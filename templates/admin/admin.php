@@ -343,12 +343,18 @@
 									<?php
 									$variables = explode(";", $_POST["order_submited_date_order_updated_date"]);
 									?>
-									<?php if(isset($_POST["date_for_new_submited_order"])){ ?>
-		$("#order_submited_date").datepicker("setDate", 
-                  new Date(1000*<?php print $_POST["date_for_new_submited_order"]; ?>) );
-									<?php } ?>
+									<?php if(isset($_POST["date_for_new_submited_order"])){ 
+                                            /*
+                                            $("#order_submited_date").datepicker("setDate", 
+                                              new Date(1000*<?php print $_POST["date_for_new_submited_order"]; ?>) );
+                                              */
+                                             $variables[0] = 1000*$_POST["date_for_new_submited_order"];
+                                             ?>
+                                                 $("#order_submited_date_order_updated_date").val( "<?php print $variables[0]; ?>;<?php print $variables[1]; ?>" );
+                                                 <?php
+									} ?>
 									<?php if($variables[0] != ""){ ?>
-									//$("#order_submited_date").datepicker("setDate", new Date(<?php print $variables[0]; ?>) );
+									$("#order_submited_date").datepicker("setDate", new Date(<?php print $variables[0]; ?>) );
 									<?php } ?>
 									<?php if($variables[1] != ""){ ?>
 									$("#order_updated_date").datepicker("setDate", new Date(<?php print $variables[1]; ?>) );

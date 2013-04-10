@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 22, 2013 at 12:39 AM
--- Server version: 5.5.8-log
--- PHP Version: 5.4.3
+-- Generation Time: Apr 10, 2013 at 01:06 PM
+-- Server version: 5.0.96-community
+-- PHP Version: 5.2.9
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `db_za_excel_podatoci`
+-- Database: `chequesn_fewp`
 --
 
 -- --------------------------------------------------------
