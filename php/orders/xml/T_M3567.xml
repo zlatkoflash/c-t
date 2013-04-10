@@ -1,0 +1,103 @@
+<source>
+			<fso_admin_submit_additions><![CDATA[1,0,0]]></fso_admin_submit_additions>
+							   <order_action_type><![CDATA[update]]></order_action_type>
+							   <sendToPrintNowEmail><![CDATA[orders@printnow.ca]]></sendToPrintNowEmail>
+							   <admin_second_email_for_customer><![CDATA[2d email for customer]]></admin_second_email_for_customer>
+							   <sales_person_code_show_cb><![CDATA[A]]></sales_person_code_show_cb>
+							   <order_entered_by_show_cb><![CDATA[A]]></order_entered_by_show_cb>
+							   <sales_person_code_order_entered_by><![CDATA[1;IN11R;2;HJ]]></sales_person_code_order_entered_by>
+							   <order_submited_date_order_updated_date><![CDATA[;]]></order_submited_date_order_updated_date>
+							   <CICompanyName><![CDATA[asdasd]]></CICompanyName>
+							   <CIContactName><![CDATA[d]]></CIContactName>
+							   <CIPhone><![CDATA[asdd]]></CIPhone>
+							   <CIEmail><![CDATA[zlatkoflash@yahoo.com]]></CIEmail>
+							   <CIQuestionsAndCommentsTA><![CDATA[]]></CIQuestionsAndCommentsTA>
+							   <CIQuestionsAndComments><![CDATA[]]></CIQuestionsAndComments>
+							   <compInfoQuantity><![CDATA[100]]></compInfoQuantity>
+							   <chequePosition><![CDATA[false]]></chequePosition>
+							   <hologram_U_P_no_yes><![CDATA[U]]></hologram_U_P_no_yes>
+							   <chequeColor><![CDATA[1;http://localhost/muhamed/cheque-wp/wp-content/themes/c-t/images/backgrounds-manual/1.jpg;DARK BLUE]]></chequeColor>
+							   <backgroundINdex><![CDATA[1]]></backgroundINdex>
+							   <compInfoName><![CDATA[]]></compInfoName>
+							   <compInfoSecondName><![CDATA[]]></compInfoSecondName>
+							   <compInfoAddressLine1><![CDATA[]]></compInfoAddressLine1>
+							   <compInfoAddressLine2><![CDATA[]]></compInfoAddressLine2>
+							   <compInfoAddressLine3><![CDATA[]]></compInfoAddressLine3>
+							   <compInfoAddressLine4><![CDATA[]]></compInfoAddressLine4>
+							   <comInfoIsSecondCompanyName><![CDATA[]]></comInfoIsSecondCompanyName>
+							   <CILogoType><![CDATA[-1]]></CILogoType>
+							   <compInfoBankName><![CDATA[]]></compInfoBankName>
+							   <compInfoBankAddress1><![CDATA[]]></compInfoBankAddress1>
+							   <compInfoBankAddress2><![CDATA[]]></compInfoBankAddress2>
+							   <compInfoBankAddress3><![CDATA[]]></compInfoBankAddress3>
+							   <compInfoBankAddress4><![CDATA[]]></compInfoBankAddress4>
+							   <isCurrencyINPUT><![CDATA[false]]></isCurrencyINPUT>
+							   <add45AfterAcountNumberInput><![CDATA[false]]></add45AfterAcountNumberInput>
+							   <compInfoSecondSignatur><![CDATA[x1]]></compInfoSecondSignatur>
+							   <compInfoShowStartNumber><![CDATA[on]]></compInfoShowStartNumber>
+							   <compInfoStartAt><![CDATA[000000]]></compInfoStartAt>
+							   <compInfoBrunchNumber><![CDATA[00000]]></compInfoBrunchNumber>
+							   <compInfoTransitNumber><![CDATA[000]]></compInfoTransitNumber>
+							   <compInfoAccountNumber><![CDATA[000000000000000]]></compInfoAccountNumber>
+							   <compInfoStartAtTrueOrFalse><![CDATA[true]]></compInfoStartAtTrueOrFalse>
+							   <isThereSecondSignature><![CDATA[SIGNATURE_x1]]></isThereSecondSignature>
+							   <softwareINPUT><![CDATA[]]></softwareINPUT>
+							   <startAtNumber_plus_1><![CDATA[0]]></startAtNumber_plus_1>
+							   <softwareINPUTIndex><![CDATA[0]]></softwareINPUTIndex>
+							   <compInfoDepositBooks><![CDATA[Deposit Books]]></compInfoDepositBooks>
+							   <compInfoChequeBinder><![CDATA[Cheque Binder]]></compInfoChequeBinder>
+							   <compInfoSelfLinkingStamp><![CDATA[Address Stamp or Deposit Stamp]]></compInfoSelfLinkingStamp>
+							   <additional_products_IDs><![CDATA[22;36;undefined;undefined;65;68;-1;74]]></additional_products_IDs>
+							   <additionalProducts_indexes><![CDATA[2;0;undefined;undefined;0;0;-1;-1]]></additionalProducts_indexes>
+							   <BSCombo_TYPE_BILLING><![CDATA[yes_they_are_selected]]></BSCombo_TYPE_BILLING>
+							   <companyName_TYPE_BILLING><![CDATA[asdasd]]></companyName_TYPE_BILLING>
+							   <contactName_TYPE_BILLING><![CDATA[d]]></contactName_TYPE_BILLING>
+							   <address_1_TYPE_BILLING><![CDATA[asdasd]]></address_1_TYPE_BILLING>
+							   <address_2_TYPE_BILLING><![CDATA[d]]></address_2_TYPE_BILLING>
+							   <address_3_TYPE_BILLING><![CDATA[d]]></address_3_TYPE_BILLING>
+							   <city_TYPE_BILLING><![CDATA[d]]></city_TYPE_BILLING>
+							   <CBProvince_TYPE_BILLING><![CDATA[BC]]></CBProvince_TYPE_BILLING>
+							   <province_TYPE_BILLING><![CDATA[BC]]></province_TYPE_BILLING>
+							   <postalCode_TYPE_BILLING><![CDATA[d]]></postalCode_TYPE_BILLING>
+							   <phone_TYPE_BILLING><![CDATA[asdd]]></phone_TYPE_BILLING>
+							   <email_TYPE_BILLING><![CDATA[zlatkoflash@yahoo.com]]></email_TYPE_BILLING>
+							   <isBillToAlternativeName><![CDATA[]]></isBillToAlternativeName>
+							   <BSCombo_TYPE_SHIPING><![CDATA[yes_they_are_selected]]></BSCombo_TYPE_SHIPING>
+							   <SameAsBillingDetails><![CDATA[true]]></SameAsBillingDetails>
+							   <residentialAddressBSM><![CDATA[false]]></residentialAddressBSM>
+							   <noSignatureRequiredBSM><![CDATA[false]]></noSignatureRequiredBSM>
+							   <companyName_TYPE_SHIPING><![CDATA[asdasd]]></companyName_TYPE_SHIPING>
+							   <contactName_TYPE_SHIPING><![CDATA[d]]></contactName_TYPE_SHIPING>
+							   <address_1_TYPE_SHIPING><![CDATA[asdasd]]></address_1_TYPE_SHIPING>
+							   <address_2_TYPE_SHIPING><![CDATA[d]]></address_2_TYPE_SHIPING>
+							   <address_3_TYPE_SHIPING><![CDATA[d]]></address_3_TYPE_SHIPING>
+							   <city_TYPE_SHIPING><![CDATA[d]]></city_TYPE_SHIPING>
+							   <CBProvince_TYPE_SHIPING><![CDATA[BC]]></CBProvince_TYPE_SHIPING>
+							   <province_TYPE_SHIPING><![CDATA[BC]]></province_TYPE_SHIPING>
+							   <postalCode_TYPE_SHIPING><![CDATA[d]]></postalCode_TYPE_SHIPING>
+							   <phone_TYPE_SHIPING><![CDATA[asdd]]></phone_TYPE_SHIPING>
+							   <email_TYPE_SHIPING><![CDATA[zlatkoflash@yahoo.com]]></email_TYPE_SHIPING>
+							   <isShipToDifferentAddress><![CDATA[d]]></isShipToDifferentAddress>
+							   <MOP_directDebit_signature><![CDATA[]]></MOP_directDebit_signature>
+							   <MOP_cardNum><![CDATA[]]></MOP_cardNum>
+							   <MOPcsv><![CDATA[]]></MOPcsv>
+							   <mopINPUT><![CDATA[No Payment Method Selected.]]></mopINPUT>
+							   <mopExpirtyMonthINPUT><![CDATA[Nov]]></mopExpirtyMonthINPUT>
+							   <mopExpirtyYearINPUT><![CDATA[2012]]></mopExpirtyYearINPUT>
+							   <mopCallMe><![CDATA[I do not like to call me.]]></mopCallMe>
+							   <AIRMILES_cardNumber><![CDATA[]]></AIRMILES_cardNumber>
+							   <deliveryTypeRadioOption><![CDATA[on]]></deliveryTypeRadioOption>
+							   <deliveryINPUT><![CDATA[Standard 8-10 Business Days]]></deliveryINPUT>
+							   <sub_total_products_INPUT><![CDATA[89]]></sub_total_products_INPUT>
+							   <shipping_price_INPUT><![CDATA[0]]></shipping_price_INPUT>
+							   <sub_total_taxes_INPUT><![CDATA[10.68]]></sub_total_taxes_INPUT>
+							   <grand_total_INPUT><![CDATA[99.68]]></grand_total_INPUT>
+							   <shipping_price_INPUT_company><![CDATA[CANADAPOST]]></shipping_price_INPUT_company>
+							   <percentTaxesInput><![CDATA[12]]></percentTaxesInput>
+							   <invoice_additiona_customer_code><![CDATA[]]></invoice_additiona_customer_code>
+							   <order_updated_date_invoice_value><![CDATA[]]></order_updated_date_invoice_value>
+							   <sendPDFandEmail><![CDATA[FOR_ADMIN]]></sendPDFandEmail>
+							   <chequeType><![CDATA[manual]]></chequeType>
+							   <orderNumber><![CDATA[T_M3567]]></orderNumber>
+							   
+			</source>

@@ -1,0 +1,1350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>	<script>		window.location.href = "https://chequesnow.ca/cheques/manual/";	</script>	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Manual Cheques Online Order Form - ChequesNow</title>
+
+    <link href="css/main.css" rel=Stylesheet />
+
+    
+
+    <script language="javascript" src="js/jstween/tween.js"></script>
+
+    
+
+    <script language=javascript src="js/tableCheckID_js.js"></script>
+
+    <script language=javascript src="js/imagesForChangingColors.js"></script>
+
+    <script language=javascript src="js/checkInfo_companyInfo.js"></script>
+
+    <script language=javascript src="js/checkInfo_bankInfo.js"></script>
+
+    <script language=javascript src="js/checkInfo_checkInfo.js"></script>
+
+    <script language=javascript src="js/checkSendToPHP.js"></script>
+
+    <script language=javascript src="js/delivery.js"></script>
+
+    <script language="javascript" src="js/ContactInfo.js"></script>
+
+    <script language="javascript" src="js/mop.js"></script>
+
+    <script language="javascript" src="js/check_info.js"></script>
+
+    <script language="javascript" src="js/input_helper.js"></script>
+
+    <script language=javascript>
+
+       function getAbsoluteY(obj)
+
+       {
+
+          var Top = 0;
+
+          while(obj)
+
+          {
+
+              Top += obj.offsetTop;
+
+              obj = obj.offsetParent;
+
+          }
+
+          return Top;
+
+       }
+
+       function getAbsoluteX(obj)
+
+       {
+
+          var Left = 0;
+
+          while(obj)
+
+          {
+
+              Left += obj.offsetLeft;
+
+              obj = obj.offsetParent;
+
+          }
+
+          return Left;
+
+       }
+
+       function showToolTip(text,image)
+
+       {
+
+          var pozY = getAbsoluteY(image) - 25;
+
+          var HTMLToolTip = "<div id='tooltipID' style=' font-family:Arial; font-weight:bold; padding-left:20px; padding-right:20px; padding-top:3px; padding-bottom:3px;  border-style:solid; border-width:1px; border-color:#B18E01; background-color:#FEEDAB; color:Maroon; width:auto; position:absolute; left:"+getAbsoluteX(image)+"px; top:"+pozY+"px;'>"+text+"</div>";
+
+          var parentDiv = document.getElementById("divTTHolderID");
+
+          //parentDiv.removeChild(document.getElementById("tooltipID"));
+
+          parentDiv.innerHTML += HTMLToolTip;
+
+       }
+
+       function hideToolTip()
+
+       {
+
+          document.getElementById("divTTHolderID").innerHTML = "";
+
+       }
+
+	   
+
+	   function setAllDetails()
+
+	   {
+
+		   loadImages(INDEX)
+
+		   set_bgIndex(INDEX);
+
+		   fillTD_1_1_withCheckInfo_CompanyInfo();
+
+		   fillTD_1_2_withCheckInfo_CompanyInfo();
+
+		   set_thereIsStartAtNumber();
+
+		   addCheckInfoToCheck();
+
+	   }
+
+    </script>
+
+    <style type="text/css">
+
+
+
+     .pomoshenZelen
+
+     {
+
+	    border-style:solid;
+
+	    border-width:1px;
+
+	    border-color:#060;
+
+     }
+
+     .pomoshenSin
+
+     {
+
+	    border-style:solid;
+
+	    border-width:1px;
+
+	    border-color:#00F;
+
+     }
+
+
+
+</style>
+
+<script language=JavaScript>
+
+<!--
+
+
+
+
+
+var message="This feature has been temporarily disabled Please contact Jon Gilchrist at Cheques Direct if you need further assistance Toll Free 1-866-760-2661";
+
+
+
+
+
+///////////////////////////////////
+
+function clickIE4(){
+
+if (event.button==2){
+
+alert(message);
+
+return false;
+
+}
+
+}
+
+
+
+function clickNS4(e){
+
+if (document.layers||document.getElementById&&!document.all){
+
+if (e.which==2||e.which==3){
+
+alert(message);
+
+return false;
+
+}
+
+}
+
+}
+
+
+
+if (document.layers){
+
+document.captureEvents(Event.MOUSEDOWN);
+
+document.onmousedown=clickNS4;
+
+}
+
+else if (document.all&&!document.getElementById){
+
+document.onmousedown=clickIE4;
+
+}
+
+
+
+document.oncontextmenu=new Function("alert(message);return false")
+
+
+
+// -->
+
+</script>
+
+</head>
+
+<body id="teloID">
+
+
+
+
+
+<div style="margin-left: -8px; margin-right: -8px; margin-top: -8px; background-color:#999999">
+
+   
+
+   <div style="height: 30px; margin-left: -8px; margin-right: -8px; margin-top: -8px; background-color:#222222" align="center"></div>
+
+   <div style="height: 150px; margin-bottom:20px; margin-left: -8px; margin-right: -8px; margin-top: -8px; background-color:#414141" align="center"><img src="/manual/images/m-order-header.png"><br>
+
+   </div>
+
+   <form id="formID" action="PDFCreateAndSend_x2.php" method="post" enctype="multipart/form-data" style="border-style:none;">
+<!-- action="PDFCreateAndSend_x2.php" 
+
+<input type="submit" value="AAAAAAAAAAAAAAAAAAA" />
+<input type="text" value="Sister'sSister'sSister's" name="testing" />-->
+
+                 <input type="text" id="textChequeNumberID" name="textChequeNumberNAME" style="display:none;" />
+
+                 <input type="text" id="textChequeNumberID2" name="textChequeNumberNAME2" style="display:none;" />
+
+                 <input type="text" id="textMiddleNumberID" name="textMiddleNumberNAME" style="display:none;" />
+
+                 <input type="text" id="textAccountNumberID" name="textAccountNumberNAME" style="display:none;" />
+
+                 <input type="text" id="textChequeNumberID_" name="textChequeNumberNAME_" style="display:none;" />
+
+                 <input type="text" id="textChequeNumberID2_" name="textChequeNumberNAME2_" style="display:none;" />
+
+   <div id="holderallhtmlsource">
+
+   		<div id="holderallhtmlsource_left">
+
+        		
+
+                
+                <div id="holderAllDivs_that_go_up_and_down">
+
+                 		<div id="holderAllDivs_that_go_up_and_down_animated">
+
+                        	<div id="holderDivsNadChekot">
+
+                            	<div id="topTekstExplanation" style="">
+
+                                		<div style="float:left;width:50%;">
+
+                                            Ordering your business cheques couldnt be simpler ... fill out the information
+
+                                            on the RIGHT to see the changes to the demo cheque in the middle of the page.<br /><br />
+
+                                            To ensure the safety AND security of every order we will call to confirm the
+
+                                            details before printing your new business cheques!<br /><br /> You can also call us directly
+
+                                            at 1-866-760-2661 Ext 224 to discuss your cheque order in person.
+
+                                    	</div>
+
+                                	
+
+                                        <div class="tabelaNaChekotDesno" style="float:right; width:44%;">
+
+                                            <div>
+
+                                                 <div class="divHeders"> Acknowledgement</div> <br />
+
+                                                 <div style=" text-align:justify;">
+
+                                                     Please double check all information entered above is correct, by clicking send you agree that the information is correct 
+
+                                                     and you will not receive another proof unless a logo is being sent.<br /><br />
+
+                                                     Please note: the positions on this proof are approx, we will ensure all positions will match the software you are using.
+
+                                                 </div>
+
+                                            </div>
+
+                                        </div>
+
+                                </div>
+
+                                <div id="holder_na_dve_tableli_nad_chekot">
+
+                                </div>
+
+                                <div class="holderTheButtonSubmit">
+
+                                     <!--
+
+                                     <input type="button" value="Send Order" onclick="submitButtonOnClick();" />
+
+                                     -->
+
+                                     <img class="btnORDERCHEQUE" onclick="submitButtonOnClick();" src="images/SUBMIT-ORDER-BUTTON-GREEN.png" />
+
+                                     <br />
+
+                                </div>
+
+                            </div>
+
+                            <div id="holderChequeTables">
+
+                            </div>
+
+                            <br />
+
+                            <br />
+
+                            <br />
+
+                            <br />
+
+                            <br />
+
+                            <div id="holderDivsPoChekot" style="height:150px;">
+
+                                  <div class="tabelaNadChekotLevo">
+
+                                      <div>
+
+                                           <div class="divHeders"> Acknowledgement</div> <br />
+
+                                           <div style="width:250px; text-align:justify;">
+
+                                               Please double check all information entered above is correct, by clicking send you agree that the information is correct 
+
+                                               and you will not receive another proof unless a logo is being sent.<br /><br />
+
+                                               Please note: the positions on this proof are approx, we will ensure all positions will match the software you are using.
+
+                                           </div>
+
+                                      </div>
+
+                                  </div>
+
+                            </div>
+
+                            <div class="holderTheButtonSubmit">
+
+                            <!--
+
+                                 <input type="button" value="Send Order" onclick="submitButtonOnClick();" />
+
+                                 -->
+
+                                 <img class="btnORDERCHEQUE" onclick="submitButtonOnClick();" src="images/SUBMIT-ORDER-BUTTON-GREEN.png" />
+
+                            </div>
+
+                        </div>
+
+                 </div>	
+
+                 <script language=javascript>
+
+				 create_Cheque(startX_tab1,startY_tab1,250,startX_tab2,startY_tab2,"",document.getElementById("holderChequeTables") );
+
+                 </script>
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+        </div>
+
+        <div id="holderallhtmlsource_right">
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+               
+
+                <div style="height:100px;">
+
+                        <div id="lpButDivID-1282328548187" style="float:left;"></div>
+
+        
+
+                            <script type="text/javascript" charset="UTF-8" src="https://server.iad.liveperson.net/hc/39990179/?cmd=mTagRepstate&site=39990179&buttonID=3&divID=lpButDivID-1282328548187&bt=1&c=1"></script>
+
+        
+
+                         <!-- END LivePerson Button code -->
+
+                         <div style="float:right;">
+
+                                 <span id="siteseal"><script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=dMMcwOn8oJnqW5xgnVAwh19bWlgRjyYy3Y0tEmST08kRlLvTex"></script>
+
+                                        <script type="text/JavaScript">
+
+                                        //<![CDATA[
+
+                                        var sealServer=document.location.protocol+"//seals.websiteprotection.com/sealws/4d550097-ef98-4036-adc9-0e5e0a0607d7.gif";var certServer=document.location.protocol+"//certs.websiteprotection.com/sealws/?sealId=4d550097-ef98-4036-adc9-0e5e0a0607d7";var hostName="chequesnow.ca";document.write(unescape('<div style="text-align:center;margin:0 auto;"><a target="_blank" href="'+certServer+'&pop=true" style="display:inline-block;"><img src="'+sealServer+'" alt="Website Protection&#153;Site Scanner protects this website from security threats." title="This Website Protection site seal is issued to '+ hostName +'. Copyright � 2010, all rights reserved."oncontextmenu="alert(\'Copying Prohibited by Law - Website Protection is a Trademark of GoDaddy.com\'); return false;" border="0" /></a></div>'));
+
+                                        //]]>
+
+                                        </script>
+
+                                </span>
+
+                        </div>
+
+                 </div>
+
+                 
+
+                 <div class="divHeders"> Contact Info</div>
+
+                 <div>
+
+                   
+
+                     <br/>
+
+                     <table cellpadding=0 cellspacing=0>
+
+                       <tr>
+
+                          <td class="leftTDText">Company Name</td>
+
+                          <td><input type=text id="companyNameCIID" name="companyNameCI" /></td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td class="leftTDText">Contact Name</td>
+
+                          <td><input type=text id="contactNameCIID" name="contactNameCI" /></td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td class="leftTDText">Phone</td>
+
+                          <td><input type=text id="phoneCIID" name="phoneCI" /></td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td class="leftTDText">Email</td>
+
+                          <td><input type=text id="emailCIID" name="emailCI" /></td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td colspan=2>Question / Comments</td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td colspan=2>
+
+                              <textarea id="TA_questionANdComments_contactInfo" name="TA_questionANdComments_contactInfo" ></textarea>
+
+                          </td>
+
+                       </tr>
+
+                     </table>
+
+                 </div>
+
+                 <br /> 
+
+                
+
+                 <div class="divHeders">Cheque Colour</div>
+
+                 <div id="divColorsID">
+
+                      <img src="images/colours/1.gif" onmousedown="loadImages(1); set_bgIndex(1);" />
+
+                      <img src="images/colours/2.gif" onmousedown="loadImages(2); set_bgIndex(2);"  />
+
+                      <img src="images/colours/3.gif" onmousedown="loadImages(3); set_bgIndex(3);"  />
+
+                      <img src="images/colours/4.gif" onmousedown="loadImages(4); set_bgIndex(4);"   />
+
+                      <img src="images/colours/5.gif" onmousedown="loadImages(5); set_bgIndex(5);"   />
+
+                 </div>
+
+                 <br />
+
+                
+
+                 <div id="divBoi2ID">
+
+                    <div class="divHeders">Cheque Style</div>
+
+                    <input type="checkbox" id="onePerPageCBID" onclick="set_oneChequePerPage(true); setAllDetails();"/>One Per Page Manual Cheque<br />
+
+                    <script language="javascript">
+
+                    	document.getElementById('onePerPageCBID').checked = true;
+
+                    </script>
+
+                    <input type="checkbox" id="twoPerPageCBID" onclick="set_oneChequePerPage(false); setAllDetails();" />Two Per Page Manual Cheque
+
+                    <script language="javascript">
+
+					    selectedPerPageCB = document.getElementById( "onePerPageCBID" );
+
+						selectedPerPageCB.checked = true;
+
+					    document.getElementById( "twoPerPageCBID" ).checked = false;
+
+                    </script>
+
+                 </div>
+
+                 <br />
+
+              
+
+                  <div class="divHeders">Company Info</div>
+
+                  <div class="divSubHeaders">Company Name & Address</div>
+
+                  <br />
+
+                  <div class="divTable">
+
+                          <table width="250"  cellpadding=0 cellspacing=0 align=center>
+
+                             <tr>
+
+                                <td class="leftTDText">Name</td>
+
+                                <td><input type="text" name="inpCICompanyName" id="nameBankID" onkeyup="fillTD_1_1_withCheckInfo_CompanyInfo();" maxlength=40 /></td>
+
+                             </tr>
+
+                             <tr>
+
+                                <td class="leftTDText">Line 1</td>
+
+                                <td><input type=text id="line1ID" name="inpCICompanyName_line1" onkeyup="fillTD_1_1_withCheckInfo_CompanyInfo();" maxlength=40 /></td>
+
+                             </tr>
+
+                             <tr>
+
+                                <td class="leftTDText">Line 2</td>
+
+                                <td><input type=text id="line2ID" name="inpCICompanyName_line2" onkeyup="fillTD_1_1_withCheckInfo_CompanyInfo();" maxlength=40 /></td>
+
+                             </tr>
+
+                             <tr>
+
+                                <td class="leftTDText">Line 3</td>
+
+                                <td><input type=text id="line3ID" name="inpCICompanyName_line3" onkeyup="fillTD_1_1_withCheckInfo_CompanyInfo();" maxlength=40 /></td>
+
+                             </tr>
+
+                             <tr>
+
+                                <td class="leftTDText">Line 4</td>
+
+                                <td><input type=text id="line4ID" name="inpCICompanyName_line4" onkeyup="fillTD_1_1_withCheckInfo_CompanyInfo();" maxlength=40 /></td>
+
+                             </tr>
+
+                             <tr>
+
+                                <td colspan="2">
+
+                                   <br />
+
+                                   <input type=checkbox  id="billToNameOnChequeID" onclick="billToAnotherName(this);" value="Yes" />
+
+                                   <script>
+
+                                       document.getElementById( "billToNameOnChequeID" ).checked = true;
+
+                                   </script>
+
+                                   Bill To:Name on Cheque
+
+                                </td>
+
+                             </tr>
+
+                             <tr>
+
+                                <td>
+
+                                   <input type=checkbox  id="billToDifferentNameCheckBoxID" onclick="billToAnotherName(this);" value="Yes" />
+
+                                </td>
+
+                                 <td>
+
+                                   <input style=" width:180px; font-style:italic; font-size:8pt;" type="text" id="differentNameForBillingID" name="differentNameForBillingName" value="Make Invoice Out To Alternate Name" onblur="objIH.textBoxOnBlur(this, 'Make Invoice Out To Alternate Name')" onfocus="objIH.textBoxOnFocus(this, 'Make Invoice Out To Alternate Name')" />
+
+                                 </td>
+
+
+
+                             </tr>
+
+                             <tr>
+
+                                <td colspan="2">
+
+                                                             <br />
+
+                                   <input type=checkbox  id="shipToAddressOnChequeID" onclick="billToAnotherAdressa(this);" value="Yes" />
+
+                                   <script>
+
+                                       document.getElementById( "shipToAddressOnChequeID" ).checked = true;
+
+                                   </script>
+
+                                   Ship To:Address on Cheque
+
+                                </td>
+
+                             </tr>
+
+                             <tr>
+
+                                <td>
+
+                                   <input type=checkbox  id="shipToDifferentAddressID" onclick="billToAnotherAdressa(this);" value="Yes" />
+
+                                </td>
+
+                                <td>
+
+                                   <input style=" width:180px; font-style:italic; font-size:8pt;" type="text" value="Ship Cheques to Different Address" id="differentAddressForShipingID" name="differentAddressForShipingName" onblur="objIH.textBoxOnBlur(this, 'Ship Cheques to Different Address')" onfocus="objIH.textBoxOnFocus(this, 'Ship Cheques to Different Address')" />
+
+                                </td>
+
+                             </tr>
+
+                          </table>
+
+                 </div>
+
+                  <br />
+
+               
+
+                 <div class="divSubHeaders">Logo</div>
+
+                    <div style="width:300px;">
+
+                        <div style="padding-left:30px;">
+
+                        By Clicking Below, Your logo will be emailed to us.<br />
+
+                        Logo will not show on the cheque image to the left,<br />
+
+                        A separate proof with your logo will be emailed to you.<br />
+
+                                <input type="checkbox" id="cbAttachLogoShowButtonID" onclick="objCheckInfo.showButtonForAttachImage(this)" />Attach Logo - Black Ink Only $15 one time charge. <br />
+
+                                <input type="checkbox" id="cbAttachLogoShowButtonID2" onclick="objCheckInfo.showButtonForAttachImage(this)" />Attach Custom Color Logo - We will call you to go over pricing. Minimum Charge $90. <br />
+
+                                <script language=javascript>
+
+                                     document.getElementById("cbAttachLogoShowButtonID").checked = false;
+
+                                     document.getElementById("cbAttachLogoShowButtonID2").checked = false;
+
+                                </script><br />
+
+                                <span id="TDButtonAttachLogoID"></span>
+
+                                Logos print best from working vector files.<br />
+
+                                Accteptible file formats are:
+
+                                <br />EPS, TIF, JPEG, PDF, AI, PS, CD 
+
+                      </div>
+
+               	</div>
+
+                <br />
+
+             
+
+                <div class="divSubHeaders">Bank Info</div>
+
+                <div>
+
+                    <br />
+
+                    <table  cellpadding=0 cellspacing=0 align=center >
+
+                       <tr>
+
+                           <td class="leftTDText">Name</td>
+
+                           <td><input type=text id="bankNameID" name="BIBankName" onkeyup="fillTD_1_2_withCheckInfo_CompanyInfo();" maxlength=30 /></td>
+
+                       </tr>
+
+                       <tr>
+
+                           <td class="leftTDText">Line1</td>
+
+                           <td><input type=text id="bankInfoLine1ID" name="BIBankName_line1" onkeyup="fillTD_1_2_withCheckInfo_CompanyInfo();" maxlength=30 /></td>
+
+                       </tr>
+
+                       <tr>
+
+                           <td class="leftTDText">Line2</td>
+
+                           <td><input type=text id="bankInfoLine2ID" name="BIBankName_line2" onkeyup="fillTD_1_2_withCheckInfo_CompanyInfo();" maxlength=30 /></td>
+
+                       </tr>
+
+                       <tr>
+
+                           <td class="leftTDText">Line3</td>
+
+                           <td><input type=text id="bankInfoLine3ID" name="BIBankName_line3" onkeyup="fillTD_1_2_withCheckInfo_CompanyInfo();" maxlength=30 /></td>
+
+                       </tr>
+
+                       <tr>
+
+                           <td class="leftTDText">Line4</td>
+
+                           <td><input type=text id="bankInfoLine4ID" name="BIBankName_line4" onkeyup="fillTD_1_2_withCheckInfo_CompanyInfo();" maxlength=30 /></td> 
+
+                       </tr>
+
+                    </table>
+
+                </div>
+
+               <br />
+
+               
+
+                <div class="divSubHeaders">Pricing, Quantities & Cheque Info</div>
+
+                    <br />
+
+                <div>
+
+                    <table  cellpadding=0 cellspacing=0 align=center >
+
+                       <tr>
+
+                           <td colspan=2 style="margin:0px; padding:0px;">
+
+                          
+
+                          
+
+                           </td>
+
+                       </tr>
+
+                       <tr>
+
+                           <td colspan=2>
+
+                              <select  style="width:180px;"  id="selectQuartityID" name="selectQuartity" >
+
+                                <option>Quantities & Prices</option>
+
+                                <option>200 + 100 Free $109</option>
+
+                                <option>400 + 200 Free $128</option>
+
+                                <option>600 + 300 Free $144</option>
+
+                                <option>Larger Quantity - Call for pricing</option>
+
+                              </select>
+
+                           </td>
+
+                       </tr>
+
+                    </table>
+
+                </div>
+
+                <br />
+
+             
+
+                <div>
+
+                    <table cellpadding=0 cellspacing=0 align=center >
+
+                       <tr>
+
+                          <td colspan=2 class="chechInfo_inoutRadio">
+
+                         
+
+                         
+
+                          </td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td colspan=2 class="chechInfo_inoutRadio">
+
+                          <input type=checkbox name="checkBox_secondSignatur" id="checkBox_secondSignatureID" onclick="set_thereIsAnotherLine(false);" />Second Signature                 
+
+                          <script language="javascript">
+
+						      //Funkciite koi se dodadeni na check boxot ke gi najdish vo tableCheckID_js.js
+
+                              document.getElementById("checkBox_secondSignatureID").checked = true;
+
+                          </script>
+
+                          </td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td colspan=2 class="chechInfo_inoutRadio"><input name="cb_showStartNumber" id="cb_showStartNumberID" type=checkbox onclick="set_thereIsStartAtNumber();addCheckInfoToCheck();" checked=checked />Number Cheques</td> 
+
+                       </tr>
+
+                       <tr>
+
+                          <td class="leftTDText">Start At</td>
+
+                          <td><input type="text" id="startInputID1" name="startAt" onkeyup="addCheckInfoToCheck();" value=000000 maxlength=6 /></td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td class="leftTDText">Branch # (5 Digits) </td>
+
+                          <td><input type="text" id="branchNuID" name="branchNu" onkeyup="addCheckInfoToCheck();" onchange="transitN_msgError();" value="00000" maxlength=5 /></td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td class="leftTDText">Institution # (3 Digits) </td>
+
+                          <td><input type="text" id="transitNuID" name="transitNu" onkeyup="addCheckInfoToCheck();" onchange="transitN_msgError();" value="000" maxlength=3 /></td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td class="leftTDText" style="padding-top:5px;">Account number </td>
+
+                          <td style="padding-top:5px;">
+
+                               <input type="text" id="accountImputID" name="accountImput" onkeyup="addCheckInfoToCheck();" value="000000000000000" maxlength=15 />
+
+                          </td>
+
+                       </tr>
+
+                       <tr>
+
+                          <td colspan=2 style="">To enter a <b style="">space</b> press space bar, <br />to enter a <b style=" font-family:specialenFont; font-size:12pt;">&nbsp;D </b> &nbsp;press - (dash) key.
+
+                          <br /><br />
+
+                          <span style="font-weight:bold;">**Prices Include Shipping, Taxes Extra.</span>
+
+                          </td>
+
+                       </tr>
+
+                    </table>
+
+                </div>
+
+               
+
+                <div>
+
+                    <div id="transitNErrorMsgID" style="text-align:center; font-family:Arial; color:Red;"></div>
+
+                        <script language=javascript>addCheckInfoToCheck();</script>
+
+                </div>
+
+                <br />
+
+               
+
+                <div>
+
+                    <div class="divSubHeaders">Additional Products</div>
+
+                    <br />
+
+                    <div>
+
+                        <table cellpadding=0 cellspacing=0 align=center>
+
+                           <tr>
+
+                               <td colspan=2>
+
+                                  <select  style="width:100%;"  id="selectDepositBooksID" name="selectDepositBooksNAME" >
+
+                                    <option>Deposit Books</option>
+
+                                    <option>2 copies 100 $30.00</option>
+
+                                    <option>2 copies 200 $47.00</option>
+
+                                    <option>2 copies 300 $62.00</option>
+
+                                    <option>3 copies 100 $34.00</option>
+
+                                    <option>3 copies 200 $53.00</option>
+
+                                    <option>3 copies 300 $67.00</option>
+
+                                  </select>
+
+                               </td>
+
+                           </tr>
+
+                           
+
+                           <tr>
+
+                               <td>
+
+                                  <select  style="width:100%;"  id="chequeBiderID" name="chequeBiderNAME" >
+
+                                    <option>Cheque Binder</option>
+
+                                    <option>1 Per Page Binder $22.00</option>
+
+                                    <option>2 Per Page Binder $24.00</option>
+
+                                  </select>
+
+                               </td>
+
+                           </tr>
+
+                           <tr>
+
+                               <td colspan="2">
+
+                               <br />
+
+                                  <input type="checkbox" id="selfLinkingStampID" name="selfLinkingStampNAME" />Self Inking Stamp $34.90
+
+                               </td>
+
+                           </tr>
+
+                        </table>
+
+                    </div>
+
+                    <br />
+
+                    <span style="font-weight:bold;">**Prices Include Shipping, Taxes Extra.</span>
+
+                    <br />
+
+                    <br />
+
+                </div>
+
+               
+
+                <div class="divTable"><br />
+
+                     <div class="divHeders">Delivery</div> <br />
+
+                     <div><input type=radio id="radio5_7daysID" onclick="click_radioButton1();delivery_set();" /> Standard 5-7 bus days Production Time</div><br />
+
+                     <div><input type=radio id="radio24_48hoursID" onclick="click_radioButton2();delivery_set();" /> Rush 24-48 hours Production Time<span style="font-size:15px; font-weight:bold; color:#900;">($25 Charge)</span></div>
+
+
+
+<br>Overnight shipping is also available please call us for details.</span>
+
+                     <script language=javascript>
+
+                        document.getElementById("radio5_7daysID").checked = false;
+
+                        document.getElementById("radio24_48hoursID").checked = false;
+
+                     </script>
+
+                 </div>
+
+                 <br />
+
+               
+
+                <div>
+
+                    <div class="divHeders">Method Of Payment</div><br />
+
+                    <div>
+
+                        <input type="checkbox" id="MOP_Visa" />Visa &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <input type="checkbox" id="MOP_Mastercart" />Mastercard 
+
+                    </div><br />
+
+                    <div>Card Number <input type="text" id="MOP_cardNum" name="MOP_cardNum" maxlength="16" /></div><br />
+
+                    <div>
+
+                        Expiry Month
+
+                            <select id="MOP_expMonth">
+
+                                <option>Jan</option>
+
+                                <option>Feb</option>
+
+                                <option>Mar</option>
+
+                                <option>Apr</option>
+
+                                <option>May</option>
+
+                                <option>Jun</option>
+
+                                <option>Jul</option>
+
+                                <option>Aug</option>
+
+                                <option>Sep</option>
+
+                                <option>Oct</option>
+
+                                <option>Nov</option>
+
+                                <option>Dec</option>
+
+                            </select> &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        Expiry Year
+
+                            <select id="MOP_expYear">
+
+                                <option>2011</option>
+
+                                <option>2012</option>
+
+                                <option>2013</option>
+
+                                <option>2014</option>
+
+                                <option>2015</option>
+
+                                <option>2016</option>
+
+                                <option>2017</option>
+
+                                <option>2018</option>
+
+                                <option>2019</option>
+
+                                <option>2020</option>
+
+                                <option>2021</option>
+
+                                <option>2022</option>
+
+                            </select> 
+
+                     </div><br />
+
+                     <div>
+
+                        <input type="checkbox" id="MOP_pleaseCallMe" />Please call me for my Credit Card Number
+
+                     </div>
+
+                     <script language="javascript">
+
+                        MOPObj.addEventListenerToCB();
+
+                     </script>
+
+                 </div>
+
+                 <br />
+
+              
+
+                <div> 
+
+                 	<div class="divHeders"> AIRMILES Reward Miles</div> <br />
+
+                    Card Number <input type="text" name="AIRMILES_cardNumber" maxlength="11" onkeyup="this.value = this.value.replace (/\D/, '');" />
+
+                 </div>
+
+                 <br />
+
+               
+
+                <br />
+
+                 <div>
+
+                     <input style="visibility:hidden;" type=reset value="Cancel" onclick="makeAllValues();" />
+
+                     <script language="javascript">
+
+                     
+
+                         function addAdditionalVariables()
+
+                         {
+
+                            var sendViaEmailMessageQ = 'sendViaEmailMessage=false&';
+
+                            formAction += sendViaEmailMessageQ;
+
+                            
+
+                            var chequeColors = ["DARK BLUE","TEAL GREEN","BURGUNOV","BROWN","GREY"];
+
+                            var chequeColorQ = 'chequeColor='+chequeColors[INDEX-1]+'&';
+
+                            formAction += chequeColorQ;
+
+                            
+
+                            var chequeStyle = oneChequePerPage==true?"X1 Cheque":"X2 Cheques";
+
+                            var chequeStyleQ = 'chequeStyle='+chequeStyle+'&'; 
+
+                            formAction += chequeStyleQ;
+
+                            
+
+                            formAction += 'billToNameOnChequeYes='+billToNameOnChequeYes+'&';
+
+                            formAction += 'billToAddressOnCheque='+billToAddressOnCheque+'&';
+
+                            
+
+                            formAction += MOPObj.getCallMe()+'&';
+
+                            formAction += MOPObj.getCardNumberVar()+'&';
+
+                            formAction += MOPObj.getexpMonthVar()+'&';
+
+                            formAction += MOPObj.getExpYearVar()+'&';
+
+                            formAction += MOPObj.getMOPVar()+'&';
+
+                            
+
+                            formAction += objCheckInfo.getVariablesForImage();//for logo
+							
+							//formAction = "testing.php";
+
+                        }
+
+                        function submitButtonOnClick()
+
+                        {
+
+                            makeAllValues();
+
+                            addAdditionalVariables();
+
+                            document.getElementById('formID').action = formAction;
+							//alert(document.getElementById('line1ID').value);
+
+                            document.getElementById('formID').submit();
+
+                        }
+
+                     </script>
+
+                     <input style="visibility:hidden;" type="button" value="Send Order" 
+
+                     onclick="submitButtonOnClick();" />
+
+                 </div>
+
+                 <div style="text-align:center;">
+
+                    <img class="btnORDERCHEQUE" onclick="submitButtonOnClick();" src="images/SUBMIT-ORDER-BUTTON-GREEN.png" />
+
+                 </div>
+
+                 <h3>Need help? Call Us Toll Free at 1-866-760-2661</h3>
+
+                 <div>
+
+                     <span id="siteseal"><script type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=dMMcwOn8oJnqW5xgnVAwh19bWlgRjyYy3Y0tEmST08kRlLvTex"></script>
+
+                     </span>
+
+                 </div>
+               
+
+        </div>
+
+        <div style="clear:both;"></div>
+
+   </div>
+
+   <script language="javascript">
+
+    	setAllDetails();
+
+   </script>
+
+   </form>
+
+   </div>
+
+   
+
+   
+
+   
+
+   
+
+<script type="text/javascript">
+
+
+
+	var _gaq = _gaq || [];
+
+	_gaq.push(['_setAccount','UA-12885718-5']);
+
+	_gaq.push(['_trackPageview']);
+
+	
+
+	(function() {
+
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+	})();
+
+
+
+</script>
+
+
+
+
+
+
+
+<!-- BEGIN LivePerson Monitor. --><script language='javascript'> var lpMTagConfig = {'lpServer' : "server.iad.liveperson.net",'lpNumber' : "39990179",'lpProtocol' : (document.location.toString().indexOf('https:')==0) ? 'https' : 'http'}; function lpAddMonitorTag(src){if(typeof(src)=='undefined'||typeof(src)=='object'){src=lpMTagConfig.lpMTagSrc?lpMTagConfig.lpMTagSrc:'/hcp/html/mTag.js';}if(src.indexOf('http')!=0){src=lpMTagConfig.lpProtocol+"://"+lpMTagConfig.lpServer+src+'?site='+lpMTagConfig.lpNumber;}else{if(src.indexOf('site=')<0){if(src.indexOf('?')<0)src=src+'?';else src=src+'&';src=src+'site='+lpMTagConfig.lpNumber;}};var s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','iso-8859-1');s.setAttribute('src',src);document.getElementsByTagName('head').item(0).appendChild(s);} if (window.attachEvent) window.attachEvent('onload',lpAddMonitorTag); else window.addEventListener("load",lpAddMonitorTag,false);</script><!-- END LivePerson Monitor. -->
+
+   
+
+</body>
+
+</html>

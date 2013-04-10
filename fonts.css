@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* Fonts */
+/*old font
+@font-face 
+{
+	font-family: 'specialenFont';
+	src: url('fonts/micr/micr___.eot');
+	src: local('☺'), url('fonts/micr/micr___-webfont.woff') format('woff'), url('fonts/micr/micr___.ttf') format('truetype'), url('fonts/micr/micr___.svg#webfontmSxsNTfc') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+@font-face 
+{
+	font-family: 'specialenFont';
+	src: url('fonts/micr-e13b/micr-e13b.eot');
+	src: local('☺'), url('fonts/micr-e13b/micr-e13b.woff') format('woff'), url('fonts/micr-e13b/micr-e13b.ttf') format('truetype'), url('fonts/micr-e13b/micr-e13b.svg#webfontmSxsNTfc') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+

@@ -1,0 +1,318 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**
+ * Theme Name: Wordpress Theme for Cheque(Laser and Manual)
+ * Theme URI: http://link-to-your-site.com
+ * Description: Nice simple website for creating cheques.
+ * Version: 0.1
+ * Author: Master World Team
+ * Author URI: http://link-to-your-site.com
+ * Tags: laser, manual, cheque, buy, sent, upload, pdf
+ */
+
+@import url("fonts.css");
+/**/
+@import url("css/jquery.ui.all.css");
+
+
+html
+{
+	padding:0px;
+}
+body
+{
+	padding:0px;
+	background-color:#999999;
+	margin:0px;
+} 
+
+div
+{
+	border-style:none;
+	border-width:1px;
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	font-size:11px;
+	color:#000;
+}
+
+.inputOnFocusInOut{ color:#999;}
+
+input[type='text'],input[type='password']
+{
+	border-style:solid;
+	border-width:1px;
+	border-color:#000000;
+	width:150px;
+	height:18px;
+	line-height:18px;
+}
+select
+{
+	margin-bottom:2px;
+}
+hr
+{
+	border:none;
+	height:5px;
+	background-color:#333;
+}
+#headerTopSmall
+{
+	background-color:#222222;
+}
+#headerTopBig
+{
+	background-color:#414141;
+	margin-bottom:20px;
+	padding:10px;
+	text-align:center;
+}
+#cheque_holder
+{
+	margin:0 auto;
+	border-style:dotted;
+	border-color:Gray;
+	border-width:1px;
+	padding:5px;
+	background-color:#FFFFFF;
+}
+.cheque_holder_width_laser
+{
+	width:920px;
+}
+.cheque_holder_width_manual
+{
+	width:1100px;
+}
+#cheque_render_holder
+{
+	position:relative;
+}
+.cheque_render_holder_laser_width
+{
+	width:615px;
+}
+.cheque_render_holder_manual_width
+{
+	width:790px;
+}
+#right_forms_holder
+{
+	width:300px;
+}
+#cheque_render_holderABSOLUTE
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.labelLeftManualChequeBG
+{
+	background-image:url(images/labelLeft.jpg);
+}
+.labelLeftManualChequeBG_BIG
+{
+	background-image:url(images/labelLeft_big.jpg);
+	background-repeat:no-repeat;
+}
+.separatorDIV
+{
+	height:1px;
+	background-color:#333;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+/*================================Standard css========================================*/
+.holderRightParceForm
+{
+	border-style:solid;
+	border-color:#000;
+	border-width:1px;
+	margin-bottom:10px;
+}
+.holderRightParceForm___intoForm
+{
+	padding:10px;
+	padding-top:10px;
+}
+.titleRightForm
+{
+	color:#FFFFFF;
+	background-color:#003399;
+	padding:5px;
+	border-bottom-style:solid;
+	border-width:1px;
+	border-color:#000000;
+}
+.subTitleRightForm
+{
+	color:#FFFFFF;
+	background-color:#0033ff;
+	padding:5px;
+	border-width:1px;
+	border-color:#000000;
+	font-size:10px;
+	text-align:left;
+}
+.btnORDERCHEQUE
+{
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.btnORDERCHEQUE img
+{
+	cursor:pointer;
+}
+.clearBoth{clear:both;}
+.floatLEft{float:left;}
+.floatRight{float:right;}
+.fontSize14px
+{
+	font-size:14px;
+}
+.fontSize18px
+{
+	font-size:18px;
+}
+.alignCenter{text-align:center;}
+.alignLeft{text-align:left;}
+.alignRight{text-align:right;}
+
+.borderStyleNONE{border-style:none;}
+.borderStyleSolid{border-style:solid;}
+
+.widthAUTO{width:auto;}
+.width100Percent{width:100% !important;}
+.width50Percent{width:50%;}
+.width45Percent{width:45%;}
+.width48Percent{width:48%;}
+.width40px{width:40px !important;}
+.width900PX{width:900px;}
+.width700PX{width:700px;}
+.width500PX{width:500px;}
+.width126px{width:126px;}
+.width150px{width:150px;}
+.width180px{width:180px;}
+.width200px{width:200px;}
+.width250px{width:250px;}
+.width300px{width:300px !important;}
+.width400px{width:400px !important;}
+
+.height22PX{height:22px;}
+.heightAUTO{height:auto;}
+.heigth100Percent{height:100%;}
+
+.lineTextHeight15{line-height:15px;}
+.lineTextHeight19{line-height:19px;}
+.lineTextHeight22{line-height:22px;}
+.lineTextHeight23{line-height:23px !important;}
+
+.marginLeftRightForms{margin-left:2px;}
+.margin2px{margin:2px;}
+.margin3px{margin:3px;}
+.margin5px{margin:5px;}
+.marginBottom2px{margin-bottom:2px;}
+.marginBottom10px{margin-bottom:10px;}
+.marginLeft5px{margin-left:5px;}
+.marginLeft7px{margin-left:7px;}
+.marginLeft10px{margin-left:10px;}
+.margin__0___AUTO{margin:0 auto;}
+
+.paddingLeft50px{padding-left:50px;}
+.paddingRight50px{padding-right:50px;}
+
+.cursorPointer{cursor:pointer;}
+.cursorDefault{cursor:default;}
+
+.colorChequeSlidingHelp
+{
+	/*
+	background-color:#3399FF;*/
+}
+.colorBGWhite
+{
+	background-color:#FFFFFF;
+}
+
+.positionRelative{position:relative;}
+.positionAbsolute{position:absolute;}
+.positionFixed{position:fixed;}
+
+.padding30px{padding:30px;}
+.padding10px{padding:10px;}
+
+.colorRED{color:#F00;}
+.colorCCCCCC{color:#CCC !important;}
+
+.displayNone{display:none;}
+.displayInline{display:inline;}
+
+.visibilityHidden{visibility:hidden;}
+
+.border_style_dotted
+{
+	border-style:dotted;
+}
+.borderGrayDotted
+{
+	border-style:dotted;
+	border-color:Gray;
+	border-width:1px;
+}
+
+.bg_E9E9E9{background-color:#E9E9E9;}
+.bg_CCC{background-color:#CCC;}
+.bg_0C9{background-color:#0C9;}
+.bg_FFF{background-color:#FFF;}
+.bg_1796ea{background-color:#1796ea;}
+.bg_F5F5F5{background-color:#F5F5F5;}
+.bg_DADADA{background-color:#DADADA;}
+
+.positionTopLeft{left:0px; top:0px;}
+
+.overflowAUTO{overflow:auto;}
+.overflowSCROLL{overflow:scroll;}
+.overflowHIDDEN{overflow:hidden;}
+
+/*
+*
+*This is style for SEARCH
+*/
+
+.arrowSortingSIZE
+{
+	width:12px;
+	height:11px;
+}
+.arrowSortingNagore
+{
+	background-image:url(images/dodatoci/270px-black_triangle2_w12_nagore.png);
+}
+.arrowSortingNadolu
+{
+	background-image:url(images/dodatoci/270px-black_triangle2_svg_w12_nadolu.png);
+}
+.navSearchGoToFirstPage{background-image:url(images/dodatoci/search-assets/search_assets_03.png);}
+.navSearchGoBack{background-image:url(images/dodatoci/search-assets/search_assets_04.png);}
+.navSearchGoNext{background-image:url(images/dodatoci/search-assets/search_assets_05.png);}
+.navSearchGoToTheLast{background-image:url(images/dodatoci/search-assets/search_assets_06.png);}
+.searchPreloader
+{
+	width:126px;
+	height:22px;
+	background-image:url(images/dodatoci/search-assets/ajax-loader.gif);
+}
+
+.fontWeightBOLD{font-weight:bold;}
+/*
+*
+*This is style for SEARCH
+*/
+
+
+
+	

@@ -1,0 +1,94 @@
+<source>
+			<CICompanyName><![CDATA[K&S Farms]]></CICompanyName>
+							   <CIContactName><![CDATA[Ken Barker]]></CIContactName>
+							   <CIPhone><![CDATA[306 534-4703]]></CIPhone>
+							   <CIEmail><![CDATA[ksfarms@sasktel.net]]></CIEmail>
+							   <CIQuestionsAndCommentsTA><![CDATA[Do you realize changes is spelt wrong on 5) under to place an order?]]></CIQuestionsAndCommentsTA>
+							   <CIQuestionsAndComments><![CDATA[Do you realize changes is spelt wrong on 5) under to place an order?]]></CIQuestionsAndComments>
+							   <compInfoQuantity><![CDATA[Manual Cheques]]></compInfoQuantity>
+							   <manualPosX1cheque_option><![CDATA[-2]]></manualPosX1cheque_option>
+							   <chequePosition><![CDATA[true]]></chequePosition>
+							   <hologram_U_P_no_yes><![CDATA[U]]></hologram_U_P_no_yes>
+							   <chequeColor><![CDATA[3;https://chequesnow.ca/cheques/wp-content/themes/c-t/images/backgrounds-manual/3.jpg;BURGUNOY]]></chequeColor>
+							   <backgroundINdex><![CDATA[3]]></backgroundINdex>
+							   <compInfoName><![CDATA[K & S Farms]]></compInfoName>
+							   <compInfoSecondName><![CDATA[Ken or Sharon Barker]]></compInfoSecondName>
+							   <compInfoAddressLine1><![CDATA[Box 32]]></compInfoAddressLine1>
+							   <compInfoAddressLine2><![CDATA[Spy Hill, Sask. S0A 3W0]]></compInfoAddressLine2>
+							   <compInfoAddressLine3><![CDATA[phone 306 534-4703 fax 306 534-2212]]></compInfoAddressLine3>
+							   <compInfoAddressLine4><![CDATA[]]></compInfoAddressLine4>
+							   <comInfoIsSecondCompanyName><![CDATA[Ken or Sharon Barker]]></comInfoIsSecondCompanyName>
+							   <CILogoType><![CDATA[-1]]></CILogoType>
+							   <compInfoBankName><![CDATA[Bank of Montreal]]></compInfoBankName>
+							   <compInfoBankAddress1><![CDATA[15 Broadway St. East]]></compInfoBankAddress1>
+							   <compInfoBankAddress2><![CDATA[Yorkton, Sask. S3N 0K2]]></compInfoBankAddress2>
+							   <compInfoBankAddress3><![CDATA[]]></compInfoBankAddress3>
+							   <compInfoBankAddress4><![CDATA[]]></compInfoBankAddress4>
+							   <isCurrencyINPUT><![CDATA[false]]></isCurrencyINPUT>
+							   <add45AfterAcountNumberInput><![CDATA[false]]></add45AfterAcountNumberInput>
+							   <compInfoSecondSignatur><![CDATA[x1]]></compInfoSecondSignatur>
+							   <compInfoShowStartNumber><![CDATA[on]]></compInfoShowStartNumber>
+							   <compInfoStartAt><![CDATA[001]]></compInfoStartAt>
+							   <compInfoBrunchNumber><![CDATA[5818]]></compInfoBrunchNumber>
+							   <compInfoTransitNumber><![CDATA[794]]></compInfoTransitNumber>
+							   <compInfoAccountNumber><![CDATA[1032981]]></compInfoAccountNumber>
+							   <compInfoStartAtTrueOrFalse><![CDATA[true]]></compInfoStartAtTrueOrFalse>
+							   <isThereSecondSignature><![CDATA[SIGNATURE_x1]]></isThereSecondSignature>
+							   <softwareINPUT><![CDATA[]]></softwareINPUT>
+							   <startAtNumber_plus_1><![CDATA[002]]></startAtNumber_plus_1>
+							   <softwareINPUTIndex><![CDATA[0]]></softwareINPUTIndex>
+							   <compInfoDepositBooks><![CDATA[0]]></compInfoDepositBooks>
+							   <compInfoChequeBinder><![CDATA[0]]></compInfoChequeBinder>
+							   <compInfoSelfLinkingStamp><![CDATA[0]]></compInfoSelfLinkingStamp>
+							   <additional_products_IDs><![CDATA[-1;-1;-1;-1;-1;-1;-1;-1]]></additional_products_IDs>
+							   <additionalProducts_indexes><![CDATA[0;0;0;0;0;0;0;0]]></additionalProducts_indexes>
+							   <BSCombo_TYPE_BILLING><![CDATA[yes_they_are_selected]]></BSCombo_TYPE_BILLING>
+							   <companyName_TYPE_BILLING><![CDATA[K&S Farms]]></companyName_TYPE_BILLING>
+							   <contactName_TYPE_BILLING><![CDATA[Ken Barker]]></contactName_TYPE_BILLING>
+							   <address_1_TYPE_BILLING><![CDATA[Box 32]]></address_1_TYPE_BILLING>
+							   <address_2_TYPE_BILLING><![CDATA[]]></address_2_TYPE_BILLING>
+							   <address_3_TYPE_BILLING><![CDATA[]]></address_3_TYPE_BILLING>
+							   <city_TYPE_BILLING><![CDATA[Spy Hill]]></city_TYPE_BILLING>
+							   <CBProvince_TYPE_BILLING><![CDATA[SK]]></CBProvince_TYPE_BILLING>
+							   <province_TYPE_BILLING><![CDATA[SK]]></province_TYPE_BILLING>
+							   <postalCode_TYPE_BILLING><![CDATA[S0A 3W0]]></postalCode_TYPE_BILLING>
+							   <phone_TYPE_BILLING><![CDATA[306 534-4703]]></phone_TYPE_BILLING>
+							   <email_TYPE_BILLING><![CDATA[ksfarms@sasktel.net]]></email_TYPE_BILLING>
+							   <isBillToAlternativeName><![CDATA[Ken Barker]]></isBillToAlternativeName>
+							   <BSCombo_TYPE_SHIPING><![CDATA[yes_they_are_selected]]></BSCombo_TYPE_SHIPING>
+							   <SameAsBillingDetails><![CDATA[false]]></SameAsBillingDetails>
+							   <residentialAddressBSM><![CDATA[true]]></residentialAddressBSM>
+							   <noSignatureRequiredBSM><![CDATA[false]]></noSignatureRequiredBSM>
+							   <companyName_TYPE_SHIPING><![CDATA[K&S Farms]]></companyName_TYPE_SHIPING>
+							   <contactName_TYPE_SHIPING><![CDATA[Ken Barker]]></contactName_TYPE_SHIPING>
+							   <address_1_TYPE_SHIPING><![CDATA[Box 32]]></address_1_TYPE_SHIPING>
+							   <address_2_TYPE_SHIPING><![CDATA[]]></address_2_TYPE_SHIPING>
+							   <address_3_TYPE_SHIPING><![CDATA[]]></address_3_TYPE_SHIPING>
+							   <city_TYPE_SHIPING><![CDATA[Spy Hill]]></city_TYPE_SHIPING>
+							   <CBProvince_TYPE_SHIPING><![CDATA[SK]]></CBProvince_TYPE_SHIPING>
+							   <province_TYPE_SHIPING><![CDATA[SK]]></province_TYPE_SHIPING>
+							   <postalCode_TYPE_SHIPING><![CDATA[S0A 3W0]]></postalCode_TYPE_SHIPING>
+							   <phone_TYPE_SHIPING><![CDATA[306 534-4703]]></phone_TYPE_SHIPING>
+							   <email_TYPE_SHIPING><![CDATA[ksfarms@sasktel.net]]></email_TYPE_SHIPING>
+							   <isShipToDifferentAddress><![CDATA[Ken Barker]]></isShipToDifferentAddress>
+							   <MOP_directDebit_signature><![CDATA[Ken Barker]]></MOP_directDebit_signature>
+							   <MOP_cardNum><![CDATA[]]></MOP_cardNum>
+							   <MOPcsv><![CDATA[]]></MOPcsv>
+							   <mopINPUT><![CDATA[Direct Debit]]></mopINPUT>
+							   <mopExpirtyMonthINPUT><![CDATA[Feb]]></mopExpirtyMonthINPUT>
+							   <mopExpirtyYearINPUT><![CDATA[2013]]></mopExpirtyYearINPUT>
+							   <mopCallMe><![CDATA[false]]></mopCallMe>
+							   <AIRMILES_cardNumber><![CDATA[83445443712]]></AIRMILES_cardNumber>
+							   <deliveryTypeRadioOption><![CDATA[on]]></deliveryTypeRadioOption>
+							   <shipping_to_bo_box><![CDATA[AAAAAA]]></shipping_to_bo_box>
+							   <deliveryINPUT><![CDATA[Standard 8-10 Business Days]]></deliveryINPUT>
+							   <sub_total_products_INPUT><![CDATA[0]]></sub_total_products_INPUT>
+							   <shipping_price_INPUT><![CDATA[0]]></shipping_price_INPUT>
+							   <sub_total_taxes_INPUT><![CDATA[0]]></sub_total_taxes_INPUT>
+							   <grand_total_INPUT><![CDATA[0]]></grand_total_INPUT>
+							   <percentTaxesInput><![CDATA[5]]></percentTaxesInput>
+							   <sendPDFandEmail><![CDATA[SEND_EMAIL]]></sendPDFandEmail>
+							   <chequeType><![CDATA[manual]]></chequeType>
+							   <orderNumber><![CDATA[M5366]]></orderNumber>
+							   
+			</source>

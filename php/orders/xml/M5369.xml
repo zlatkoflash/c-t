@@ -1,0 +1,95 @@
+<source>
+			<CICompanyName><![CDATA[cont comp name]]></CICompanyName>
+							   <CIContactName><![CDATA[cont name]]></CIContactName>
+							   <CIPhone><![CDATA[cont phone]]></CIPhone>
+							   <CIEmail><![CDATA[bigjonnyg@gmail.com]]></CIEmail>
+							   <CIQuestionsAndCommentsTA><![CDATA[test coments]]></CIQuestionsAndCommentsTA>
+							   <CIQuestionsAndComments><![CDATA[]]></CIQuestionsAndComments>
+							   <compInfoQuantity><![CDATA[50 + 25 Free $73.00]]></compInfoQuantity>
+							   <manualPosX1cheque_option><![CDATA[-1]]></manualPosX1cheque_option>
+							   <chequePosition><![CDATA[true]]></chequePosition>
+							   <hologram_U_P_no_yes><![CDATA[U]]></hologram_U_P_no_yes>
+							   <chequeColor><![CDATA[]]></chequeColor>
+							   <backgroundINdex><![CDATA[1]]></backgroundINdex>
+							   <compInfoName><![CDATA[TEST COMPANY 1]]></compInfoName>
+							   <compInfoSecondName><![CDATA[TEST COMP 2]]></compInfoSecondName>
+							   <compInfoAddressLine1><![CDATA[ADD 1]]></compInfoAddressLine1>
+							   <compInfoAddressLine2><![CDATA[ADD 2]]></compInfoAddressLine2>
+							   <compInfoAddressLine3><![CDATA[ADD 3]]></compInfoAddressLine3>
+							   <compInfoAddressLine4><![CDATA[ADD 4]]></compInfoAddressLine4>
+							   <comInfoIsSecondCompanyName><![CDATA[TEST COMP 2]]></comInfoIsSecondCompanyName>
+							   <CILogoType><![CDATA[1]]></CILogoType>
+							   <compInfoBankName><![CDATA[BANK NAME]]></compInfoBankName>
+							   <compInfoBankAddress1><![CDATA[BANK ADD 1]]></compInfoBankAddress1>
+							   <compInfoBankAddress2><![CDATA[BANK ADD 2]]></compInfoBankAddress2>
+							   <compInfoBankAddress3><![CDATA[BANK ADD 3]]></compInfoBankAddress3>
+							   <compInfoBankAddress4><![CDATA[BANK ADD 4]]></compInfoBankAddress4>
+							   <add_45_after_account><![CDATA[yes]]></add_45_after_account>
+							   <isCurrencyINPUT><![CDATA[true]]></isCurrencyINPUT>
+							   <add45AfterAcountNumberInput><![CDATA[true]]></add45AfterAcountNumberInput>
+							   <compInfoSecondSignatur><![CDATA[x2]]></compInfoSecondSignatur>
+							   <compInfoShowStartNumber><![CDATA[on]]></compInfoShowStartNumber>
+							   <compInfoStartAt><![CDATA[01001]]></compInfoStartAt>
+							   <compInfoBrunchNumber><![CDATA[12312]]></compInfoBrunchNumber>
+							   <compInfoTransitNumber><![CDATA[123]]></compInfoTransitNumber>
+							   <compInfoAccountNumber><![CDATA[132- -1- 1]]></compInfoAccountNumber>
+							   <compInfoStartAtTrueOrFalse><![CDATA[true]]></compInfoStartAtTrueOrFalse>
+							   <isThereSecondSignature><![CDATA[SIGNATURE_x2]]></isThereSecondSignature>
+							   <softwareINPUT><![CDATA[]]></softwareINPUT>
+							   <startAtNumber_plus_1><![CDATA[01002]]></startAtNumber_plus_1>
+                                                           <special_designation>XXXX</special_designation>
+							   <softwareINPUTIndex><![CDATA[0]]></softwareINPUTIndex>
+							   <compInfoDepositBooks><![CDATA[12]]></compInfoDepositBooks>
+							   <compInfoChequeBinder><![CDATA[2]]></compInfoChequeBinder>
+							   <compInfoSelfLinkingStamp><![CDATA[1]]></compInfoSelfLinkingStamp>
+							   <additional_products_IDs><![CDATA[21;48;undefined;undefined;67;69;73;74]]></additional_products_IDs>
+							   <additionalProducts_indexes><![CDATA[1;12;undefined;undefined;2;1;-1;-1]]></additionalProducts_indexes>
+							   <BSCombo_TYPE_BILLING><![CDATA[yes_they_are_selected]]></BSCombo_TYPE_BILLING>
+							   <companyName_TYPE_BILLING><![CDATA[BILL COMP NAME]]></companyName_TYPE_BILLING>
+							   <contactName_TYPE_BILLING><![CDATA[BILL CONT NAME]]></contactName_TYPE_BILLING>
+							   <address_1_TYPE_BILLING><![CDATA[BILL ADD 1]]></address_1_TYPE_BILLING>
+							   <address_2_TYPE_BILLING><![CDATA[BILL ADD 2]]></address_2_TYPE_BILLING>
+							   <address_3_TYPE_BILLING><![CDATA[BILL ADD 3]]></address_3_TYPE_BILLING>
+							   <city_TYPE_BILLING><![CDATA[BILL CITY]]></city_TYPE_BILLING>
+							   <CBProvince_TYPE_BILLING><![CDATA[QC]]></CBProvince_TYPE_BILLING>
+							   <province_TYPE_BILLING><![CDATA[QC]]></province_TYPE_BILLING>
+							   <postalCode_TYPE_BILLING><![CDATA[T2C2A2]]></postalCode_TYPE_BILLING>
+							   <phone_TYPE_BILLING><![CDATA[BILL PHONE]]></phone_TYPE_BILLING>
+							   <email_TYPE_BILLING><![CDATA[BILL EMAIL]]></email_TYPE_BILLING>
+							   <isBillToAlternativeName><![CDATA[BILL CONT NAME]]></isBillToAlternativeName>
+							   <BSCombo_TYPE_SHIPING><![CDATA[yes_they_are_selected]]></BSCombo_TYPE_SHIPING>
+							   <SameAsBillingDetails><![CDATA[true]]></SameAsBillingDetails>
+							   <residentialAddressBSM><![CDATA[false]]></residentialAddressBSM>
+							   <noSignatureRequiredBSM><![CDATA[true]]></noSignatureRequiredBSM>
+							   <companyName_TYPE_SHIPING><![CDATA[BILL COMP NAME]]></companyName_TYPE_SHIPING>
+							   <contactName_TYPE_SHIPING><![CDATA[BILL CONT NAME]]></contactName_TYPE_SHIPING>
+							   <address_1_TYPE_SHIPING><![CDATA[BILL ADD 1]]></address_1_TYPE_SHIPING>
+							   <address_2_TYPE_SHIPING><![CDATA[BILL ADD 2]]></address_2_TYPE_SHIPING>
+							   <address_3_TYPE_SHIPING><![CDATA[BILL ADD 3]]></address_3_TYPE_SHIPING>
+							   <city_TYPE_SHIPING><![CDATA[BILL CITY]]></city_TYPE_SHIPING>
+							   <CBProvince_TYPE_SHIPING><![CDATA[QC]]></CBProvince_TYPE_SHIPING>
+							   <province_TYPE_SHIPING><![CDATA[QC]]></province_TYPE_SHIPING>
+							   <postalCode_TYPE_SHIPING><![CDATA[T2C2A2]]></postalCode_TYPE_SHIPING>
+							   <phone_TYPE_SHIPING><![CDATA[BILL PHONE]]></phone_TYPE_SHIPING>
+							   <email_TYPE_SHIPING><![CDATA[BILL EMAIL]]></email_TYPE_SHIPING>
+							   <isShipToDifferentAddress><![CDATA[BILL CONT NAME]]></isShipToDifferentAddress>
+							   <MOP_directDebit_signature><![CDATA[]]></MOP_directDebit_signature>
+							   <MOP_cardNum><![CDATA[1324132413241324]]></MOP_cardNum>
+							   <MOPcsv><![CDATA[123]]></MOPcsv>
+							   <mopINPUT><![CDATA[Mastercard]]></mopINPUT>
+							   <mopExpirtyMonthINPUT><![CDATA[Feb]]></mopExpirtyMonthINPUT>
+							   <mopExpirtyYearINPUT><![CDATA[2013]]></mopExpirtyYearINPUT>
+							   <mopCallMe><![CDATA[false]]></mopCallMe>
+							   <AIRMILES_cardNumber><![CDATA[12341324132]]></AIRMILES_cardNumber>
+							   <deliveryTypeRadioOption><![CDATA[on]]></deliveryTypeRadioOption>
+							   <deliveryINPUT><![CDATA[Standard 8-10 Business Days]]></deliveryINPUT>
+							   <sub_total_products_INPUT><![CDATA[446.9]]></sub_total_products_INPUT>
+							   <shipping_price_INPUT><![CDATA[0]]></shipping_price_INPUT>
+							   <sub_total_taxes_INPUT><![CDATA[22.35]]></sub_total_taxes_INPUT>
+							   <grand_total_INPUT><![CDATA[469.25]]></grand_total_INPUT>
+							   <percentTaxesInput><![CDATA[5]]></percentTaxesInput>
+							   <sendPDFandEmail><![CDATA[SEND_EMAIL]]></sendPDFandEmail>
+							   <chequeType><![CDATA[manual]]></chequeType>
+							   <orderNumber><![CDATA[M5369]]></orderNumber>
+							   
+			</source>

@@ -1,0 +1,27 @@
+color, quantity, price, and the related products
+everything else we can get later in the checkout process
+it would be nice if the related products like deposit slips, binders, stamps etc.. could all be added off that one page
+and if it can show a subtotal for the products like the pdf file shows
+it would be nice if they can choose cheque style.." TOP, MIDDLE" or BOTTTOM"
+and then color, so the image on the left chagnes based on those selections.
+
+Here are the steps were looking for
+1) go to this page select products and see prices
+2) go to checkout page using this zencart module
+https://www.numinix.com/zen-cart-modules/checkout/fast-and-easy-checkout-for-zen-cart?zenid=9015488aaddd9ee2b001d283803d3c4d
+on that page they can register as a new user or checkout as a guest or login if they are a past customer
+3) once registered or logged in they are taken through the checkout process for billing/shipping and payment
+
+For shipping we will need to use all 3 shipping modules... Canpar, Canada Post & UPS
+For the payment we need to use the zencart modules BEANSTREAM for interac, and Blue pay for credit card
+also on the checkout page, we will need the option for them to pay for RUSH service $25
+
+once they have made their shipping choices and paid via beanstream or blue pay. I then would want them taken to a new page that gives them 3 options to submit their cheque deatils
+on that page they will be able to 1) Scan and email a copy of your current cheque (with a box where they can enter any changes)
+2) Go fill in the online order form (that we use now)
+3) Fax us a copy of their current cheque
+
+Also, once they have paid for their order, i want to use the PDF invoice module in Zencart, so they can print of their invoice and so we can have a copy of it as well... there are zencart modules for that
+im assuming that zencart tracks all orders online, and that order and shipping details can be downloaded in .csv files?
+Anyways... so that is the process we are trying to do
+So instead of filling in the online order form 1st, we would have them fill it in after they have checkout out etc...
