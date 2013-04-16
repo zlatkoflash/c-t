@@ -1,19 +1,19 @@
 <source>
 			<fso_admin_submit_additions><![CDATA[1,0,0]]></fso_admin_submit_additions>
+							   <order_action_type><![CDATA[update]]></order_action_type>
 							   <sendToPrintNowEmail><![CDATA[orders@printnow.ca]]></sendToPrintNowEmail>
 							   <admin_second_email_for_customer><![CDATA[2d email for customer]]></admin_second_email_for_customer>
 							   <sales_person_code_show_cb><![CDATA[A]]></sales_person_code_show_cb>
 							   <order_entered_by_show_cb><![CDATA[A]]></order_entered_by_show_cb>
 							   <sales_person_code_order_entered_by><![CDATA[1;IN11R;2;HJ]]></sales_person_code_order_entered_by>
-							   <order_submited_date_order_updated_date><![CDATA[;]]></order_submited_date_order_updated_date>
+							   <order_submited_date_order_updated_date><![CDATA[10000000;]]></order_submited_date_order_updated_date>
 							   <compInfoQuantity><![CDATA[250 + 75 FREE $149.00]]></compInfoQuantity>
 							   <CICompanyName><![CDATA[asdasd]]></CICompanyName>
 							   <CIContactName><![CDATA[asdfsdf]]></CIContactName>
 							   <CIPhone><![CDATA[asdasd]]></CIPhone>
 							   <CIEmail><![CDATA[zlatkoflash@yahoo.com]]></CIEmail>
 							   <CIQuestionsAndCommentsTA><![CDATA[]]></CIQuestionsAndCommentsTA>
-                                                           <special_designation>XXXX</special_designation>
-                                                           <CIQuestionsAndComments><![CDATA[]]></CIQuestionsAndComments>
+							   <CIQuestionsAndComments><![CDATA[]]></CIQuestionsAndComments>
 							   <chequePosition><![CDATA[3]]></chequePosition>
 							   <hologram_U_P_no_yes><![CDATA[U]]></hologram_U_P_no_yes>
 							   <chequeColor><![CDATA[1;http://localhost/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/images/backgrounds/1.jpg;DARK BLUE]]></chequeColor>
@@ -28,10 +28,9 @@
 							   <cheque_logo_proof_required><![CDATA[no]]></cheque_logo_proof_required>
 							   <CILogoType><![CDATA[-1]]></CILogoType>
 							   <compInfoBrunchNumber><![CDATA[00000]]></compInfoBrunchNumber>
-                                                           <date_for_new_submited_order>1138618081</date_for_new_submited_order>
-                                                           <compInfoTransitNumber><![CDATA[001]]></compInfoTransitNumber>
-							   <cb_ovverride_default_bank_layout><![CDATA[true]]></cb_ovverride_default_bank_layout>
+							   <compInfoTransitNumber><![CDATA[001]]></compInfoTransitNumber>
 							   <compInfoAccountNumber><![CDATA[1]]></compInfoAccountNumber>
+							   <cb_ovverride_default_bank_layout><![CDATA[true]]></cb_ovverride_default_bank_layout>
 							   <compInfoBankName><![CDATA[]]></compInfoBankName>
 							   <compInfoBankAddress1><![CDATA[]]></compInfoBankAddress1>
 							   <compInfoBankAddress2><![CDATA[]]></compInfoBankAddress2>
@@ -44,6 +43,7 @@
 							   <compInfoSoftware><![CDATA[2]]></compInfoSoftware>
 							   <compInfoShowStartNumber><![CDATA[on]]></compInfoShowStartNumber>
 							   <compInfoStartAt><![CDATA[000000]]></compInfoStartAt>
+							   <special_designation><![CDATA[XXXX]]></special_designation>
 							   <compInfoStartAtTrueOrFalse><![CDATA[true]]></compInfoStartAtTrueOrFalse>
 							   <isThereSecondSignature><![CDATA[SIGNATURE_x1]]></isThereSecondSignature>
 							   <softwareINPUT><![CDATA[Buisiness Visions;2]]></softwareINPUT>
@@ -98,10 +98,10 @@
 							   <shipping_charge_select_company><![CDATA[CANADAPOST]]></shipping_charge_select_company>
 							   <shipping_price_INPUT_company><![CDATA[CANADAPOST]]></shipping_price_INPUT_company>
 							   <deliveryINPUT><![CDATA[Standard 8-10 Business Days]]></deliveryINPUT>
-							   <sub_total_products_INPUT><![CDATA[194]]></sub_total_products_INPUT>
-							   <shipping_price_INPUT><![CDATA[15]]></shipping_price_INPUT>
-							   <sub_total_taxes_INPUT><![CDATA[23.28]]></sub_total_taxes_INPUT>
-							   <grand_total_INPUT><![CDATA[217.28]]></grand_total_INPUT>
+							   <sub_total_products_INPUT><![CDATA[179]]></sub_total_products_INPUT>
+							   <shipping_price_INPUT><![CDATA[0]]></shipping_price_INPUT>
+							   <sub_total_taxes_INPUT><![CDATA[21.48]]></sub_total_taxes_INPUT>
+							   <grand_total_INPUT><![CDATA[200.48]]></grand_total_INPUT>
 							   <percentTaxesInput><![CDATA[12]]></percentTaxesInput>
 							   <authorization_number><![CDATA[]]></authorization_number>
 							   <batch_number><![CDATA[]]></batch_number>

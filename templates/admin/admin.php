@@ -351,33 +351,34 @@
                                              $variables[0] = 1000*$_POST["date_for_new_submited_order"];
                                              ?>
                                                  $("#order_submited_date_order_updated_date").val( "<?php print $variables[0]; ?>;<?php print $variables[1]; ?>" );
+                                                 //alert(12);
                                                  <?php
-									} ?>
+									}    
+                                                ?>
+                                                $("#order_submited_date_order_updated_date").val( "<?php print $variables[0]; ?>;<?php print $variables[1]; ?>" );
 									<?php if($variables[0] != ""){ ?>
 									$("#order_submited_date").datepicker("setDate", new Date(<?php print $variables[0]; ?>) );
 									<?php } ?>
 									<?php if($variables[1] != ""){ ?>
 									$("#order_updated_date").datepicker("setDate", new Date(<?php print $variables[1]; ?>) );
 									<?php } ?>
-									
+									function set_submit_update_date()
+                                                                        {
+										var date_order_submited_date = $( "#order_submited_date" ).datepicker( "getDate" );
+										var date_order_updated_date = $( "#order_updated_date" ).datepicker( "getDate" );
+										var dateValue = ";";
+										if(date_order_submited_date != null){dateValue=date_order_submited_date.getTime()+dateValue;}
+										if(date_order_updated_date != null){dateValue=dateValue+date_order_updated_date.getTime();}
+										$("#order_submited_date_order_updated_date").val(dateValue);
+                                                                        }
 									$( "#order_submited_date" ).change(function(e) 
 									{
-										var date_order_submited_date = $( "#order_submited_date" ).datepicker( "getDate" );
-										var date_order_updated_date = $( "#order_updated_date" ).datepicker( "getDate" );
-										var dateValue = ";";
-										if(date_order_submited_date != null){dateValue=date_order_submited_date.getTime()+dateValue;}
-										if(date_order_updated_date != null){dateValue=dateValue+date_order_updated_date.getTime();}
-										$("#order_submited_date_order_updated_date").val(dateValue);
-	                                });
+                                                                            set_submit_update_date();
+                                                                        });
 									$( "#order_updated_date" ).change(function(e) 
 									{
-										var date_order_submited_date = $( "#order_submited_date" ).datepicker( "getDate" );
-										var date_order_updated_date = $( "#order_updated_date" ).datepicker( "getDate" );
-										var dateValue = ";";
-										if(date_order_submited_date != null){dateValue=date_order_submited_date.getTime()+dateValue;}
-										if(date_order_updated_date != null){dateValue=dateValue+date_order_updated_date.getTime();}
-										$("#order_submited_date_order_updated_date").val(dateValue);
-	                                });
+                                                                            set_submit_update_date();
+                                                                        });
 	                            </script>
 	                            <script>
 	                                function OrderNumber()
@@ -606,7 +607,8 @@
 			foreach($_POST as $variable=>$value)
 			{
 				if(
-				   $variable != "email_discount_code"
+				   $variable != "email_discount_code" && 
+                                        $variable != "order_submited_date_order_updated_date"
 				   )
 				{
 				?>
