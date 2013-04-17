@@ -1759,7 +1759,7 @@
 							switch(selectedProvinceOrStateOnShiping)
 							{
 								case "AB":{percent=5/100;}break;
-								case "BC":{percent=12/100;}break;
+								case "BC":{percent=5/100;}break;
 								case "MB":{percent=5/100;}break;
 								case "NB":{percent=13/100;}break;
 								case "NL":{percent=13/100;}break;
