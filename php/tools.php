@@ -10,6 +10,7 @@
 	if(!class_exists("HELPWordpress")){require_once("tools/help.php");}
 	if(!class_exists("User")){require_once("tools/user.php");}
 	require_once("settings_moderator.php");
+        require_once 'taxes_moderator.php';
 	
 	$user = new User();
 	

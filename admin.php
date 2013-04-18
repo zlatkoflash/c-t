@@ -25,7 +25,7 @@
 		<?php
 		require_once('search.php');
 	}
-	
+        
 	//This form is for editing details of the products
 	ProductsModerator::initTheHTMLForm();
 	SettingsModerator::init_form();
