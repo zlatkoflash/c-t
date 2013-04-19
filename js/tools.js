@@ -1,3 +1,29 @@
+function Eventor()
+{
+    this.events = [];
+    this.add_event = function(type, f)
+    {
+        this.set_events_array(type);
+        this.events[type].push(f);
+    }
+    this.remove_event = function(type, f)
+    {
+    }
+    this.dispatch_event = function(type, data)
+    {
+        this.set_events_array(type);
+        for (var i = 0; i < this.events[type].length; i++)
+        {
+            this.events[type][i](data);
+        }
+    }
+    this.set_events_array = function(type)
+    {
+        if (this.events[type] == null)
+            this.events[type] = [];
+    }
+}
+
 function HELPER()
 {
 	this.arrayFUNCTIONs = [];

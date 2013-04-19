@@ -465,6 +465,14 @@ class AdminEditorAdditional {
         //self::$IS_FOR_SHOWING_ORDER_FOR_ADMIN
         TaxesModerator::$TaxesModerator = new TaxesModerator($_POST["fso_order_number"]);
         TaxesModerator::$TaxesModerator->init_html_editor();
+        ?>
+        <script>
+            TaxesModerator.TM.add_event( TaxesModerator.ON_TAX_CHANGED, function(e)
+            {
+                OrderTotalAmount.OTA.calculate();
+            });
+        </script>            
+        <?php
         
         $RightFObject->showMe();
         ?>

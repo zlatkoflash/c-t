@@ -173,6 +173,17 @@ class TaxesModerator
         }
         this.update = function()
         {
+            if(isNaN(parseFloat($("#tax_shipping_form_moderator").val())) || 
+               isNaN(parseFloat($("#tax_absolute_shipping_form_moderator").val())) || 
+               isNaN(parseFloat($("#tax_discount_shipping_form_moderator").val())))
+       {
+           alert("Taxes inputs are wrong.");
+            return;
+       }
+            this.array_taxes[$("#CBProvince_TYPE_SHIPING").val()].tax_base = parseFloat($("#tax_shipping_form_moderator").val());
+            this.array_taxes[$("#CBProvince_TYPE_SHIPING").val()].discount = parseFloat($("#tax_discount_shipping_form_moderator").val());
+            //this.array_taxes[$("#CBProvince_TYPE_SHIPING").val()].tax_base = parseFloat($("#tax_shipping_form_moderator").val());
+        
             //OrderNumber.ORDER_NUMBER_BASE
             var object_update = 
             {
@@ -192,9 +203,12 @@ class TaxesModerator
             $.post(settings.URL_TO_PHP_PRODUCTS, object_update, function(data)
             {
                 //alert(data)
+                TaxesModerator.TM.dispatch_event(TaxesModerator.ON_TAX_CHANGED, {});
             });
         }
     }
+    TaxesModerator.ON_TAX_CHANGED = "ON_TAX_CHANGED";
+    TaxesModerator.prototype = new Eventor();
     TaxesModerator.TM = new TaxesModerator( <?php if($this->IS_FOR_DISCOUNT)print "true"; ?> );
     <?php
     for($i=0;$i<count($this->array_provinces_labels);$i++)
