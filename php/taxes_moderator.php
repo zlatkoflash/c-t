@@ -161,8 +161,8 @@ class TaxesModerator
             }
             else if($(input_key_up).attr("id") == "tax_absolute_shipping_form_moderator")
             {
-                var discount_temp = parseFloat($("#tax_absolute_shipping_form_moderator").val())
-                        -this.tax_base();
+                var discount_temp = 0-parseFloat($("#tax_absolute_shipping_form_moderator").val())
+                        +this.tax_base();
                 if(isNaN(discount_temp))
                 {
                     discount_temp = 0;
