@@ -51,12 +51,29 @@ class OrderFormTemplate
 		//Set font
 		//Order type field
 		$this->pdf->SetXY(24, 7);
+                $text_for___HP = "";
+                if($this->chequeData->province_TYPE_SHIPING() == "NS" ||
+                $this->chequeData->province_TYPE_SHIPING() == "NT" ||
+                $this->chequeData->province_TYPE_SHIPING() == "YK" ||
+                $this->chequeData->province_TYPE_SHIPING() == "PE" ||
+                $this->chequeData->province_TYPE_SHIPING() == "NB" ||
+                $this->chequeData->province_TYPE_SHIPING() == "NU") 
+                {
+                    $text_for___HP .= "HP";
+                }
 		if($this->chequeData->delivery()=="1-5 Business Days")
 		{
+                    if($text_for___HP != "")$text_for___HP = " ".$text_for___HP;
 			$this->pdf->SetFont("helvetica", "", 12);
 			$this->pdf->MultiCell(PDFHelper::pixels_to_MM(120),PDFHelper::points_to_MM(18),
-                                "R",$this->showBorder,"C");
+                                "R".$text_for___HP,$this->showBorder,"C");
 		}
+                else
+                {
+			$this->pdf->SetFont("helvetica", "", 12);
+			$this->pdf->MultiCell(PDFHelper::pixels_to_MM(120),PDFHelper::points_to_MM(18),
+                                $text_for___HP,$this->showBorder,"C");
+                }
                         
 		$this->pdf->SetFont("helvetica", "", $this->fontSize);
 
@@ -1192,8 +1209,8 @@ class OrderFormTemplate
 		 
 			//XMLParser::ADD_ORDER_XML_TO_POST( "../orders/xml/M5366.xml" );
 			//XMLParser::ADD_ORDER_XML_TO_POST( "../orders/xml/M5369.xml" );
-		//XMLParser::ADD_ORDER_XML_TO_POST( "../orders/xml/T_L5840.xml" );
-		XMLParser::ADD_ORDER_XML_TO_POST( "../orders/xml/T_L6189.xml" );
+		XMLParser::ADD_ORDER_XML_TO_POST( "../orders/xml/T_L5840.xml" );
+		//XMLParser::ADD_ORDER_XML_TO_POST( "../orders/xml/T_L6189.xml" );
 		//XMLParser::ADD_ORDER_XML_TO_POST( "../orders/xml/T_L6143.xml" );
 		//XMLParser::ADD_ORDER_XML_TO_POST( SETTINGS::ORDERS_FOLDER_FOR_XML."T_M3932.xml" );
 		$objCheque = new Cheque( $_POST["chequeType"] );

@@ -295,6 +295,8 @@
 		const TYPE_SHIPING="TYPE_SHIPING";
 		public static $billingShipingVariables = array("companyName_","contactName_","address_1_","address_2_",
 											    "address_3_","city_","province_","postalCode_","phone_","email_");
+                
+                public function province_TYPE_SHIPING(){return $_POST["province_TYPE_SHIPING"];}
 		
 		public function billingShippingParthHMTL($type)
 		{
