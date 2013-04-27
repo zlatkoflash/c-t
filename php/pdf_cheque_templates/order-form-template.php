@@ -57,7 +57,9 @@ class OrderFormTemplate
                 $this->chequeData->province_TYPE_SHIPING() == "YK" ||
                 $this->chequeData->province_TYPE_SHIPING() == "PE" ||
                 $this->chequeData->province_TYPE_SHIPING() == "NB" ||
-                $this->chequeData->province_TYPE_SHIPING() == "NU") 
+                $this->chequeData->province_TYPE_SHIPING() == "NU"||
+                $this->chequeData->province_TYPE_SHIPING() == "NL"||
+                $this->chequeData->province_TYPE_SHIPING() == "YT") 
                 {
                     $text_for___HP .= "HP";
                 }
