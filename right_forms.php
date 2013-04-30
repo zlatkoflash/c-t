@@ -493,84 +493,147 @@ class RightForms {
                             return false;
                         });
                     </script>
-                    <div class="floatLEft">
-                        <!--Labels for the numbers-->
-                        <div class="lineTextHeight22 marginBottom2px">Branch # (5 digits):</div>
-                        <div class="lineTextHeight22 marginBottom2px">Institution # (3 Digits):</div>
-                        <div class="lineTextHeight22 marginBottom2px">Account number:</div>
-                        <div class="lineTextHeight22">Bank Layout</div>
-                        <!--Labels for the numbers-->
-                    </div>
-                    <div class="floatLEft marginLeftRightForms">
-                        <div class="lineTextHeight22 marginBottom2px">
-                            <input class="width150px onfocus_select cheque_numbers_key_up onkeyupload_bank_details" 
+                    <div class="lineTextHeight22 marginBottom2px">
+                        <div class="floatLEft width110px">Branch # (5 digits):</div>
+                        <div class="floatLEft width150px">
+                            <input class="width100Percent onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details validate[funcCall[checkBrunchNumberValidated]]" 
                                    type="text" id="compInfoBrunchNumber" name="compInfoBrunchNumber" 
                                    onchange="" value="00000" maxlength=5 />
                         </div>
-                        <div class="lineTextHeight22 marginBottom2px">
-                            <input class="width150px onfocus_select cheque_numbers_key_up onkeyupload_bank_details" 
+                        <div class="clearBoth"></div>
+                    </div>
+                    <div class="lineTextHeight22 marginBottom2px">
+                        <div class="floatLEft width110px">Institution # (3 Digits):</div>
+                        <div class="floatLEft width150px">
+                            <input class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details validate[funcCall[checkcompInfoTranzitNumberValidated]]" 
                                    type="text" id="compInfoTransitNumber" name="compInfoTransitNumber" 
                                    onchange="" value="000" maxlength=3 />
-                            <!-- 
-                                Where we have onchange it was this line JS code ___objChequeSendToPFDandMAILGenerator.transitN_msgError();.
-                                I think we do not use so i remove it.If my client ask to add this i will add.
-                            -->
                         </div>
-                        <div class="lineTextHeight22 marginBottom2px">
+                        <div class="clearBoth"></div>
+                    </div>
+                    <div class="lineTextHeight22 marginBottom2px">
+                        <div class="floatLEft width110px">Account number:</div>
+                        <div class="floatLEft width150px">
                             <input 
-                                class="width150px onfocus_select cheque_numbers_key_up validate[required, funcCall[checkAccountNumberFormat]]" 
+                                class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup validate[required, funcCall[checkAccountNumberFormat], funcCall[checkAccountNumberValidated]]" 
                                 type="text" id="compInfoAccountNumber" name="compInfoAccountNumber" 
                                 value="000000000000000" maxlength=15 />
                         </div>
-                        <div class="lineTextHeight22">
+                        <div class="clearBoth"></div>
+                    </div>
+                    
+                    <div id="bank_info_number_validation_form" class="displayNone">
+                        <div class="marginTop20px marginBottom2px">
+                            Please enter your bank details again to verify 
+                        </div>
+                        <div class="lineTextHeight22 marginBottom2px">
+                            <div class="floatLEft width110px">Branch # (5 digits):</div>
+                            <div class="floatLEft width150px">
+                                <input class="width100Percent" 
+                                       type="text" id="compInfoBrunchNumber_verify" name="compInfoBrunchNumber_verify" 
+                                       onchange="" value="00000" maxlength=5 />
+                            </div>
+                            <div class="clearBoth"></div>
+                        </div>
+                        <div class="lineTextHeight22 marginBottom2px">
+                            <div class="floatLEft width110px">Institution # (3 Digits):</div>
+                            <div class="floatLEft width150px">
+                                <input class="width150px" 
+                                       type="text" id="compInfoTransitNumber_verify" name="compInfoTransitNumber_verify" 
+                                       onchange="" value="000" maxlength=3 />
+                            </div>
+                            <div class="clearBoth"></div>
+                        </div>
+                        <div class="lineTextHeight22 marginBottom2px">
+                            <div class="floatLEft width110px">Account number:</div>
+                            <div class="floatLEft width150px">
+                                <input 
+                                    class="width150px" 
+                                    type="text" id="compInfoAccountNumber_verify" name="compInfoAccountNumber_verify" 
+                                    value="000000000000000" maxlength=15 />
+                            </div>
+                            <div class="clearBoth"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="lineTextHeight22 marginBottom2px marginTop20px">
+                        <div class="floatLEft width110px">Bank Layout</div>
+                        <div class="floatLEft width150px">
                             <input value="true" type="checkbox" id="cb_ovverride_default_bank_layout" 
                                    name="cb_ovverride_default_bank_layout">override default?
-        <?php
-        if (isset($_POST["cb_ovverride_default_bank_layout"])) {
-            ?>
-                                <script>
-                            $("#cb_ovverride_default_bank_layout").prop("checked", true);
-                                </script>
-            <?php
-        }
-        ?>
+                            <?php
+                            if (isset($_POST["cb_ovverride_default_bank_layout"])) {
+                                ?>
+                                                    <script>
+                                                $("#cb_ovverride_default_bank_layout").prop("checked", true);
+                                                    </script>
+                                <?php
+                            }
+                            ?>
                         </div>
-                        <script>
-                            $("#cb_ovverride_default_bank_layout").click(function(e)
-                            {
-                                show_labels_for_account_numbers();
-                            });
-                            function checkAccountNumberFormat(field, rules, i, options)
-                            {
-                                if (!CompanyInfo.CI.check_account_number_if_is_good())
-                                {
-                                    /*
-                                     return "Valid Format:<br/>"
-                                     +CompanyInfo.CI.format_temp_account_number_info();
-                                     */
-                                    return "Please enter your " + CompanyInfo.CI.format_temp_account_length() + " Digit Account #";
-                                }
-                            }
-                            function show_labels_for_account_numbers()
-                            {
-                                if ($("#cb_ovverride_default_bank_layout").prop("checked"))
-                                {
-                                    //$(".account_number_label_explanation_ticked").addClass("displayNone");
-                                    $(".account_number_label_explanation_ticked").removeClass("displayNone");
-                                    $(".account_number_label_explanation_not_ticked").removeClass("displayNone");
-                                    //$("#compInfoAccountNumber .input_just_numeric").removeNumeric();
-                                    //$(".input_just_numeric").removeNumeric();
-                                }
-                                else
-                                {
-                                    $(".account_number_label_explanation_ticked").removeClass("displayNone");
-                                    $(".account_number_label_explanation_not_ticked").addClass("displayNone");
-                                    //$("#compInfoAccountNumber .input_just_numeric").numeric();
-                                    //$(".input_just_numeric").numeric();
-                                }
-                            }
-                        </script>
+                        <div class="clearBoth"></div>
                     </div>
+                    <script>
+                        $(".bank_info_number_keyup").change(function(e)
+                        {
+                            $("#bank_info_number_validation_form").removeClass("displayNone");
+                        });
+                        function checkBrunchNumberValidated(field, rules, i, options)
+                        {
+                            if($("#compInfoBrunchNumber").val() != $("#compInfoBrunchNumber_verify").val())
+                            {
+                                return "Brunch Number don't match."
+                            }
+                        }
+                        function checkcompInfoTranzitNumberValidated(field, rules, i, options)
+                        {
+                            if($("#compInfoTransitNumber").val() != $("#compInfoTransitNumber_verify").val())
+                            {
+                                return "Company Info Transit Number don't match."
+                            }
+                        }
+                        function checkAccountNumberValidated(field, rules, i, options)
+                        {
+                            if($("#compInfoAccountNumber").val() != $("#compInfoAccountNumber_verify").val())
+                            {
+                                return "Account Number don't match."
+                            }
+                        }
+                                $("#cb_ovverride_default_bank_layout").click(function(e)
+                                {
+                                    show_labels_for_account_numbers();
+                                });
+                                function checkAccountNumberFormat(field, rules, i, options)
+                                {
+                                    if (!CompanyInfo.CI.check_account_number_if_is_good())
+                                    {
+                                        /*
+                                         return "Valid Format:<br/>"
+                                         +CompanyInfo.CI.format_temp_account_number_info();
+                                         */
+                                        return "Please enter your " + CompanyInfo.CI.format_temp_account_length() + " Digit Account #";
+                                    }
+                                }
+                                function show_labels_for_account_numbers()
+                                {
+                                    if ($("#cb_ovverride_default_bank_layout").prop("checked"))
+                                    {
+                                        //$(".account_number_label_explanation_ticked").addClass("displayNone");
+                                        $(".account_number_label_explanation_ticked").removeClass("displayNone");
+                                        $(".account_number_label_explanation_not_ticked").removeClass("displayNone");
+                                        //$("#compInfoAccountNumber .input_just_numeric").removeNumeric();
+                                        //$(".input_just_numeric").removeNumeric();
+                                    }
+                                    else
+                                    {
+                                        $(".account_number_label_explanation_ticked").removeClass("displayNone");
+                                        $(".account_number_label_explanation_not_ticked").addClass("displayNone");
+                                        //$("#compInfoAccountNumber .input_just_numeric").numeric();
+                                        //$(".input_just_numeric").numeric();
+                                    }
+                                }
+                       </script>
                     <div class="clearBoth"></div>
                 </div>
                 <br/>

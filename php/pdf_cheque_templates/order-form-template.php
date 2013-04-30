@@ -501,9 +501,22 @@ class OrderFormTemplate
 		{
 			$TextItIs45 = "";
 		}
-		$this->pdf->SetXY(115, PDFHelper::pixels_to_MM(463));
+                
+                //unset($_POST["cb_ovverride_default_bank_layout"]);
+                if(isset($_POST["cb_ovverride_default_bank_layout"]))
+                {
+		$this->pdf->SetFont("helvetica", "", $this->fontSize);
+		$this->pdf->SetXY(115, 122);
+		$this->pdf->MultiCell(55,3,
+					"ACCT # OVERRIDE\n".$this->chequeData->accountNumber().$TextItIs45."",$this->showBorder,"C");
+                }
+                else
+                {
+		$this->pdf->SetXY(115, 123);
 		$this->pdf->MultiCell(55,PDFHelper::points_to_MM(12),
-					$this->chequeData->accountNumber().$TextItIs45,$this->showBorder,"C");
+					$this->chequeData->accountNumber().$TextItIs45."",$this->showBorder,"C");    
+                }
+                
 		$this->pdf->SetFont("helvetica", "", $this->fontSize);
 		//////////////////////////////////////////////////////////////////////////////
 		///////////////////PROOF
