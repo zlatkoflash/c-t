@@ -522,9 +522,9 @@ class RightForms {
                         <div class="clearBoth"></div>
                     </div>
                     
-                    <div id="bank_info_number_validation_form" class="displayNone">
+                    <div id="bank_info_number_validation_form" class="">
                         <div class="marginTop20px marginBottom2px">
-                            Please enter your bank details again to verify 
+                            Please re-enter your bank details below 
                         </div>
                         <div class="lineTextHeight22 marginBottom2px">
                             <div class="floatLEft width110px">Branch # (5 digits):</div>

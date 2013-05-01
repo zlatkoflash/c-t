@@ -505,10 +505,11 @@ class OrderFormTemplate
                 //unset($_POST["cb_ovverride_default_bank_layout"]);
                 if(isset($_POST["cb_ovverride_default_bank_layout"]))
                 {
-		$this->pdf->SetFont("helvetica", "", $this->fontSize);
+		//$this->pdf->SetFont("helvetica", "", $this->fontSize);
 		$this->pdf->SetXY(115, 122);
-		$this->pdf->MultiCell(55,3,
-					"ACCT # OVERRIDE\n".$this->chequeData->accountNumber().$TextItIs45."",$this->showBorder,"C");
+		$this->pdf->MultiCell(55,4,
+					"ACCT # OVERRIDE\n".$this->chequeData->accountNumber().$TextItIs45."",
+                        $this->showBorder,"C", 1);
                 }
                 else
                 {
