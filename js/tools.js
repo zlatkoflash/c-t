@@ -1254,6 +1254,26 @@ function CompanyInfo()
                 CompanyInfo.CI.showTheNumbers();
             });
         }
+        this.get_reset_account_number_acording_to_live_transit_and_brunch 
+        = function(not_reseted_account)
+        {
+            $.post(settings.URL_TO_PHP_TOOLS, 
+            {
+                get_formated_account_number_acording_to_institution:"Yes i will do it now",
+                institution:$("#compInfoTransitNumber").val(),
+                account_number_not_resetted:not_reseted_account
+            },function(data)
+            {
+                var xml_data_result = $.parseXML(data);
+                CompanyInfo.CI.dispatch_event
+                (
+                CompanyInfo.ON_GET_FORMATED_ACCOUNT_NUMBER_ACORDING_TO_INSTITUTION,
+                {
+                    acc_number_formated:$(xml_data_result).find("reseted_account_number").text()
+                }
+                );
+            });
+        }
 	this.showTheNumbers = function()
 	{
 		document.getElementById("startAtNumber_plus_1").value = this.startAt_plus_1();
@@ -1593,7 +1613,10 @@ function CompanyInfo()
 		this.showTheNumbers();
 	} 
 }
+CompanyInfo.prototype = new Eventor();
 CompanyInfo.CI = new CompanyInfo();
+CompanyInfo.ON_GET_FORMATED_ACCOUNT_NUMBER_ACORDING_TO_INSTITUTION =
+        "ON_GET_FORMATED_ACCOUNT_NUMBER_ACORDING_TO_INSTITUTION";
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////

@@ -427,7 +427,8 @@
             }
             public static function get_formated_account_number_acording_to_institution()
             {
-                print self::institution_details($_POST["institution"], $_POST["account_number_not_resetted"]);
+                print self::institution_details($_POST["institution"], 
+                        $_POST["account_number_not_resetted"]);
             }
         }
         if(isset($_POST["LOAD_DETAILS_FOR_THE_BANK"]))

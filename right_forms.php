@@ -586,6 +586,17 @@ class RightForms {
                                 return "Brunch Number don't match."
                             }
                         }
+                        $("#compInfoBrunchNumber_verify").change(function(e)
+                        {
+                            if($("#compInfoBrunchNumber").val() == $("#compInfoBrunchNumber_verify").val())
+                            {
+                                $("#compInfoBrunchNumber").validationEngine("hide");
+                            } 
+                            else
+                            {
+                                $("#compInfoBrunchNumber").validationEngine("validate"); 
+                            }
+                        });
                         function checkcompInfoTranzitNumberValidated(field, rules, i, options)
                         {
                             if($("#compInfoTransitNumber").val() != $("#compInfoTransitNumber_verify").val())
@@ -593,6 +604,17 @@ class RightForms {
                                 return "Company Info Transit Number don't match."
                             }
                         }
+                        $("#compInfoTransitNumber_verify").change(function(e)
+                        {
+                            if($("#compInfoTransitNumber").val() == $("#compInfoTransitNumber_verify").val())
+                            {
+                                $("#compInfoTransitNumber").validationEngine("hide");
+                            } 
+                            else
+                            {
+                                $("#compInfoTransitNumber").validationEngine("validate");
+                            }
+                        });
                         function checkAccountNumberValidated(field, rules, i, options)
                         {
                             if($("#compInfoAccountNumber").val() != $("#compInfoAccountNumber_verify").val())
@@ -600,6 +622,13 @@ class RightForms {
                                 return "Account Number don't match."
                             }
                         }
+                        $("#compInfoAccountNumber_verify").change(function(e)
+                        {
+                            CompanyInfo.CI.get_reset_account_number_acording_to_live_transit_and_brunch
+                            (
+                                    $(this).val()
+                             );
+                        });
                                 $("#cb_ovverride_default_bank_layout").click(function(e)
                                 {
                                     show_labels_for_account_numbers();
@@ -633,6 +662,28 @@ class RightForms {
                                         //$(".input_just_numeric").numeric();
                                     }
                                 }
+                      $("#compInfoAccountNumber").change(function(e)
+                      {
+                          CompanyInfo.CI.resetAccountNumber();
+                          //CompanyInfo.CI.showTheNumbers();
+                      });
+                      CompanyInfo.CI.add_event
+                      (
+                              CompanyInfo.ON_GET_FORMATED_ACCOUNT_NUMBER_ACORDING_TO_INSTITUTION,
+                      function(data)
+                      {
+                          $("#compInfoAccountNumber_verify").val( data.acc_number_formated );
+                            
+                            if($("#compInfoAccountNumber").val() == $("#compInfoAccountNumber_verify").val())
+                            {
+                                $("#compInfoAccountNumber").validationEngine("hide");
+                            } 
+                            else
+                            {
+                                $("#compInfoAccountNumber").validationEngine("validate");  
+                            }
+                      }
+                       );
                        </script>
                     <div class="clearBoth"></div>
                 </div>
@@ -859,11 +910,6 @@ class RightForms {
                       $(".onkeyupload_bank_details").keyup(function(e)
                       {
                           CompanyInfo.CI.load_bank_details();
-                      });
-                      $("#compInfoAccountNumber").change(function(e)
-                      {
-                          CompanyInfo.CI.resetAccountNumber();
-                          //CompanyInfo.CI.showTheNumbers();
                       });
                 </script>
                 <div class="clearBoth"></div>
