@@ -496,7 +496,7 @@ class RightForms {
                     <div class="lineTextHeight22 marginBottom2px">
                         <div class="floatLEft width110px">Branch # (5 digits):</div>
                         <div class="floatLEft width150px">
-                            <input class="width100Percent onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details validate[funcCall[checkBrunchNumberValidated]]" 
+                            <input class="width100Percent onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details" 
                                    type="text" id="compInfoBrunchNumber" name="compInfoBrunchNumber" 
                                    onchange="" value="00000" maxlength=5 />
                         </div>
@@ -505,7 +505,7 @@ class RightForms {
                     <div class="lineTextHeight22 marginBottom2px">
                         <div class="floatLEft width110px">Institution # (3 Digits):</div>
                         <div class="floatLEft width150px">
-                            <input class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details validate[funcCall[checkcompInfoTranzitNumberValidated]]" 
+                            <input class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details" 
                                    type="text" id="compInfoTransitNumber" name="compInfoTransitNumber" 
                                    onchange="" value="000" maxlength=3 />
                         </div>
@@ -515,7 +515,7 @@ class RightForms {
                         <div class="floatLEft width110px">Account number:</div>
                         <div class="floatLEft width150px">
                             <input 
-                                class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup validate[required, funcCall[checkAccountNumberFormat], funcCall[checkAccountNumberValidated]]" 
+                                class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup validate[required, funcCall[checkAccountNumberFormat]]" 
                                 type="text" id="compInfoAccountNumber" name="compInfoAccountNumber" 
                                 value="000000000000000" maxlength=15 />
                         </div>
@@ -524,13 +524,14 @@ class RightForms {
                     
                     <div id="bank_info_number_validation_form" class="">
                         <div class="marginTop20px marginBottom2px">
-                            Please re-enter your bank details below 
+                            <b class="colorRED">Please re-enter your bank details below</b> 
                         </div>
                         <div class="lineTextHeight22 marginBottom2px">
                             <div class="floatLEft width110px">Branch # (5 digits):</div>
                             <div class="floatLEft width150px">
-                                <input class="width100Percent" 
-                                       type="text" id="compInfoBrunchNumber_verify" name="compInfoBrunchNumber_verify" 
+                                <input class="width100Percent validate[funcCall[checkBrunchNumberValidated]]" 
+                                       type="text" id="compInfoBrunchNumber_verify" 
+                                       name="compInfoBrunchNumber_verify"
                                        onchange="" value="00000" maxlength=5 />
                             </div>
                             <div class="clearBoth"></div>
@@ -538,7 +539,7 @@ class RightForms {
                         <div class="lineTextHeight22 marginBottom2px">
                             <div class="floatLEft width110px">Institution # (3 Digits):</div>
                             <div class="floatLEft width150px">
-                                <input class="width150px" 
+                                <input class="width150px  validate[funcCall[checkcompInfoTranzitNumberValidated]]" 
                                        type="text" id="compInfoTransitNumber_verify" name="compInfoTransitNumber_verify" 
                                        onchange="" value="000" maxlength=3 />
                             </div>
@@ -548,8 +549,8 @@ class RightForms {
                             <div class="floatLEft width110px">Account number:</div>
                             <div class="floatLEft width150px">
                                 <input 
-                                    class="width150px" 
-                                    type="text" id="compInfoAccountNumber_verify" name="compInfoAccountNumber_verify" 
+                                    class="width150px validate[required, funcCall[checkAccountNumberValidated]]" 
+                                    type="text" id="compInfoAccountNumber_verify" name="compInfoAccountNumber_verify"
                                     value="000000000000000" maxlength=15 />
                             </div>
                             <div class="clearBoth"></div>
@@ -583,50 +584,58 @@ class RightForms {
                         {
                             if($("#compInfoBrunchNumber").val() != $("#compInfoBrunchNumber_verify").val())
                             {
-                                return "Brunch Number don't match."
+                                return "Brunch Numbers Dont Match."
                             }
                         }
-                        $("#compInfoBrunchNumber_verify").change(function(e)
+                        $("#compInfoBrunchNumber").change(function(e)
                         {
                             if($("#compInfoBrunchNumber").val() == $("#compInfoBrunchNumber_verify").val())
                             {
-                                $("#compInfoBrunchNumber").validationEngine("hide");
+                                $("#compInfoBrunchNumber_verify").validationEngine("hide");
                             } 
                             else
                             {
-                                $("#compInfoBrunchNumber").validationEngine("validate"); 
+                                $("#compInfoBrunchNumber_verify").validationEngine("validate"); 
                             }
                         });
                         function checkcompInfoTranzitNumberValidated(field, rules, i, options)
                         {
                             if($("#compInfoTransitNumber").val() != $("#compInfoTransitNumber_verify").val())
                             {
-                                return "Company Info Transit Number don't match."
+                                return "Institution Numbers Dont Match."
                             }
                         }
-                        $("#compInfoTransitNumber_verify").change(function(e)
+                        $("#compInfoTransitNumber").change(function(e)
                         {
                             if($("#compInfoTransitNumber").val() == $("#compInfoTransitNumber_verify").val())
                             {
-                                $("#compInfoTransitNumber").validationEngine("hide");
+                                $("#compInfoTransitNumber_verify").validationEngine("hide");
                             } 
                             else
                             {
-                                $("#compInfoTransitNumber").validationEngine("validate");
+                                $("#compInfoTransitNumber_verify").validationEngine("validate");
                             }
                         });
                         function checkAccountNumberValidated(field, rules, i, options)
                         {
                             if($("#compInfoAccountNumber").val() != $("#compInfoAccountNumber_verify").val())
                             {
-                                return "Account Number don't match."
+                                return "Account Numbers Dont Match."
                             }
                         }
-                        $("#compInfoAccountNumber_verify").change(function(e)
+                        $("#compInfoAccountNumber").change(function(e)
                         {
+                            if($("#compInfoAccountNumber").val() == $("#compInfoAccountNumber_verify").val())
+                            {
+                                $("#compInfoAccountNumber_verify").validationEngine("hide");
+                            } 
+                            else
+                            {
+                                $("#compInfoAccountNumber_verify").validationEngine("validate");
+                            }
                             CompanyInfo.CI.get_reset_account_number_acording_to_live_transit_and_brunch
                             (
-                                    $(this).val()
+                                    $("#compInfoAccountNumber_verify").val()
                              );
                         });
                                 $("#cb_ovverride_default_bank_layout").click(function(e)
@@ -676,11 +685,11 @@ class RightForms {
                             
                             if($("#compInfoAccountNumber").val() == $("#compInfoAccountNumber_verify").val())
                             {
-                                $("#compInfoAccountNumber").validationEngine("hide");
+                                $("#compInfoAccountNumber_verify").validationEngine("hide");
                             } 
                             else
                             {
-                                $("#compInfoAccountNumber").validationEngine("validate");  
+                                $("#compInfoAccountNumber_verify").validationEngine("validate");  
                             }
                       }
                        );
