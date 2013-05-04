@@ -496,18 +496,18 @@ class RightForms {
                     <div class="lineTextHeight22 marginBottom2px">
                         <div class="floatLEft width110px">Branch # (5 digits):</div>
                         <div class="floatLEft width150px">
-                            <input class="width100Percent onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details" 
+                            <input class="width100Percent cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details" 
                                    type="text" id="compInfoBrunchNumber" name="compInfoBrunchNumber" 
-                                   onchange="" value="00000" maxlength=5 />
+                                   onchange="" value="" maxlength=5 />
                         </div>
                         <div class="clearBoth"></div>
                     </div>
                     <div class="lineTextHeight22 marginBottom2px">
                         <div class="floatLEft width110px">Institution # (3 Digits):</div>
                         <div class="floatLEft width150px">
-                            <input class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details" 
+                            <input class="width150px cheque_numbers_key_up bank_info_number_keyup onkeyupload_bank_details" 
                                    type="text" id="compInfoTransitNumber" name="compInfoTransitNumber" 
-                                   onchange="" value="000" maxlength=3 />
+                                   onchange="" value="" maxlength=3 />
                         </div>
                         <div class="clearBoth"></div>
                     </div>
@@ -515,16 +515,16 @@ class RightForms {
                         <div class="floatLEft width110px">Account number:</div>
                         <div class="floatLEft width150px">
                             <input 
-                                class="width150px onfocus_select cheque_numbers_key_up bank_info_number_keyup validate[required, funcCall[checkAccountNumberFormat]]" 
+                                class="width150px cheque_numbers_key_up bank_info_number_keyup validate[required, funcCall[checkAccountNumberFormat]]" 
                                 type="text" id="compInfoAccountNumber" name="compInfoAccountNumber" 
-                                value="000000000000000" maxlength=15 />
+                                value="" maxlength=15 />
                         </div>
                         <div class="clearBoth"></div>
                     </div>
                     
                     <div id="bank_info_number_validation_form" class="">
                         <div class="marginTop20px marginBottom2px">
-                            <b class="colorRED">Please re-enter your bank details below</b> 
+                            <b class="colorRED">Please verify bank details by re-entering below</b> 
                         </div>
                         <div class="lineTextHeight22 marginBottom2px">
                             <div class="floatLEft width110px">Branch # (5 digits):</div>
@@ -532,7 +532,7 @@ class RightForms {
                                 <input class="width100Percent validate[funcCall[checkBrunchNumberValidated]]" 
                                        type="text" id="compInfoBrunchNumber_verify" 
                                        name="compInfoBrunchNumber_verify"
-                                       onchange="" value="00000" maxlength=5 />
+                                       onchange="" value="" maxlength=5 />
                             </div>
                             <div class="clearBoth"></div>
                         </div>
@@ -541,7 +541,7 @@ class RightForms {
                             <div class="floatLEft width150px">
                                 <input class="width150px  validate[funcCall[checkcompInfoTranzitNumberValidated]]" 
                                        type="text" id="compInfoTransitNumber_verify" name="compInfoTransitNumber_verify" 
-                                       onchange="" value="000" maxlength=3 />
+                                       onchange="" value="" maxlength=3 />
                             </div>
                             <div class="clearBoth"></div>
                         </div>
@@ -551,7 +551,7 @@ class RightForms {
                                 <input 
                                     class="width150px validate[required, funcCall[checkAccountNumberValidated]]" 
                                     type="text" id="compInfoAccountNumber_verify" name="compInfoAccountNumber_verify"
-                                    value="000000000000000" maxlength=15 />
+                                    value="" maxlength=15 />
                             </div>
                             <div class="clearBoth"></div>
                         </div>
@@ -584,7 +584,7 @@ class RightForms {
                         {
                             if($("#compInfoBrunchNumber").val() != $("#compInfoBrunchNumber_verify").val())
                             {
-                                return "Brunch Numbers Dont Match."
+                                return "Branch Numbers Dont Match."
                             }
                         }
                         $("#compInfoBrunchNumber").change(function(e)
