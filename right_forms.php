@@ -633,6 +633,17 @@ class RightForms {
                             {
                                 $("#compInfoAccountNumber_verify").validationEngine("validate");
                             }
+                        });
+                        $("#compInfoAccountNumber_verify").change(function(e)
+                        {
+                            if($("#compInfoAccountNumber").val() == $("#compInfoAccountNumber_verify").val())
+                            {
+                                $("#compInfoAccountNumber_verify").validationEngine("hide");
+                            } 
+                            else
+                            {
+                                $("#compInfoAccountNumber_verify").validationEngine("validate");
+                            }
                             CompanyInfo.CI.get_reset_account_number_acording_to_live_transit_and_brunch
                             (
                                     $("#compInfoAccountNumber_verify").val()
