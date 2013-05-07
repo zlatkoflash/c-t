@@ -515,7 +515,7 @@ class RightForms {
                         <div class="floatLEft width110px">Account number:</div>
                         <div class="floatLEft width150px">
                             <input 
-                                class="width150px cheque_numbers_key_up bank_info_number_keyup validate[required, funcCall[checkAccountNumberFormat]]" 
+                                class="width150px cheque_numbers_key_up bank_info_number_keyup validate[funcCall[checkAccountNumberFormat]]" 
                                 type="text" id="compInfoAccountNumber" name="compInfoAccountNumber" 
                                 value="" maxlength=15 />
                         </div>
@@ -549,7 +549,7 @@ class RightForms {
                             <div class="floatLEft width110px">Account number:</div>
                             <div class="floatLEft width150px">
                                 <input 
-                                    class="width150px validate[required, funcCall[checkAccountNumberValidated]]" 
+                                    class="width150px validate[funcCall[checkAccountNumberValidated]]" 
                                     type="text" id="compInfoAccountNumber_verify" name="compInfoAccountNumber_verify"
                                     value="" maxlength=15 />
                             </div>
