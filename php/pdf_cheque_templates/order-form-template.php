@@ -147,6 +147,17 @@ class OrderFormTemplate
 	{
 		//Set font
 		$this->pdf->SetFont("helvetica", "", $this->fontSize);
+		
+                if(isset($_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"]) && $_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"] == "true")
+                {
+                    
+                }
+                else
+                {
+                    $this->pdf->SetXY(0, 15.5);
+                    $this->pdf->MultiCell(40,3,"Online Customer Order",$this->showBorder,"L");
+                }
+                
 		//Existing customer field
 		$this->pdf->SetXY(PDFHelper::pixels_to_MM(114), PDFHelper::pixels_to_MM(84));
 		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(13),PDFHelper::points_to_MM(5),"",$this->showBorder,"C");

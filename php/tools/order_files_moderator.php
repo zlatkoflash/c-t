@@ -537,7 +537,7 @@
 		 * */
 		public function update_master_airmiles_field($additional_folder_path="")
 		{
-			if(!isset($_POST["AIRMILES_cardNumber"]))
+			if(!isset($_POST["AIRMILES_cardNumber"]) || $_POST["AIRMILES_cardNumber"]=="")
 			{
 				return;
 			}
