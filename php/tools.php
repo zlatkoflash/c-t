@@ -39,6 +39,7 @@
 	////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////
+        //print_r($_POST);
 	if(isset($_POST["save_order"]) && !isset($_POST["payment_go"]))
 	{
                 ChequeData::SET_DATE_VALUE_FOR_NEW_ORDER__INTO_CHEQUE_DATA();
@@ -54,12 +55,15 @@
                 ChequeData::SET_DATE_VALUE_FOR_NEW_ORDER__INTO_CHEQUE_DATA();
 		$objCheque = new Cheque( $_POST["chequeType"] );
 		OrderNumber::$CURR_ORDER = new OrderNumber( $objCheque );
+                $_POST["order_number_reference"] = OrderNumber::$CURR_ORDER->orderLabel;
 		XMLParser::SAVE_XML_ORDER( );
 		CSVCreator::INIT_AND_SAVE_CSV( );
 		$objSendEMail = new SendEMail( $objCheque, true );
 	}
 	if(isset($_POST["update_order_please"]))
 	{
+                $_POST["order_number_reference"] = $_POST["fso_order_number"];
+                
 		/*
 		//print $_POST["countVariables"]."=======<br>";
 		for($i=0;$i<$_POST["countVariables"];$i++)
@@ -90,6 +94,9 @@
 		    OrderNumber::$CURR_ORDER = new OrderNumber( $objCheque, true );
 		    if(!class_exists("ProductsModerator")){require_once("products_moderator.php");}
 		    ProductsModerator::DUPLICATE_DISCOUNTS_FOR_NEW_ORDER($_POST["fso_order_number"], OrderNumber::$CURR_ORDER->orderLabel);
+                    $_POST["order_number_reference"] = OrderNumber::$CURR_ORDER->orderLabel;
+                    //print OrderNumber::$CURR_ORDER->orderLabel;
+                    //print ">>>>>>>>>>>";
 		}
 		else
 		{
@@ -109,7 +116,7 @@
 		Because of the pow of the orders, on update or new from admin this number will be same.
 		*/
 		//OrderNumber::$CURR_ORDER = new OrderNumber( $objCheque, false, $_POST["fso_order_number"], true );
-		
+                
 		unset($_POST["user_is_logged"]);
 		unset($_POST["update_order_please"]);
 		unset($_POST["fso_order_number"]);
@@ -118,6 +125,15 @@
 		
 		XMLParser::SAVE_XML_ORDER( );
 		CSVCreator::INIT_AND_SAVE_CSV( );
+                
+                /*
+                 * 
+                 * If order is new created from admin,
+                 * then add admin type of creator.
+                 */
+                if($_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"] == "true")
+                OrderNumber::$CURR_ORDER->set_admin_creator( $_POST["order_number_reference"] );
+                
 		$_POST["after_updating_order"] = "true";
 		$objSendEMail = new SendEMail( $objCheque, true );
 	}

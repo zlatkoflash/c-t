@@ -148,11 +148,11 @@ class OrderFormTemplate
 		//Set font
 		$this->pdf->SetFont("helvetica", "", $this->fontSize);
 		
-                if(isset($_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"]) && $_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"] == "true")
+                if($this->chequeData->get_creator_type() == OrderNumber::CREATOR_ADMIN)
                 {
                     
                 }
-                else
+                else if($this->chequeData->get_creator_type() == OrderNumber::CREATOR_CLIENT)
                 {
                     $this->pdf->SetXY(0, 15.5);
                     $this->pdf->MultiCell(40,3,"Online Customer Order",$this->showBorder,"L");

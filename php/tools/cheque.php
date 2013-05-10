@@ -77,6 +77,21 @@
 			}
 		}
                 
+                public function get_order_number_reference()
+                {
+                    return $_POST["order_number_reference"];
+                }
+                
+                public function  get_creator_type()
+                {
+                    $row_order_creator = DB_DETAILS::ADD_ACTION("
+                    SELECT order_creator FROM orders_details WHERE orderNumber='".$this->get_order_number_reference()."'    
+                    ", DB_DETAILS::$TYPE_SELECT);
+                    if(count($row_order_creator) == 1){return $row_order_creator[0]["order_creator"];}
+                    return OrderNumber::CREATOR_CLIENT;
+                }
+
+
                 /*
                  * When creating new order, i will define new time current,
                  * and will put into the order files.

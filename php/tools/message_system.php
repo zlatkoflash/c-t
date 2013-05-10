@@ -96,6 +96,8 @@ class SendEMail {
         }
         //return;
         //print "Update and sent order setup links please......[into tools.php]";
+        //print_r($_POST);
+        
         if (isset($_POST["after_updating_order"])) {
             $this->SEND_AFTER_UPDATE_INTO_ADMIN();
             ?>

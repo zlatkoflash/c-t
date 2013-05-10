@@ -16,6 +16,9 @@
 	////////////////////////////////////////////////////////////////////////////////////////////////
 	class OrderNumber
 	{
+            const CREATOR_ADMIN="admin";
+            const CREATOR_CLIENT="client";
+            
 		const LABEL_LASER_BEFORE="L";
 		const LABEL_MANUAL_BEFORE="M";
 		static $START_ORDER_INDEX=5000;
@@ -97,6 +100,15 @@
 						   */
 			print "<source><order_number>".self::$CURR_ORDER->orderLabel."</order_number><cheque_type>".$cheque->type."</cheque_type></source>";
 		}
+                
+                public function set_admin_creator($order_number)
+                {
+                    $sql_action = "
+                        UPDATE orders_details SET order_creator='".self::CREATOR_ADMIN."' 
+                            WHERE orderNumber='".$order_number."'";
+                    DB_DETAILS::ADD_ACTION($sql_action);
+                    //print $sql_action;
+                }
 	}
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////
