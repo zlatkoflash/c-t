@@ -97,9 +97,11 @@
                     $_POST["order_number_reference"] = OrderNumber::$CURR_ORDER->orderLabel;
                     //print OrderNumber::$CURR_ORDER->orderLabel;
                     //print ">>>>>>>>>>>";
+                    //print_r( $_POST );
 		}
 		else
 		{
+                    //print_r( $_POST );
 			OrderNumber::$CURR_ORDER = new OrderNumber( $objCheque, false, $_POST["fso_order_number"], true );
 			//print $_POST["fso_order_number"];
 			if($_POST["setupNewVariable"] == "it_is_empthy_new_created_from_admin")
@@ -131,8 +133,11 @@
                  * If order is new created from admin,
                  * then add admin type of creator.
                  */
-                if($_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"] == "true")
-                OrderNumber::$CURR_ORDER->set_admin_creator( $_POST["order_number_reference"] );
+                if(isset($_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"])
+                        && $_POST["IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER"] == "true")
+                {
+                    OrderNumber::$CURR_ORDER->set_admin_creator( $_POST["order_number_reference"] ); 
+                }
                 
 		$_POST["after_updating_order"] = "true";
 		$objSendEMail = new SendEMail( $objCheque, true );
