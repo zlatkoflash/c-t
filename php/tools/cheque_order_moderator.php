@@ -64,6 +64,7 @@
 				$this->orderFileName = SETTINGS::ORDER_SAVING_PLUS_LABEL.self::LABEL_MANUAL_BEFORE;
 				$this->orderLabel = SETTINGS::ORDER_SAVING_PLUS_LABEL.OrderNumber::LABEL_MANUAL_BEFORE.$this->orderIndex;;
 			}
+                        DB_DETAILS::ADD_ACTION("INSERT INTO orders_details(orderNumber) VALUES('".$this->orderLabel."')");
 			//print $this->orderLabel;
 			$this->orderFileName .= $this->orderIndex;
 		}
@@ -91,6 +92,7 @@
 		{
 			$cheque = new Cheque( $_POST["CREATE_ORDER_NEW_ByChequeType"] );
 			self::$CURR_ORDER = new OrderNumber($cheque, true);
+                        self::$CURR_ORDER->set_admin_creator( self::$CURR_ORDER->orderLabel );
 			$_POST["chequeType"] = $cheque->type;
 			XMLParser::SAVE_XML_ORDER();
 			/*
