@@ -1061,7 +1061,9 @@ function CompanyInfo()
 	{
 		if(this.useDWE())
 		{
-		   document.getElementById("compInfoIncludeEnvelopes_supplierINPUT").innerHTML = 'Enter Your Supplier<br> <input type=text id="compInfoClientSupplier" name="compInfoClientSupplier" style=" margin-bottom:10px; width:95%;" />';
+		   document.getElementById("compInfoIncludeEnvelopes_supplierINPUT").innerHTML = 
+                           'Enter Your Supplier<br> <input type=text id="compInfoClientSupplier" name="compInfoClientSupplier" \n\
+                    style=" margin-bottom:10px; width:95%;" />';
 		}
 		else
 		{

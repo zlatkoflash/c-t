@@ -18,7 +18,7 @@
             	<div class="marginBottom10px">
                 	Enter Order Number:
                     <div>
-                    	<input type="text" name="fso_order_number" id="fso_order_number" class="width400px"  />
+                    	<input type="text" name="fso_order_number" id="fso_order_number" class="width400px text_input_upper_case"  />
                         <input id="btn_open_order_by_name" type="button" value="Open" class="floatRight buttonOpenBlackOrder" />
 						<script>
 							$("#btn_open_order_by_name").click(function(e)

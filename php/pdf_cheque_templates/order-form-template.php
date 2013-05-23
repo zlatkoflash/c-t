@@ -434,13 +434,18 @@ class OrderFormTemplate
 		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(14),PDFHelper::points_to_MM(7),"X",$this->showBorder,"C");
 		*/
 		//DWE USED
+                //test supplier
+                //$_POST["compInfoClientSupplier"] = "Zlatko Derkoski";
 		if($this->chequeData->supplier() != "")
 		{
-			$this->pdf->SetXY(PDFHelper::pixels_to_MM(720), PDFHelper::pixels_to_MM(256));
-			$this->pdf->MultiCell(PDFHelper::pixels_to_MM(110),PDFHelper::points_to_MM(12),"X",$this->showBorder,"L");
+			$this->pdf->SetXY(170, 69);
+			$this->pdf->MultiCell(40,3,
+                                "USES ENVELOPES",
+                                $this->showBorder,"L");
 			//SUPPLIER
-			$this->pdf->SetXY(PDFHelper::pixels_to_MM(689), PDFHelper::pixels_to_MM(280));
-			$this->pdf->MultiCell(PDFHelper::pixels_to_MM(110),PDFHelper::points_to_MM(12), $this->chequeData->supplier(),$this->showBorder,"L");
+			$this->pdf->SetXY(170, 73);
+			$this->pdf->MultiCell(40,3, 
+                                $this->chequeData->supplier(),$this->showBorder,"L");
 		}
 		
 		///////////////////////////////////////////////////////
@@ -518,6 +523,7 @@ class OrderFormTemplate
                 {
 		//$this->pdf->SetFont("helvetica", "", $this->fontSize);
 		$this->pdf->SetXY(115, 122);
+                $this->pdf->SetFillColor(255,255,255);
 		$this->pdf->MultiCell(55,4,
 					"ACCT # OVERRIDE\n".$this->chequeData->accountNumber().$TextItIs45."",
                         $this->showBorder,"C", 1);
@@ -537,17 +543,19 @@ class OrderFormTemplate
 		//P.O FIRST ROW
 		//P.O 1 field
 		
-		$this->pdf->SetFont("helvetica_bold", "", 15);
+		$this->pdf->SetFont("helvetica_bold", "", 12);
 		/**/
+                //Just for testing
+                //$_POST["cheque_logo_proof_required"] = "yes";
 		if($_POST["cheque_logo_proof_required"] == "yes")
 		{
-			$this->pdf->SetXY(182.3, 80.8);
-			$this->pdf->MultiCell(10,5,"X",$this->showBorder,"C");
+			$this->pdf->SetXY(172, 80.8);
+			$this->pdf->MultiCell(80,5,"PROOF REQUIRED",$this->showBorder,"L");
 		}
 		else if($_POST["cheque_logo_proof_required"] == "no")
 		{
-			$this->pdf->SetXY(188.4,80.8);
-			$this->pdf->MultiCell(10,5,"X",$this->showBorder,"C");
+			/*$this->pdf->SetXY(188.4,80.8);
+			$this->pdf->MultiCell(10,5,"X",$this->showBorder,"C");*/
 		}
 		/*
 			$this->pdf->SetXY(182.3, 80.8);
