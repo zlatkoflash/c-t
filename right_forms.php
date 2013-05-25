@@ -615,6 +615,14 @@ class RightForms {
                             {
                                 $("#compInfoTransitNumber_verify").validationEngine("validate");
                             }
+                            if($(this).val()=="003")
+                            {
+                                CompanyInfo.CI.addAllDepositBooks__exeptx2Copies();
+                            }
+                            else
+                            {
+                                CompanyInfo.CI.addAllDepositBooks();
+                            }
                         });
                         function checkAccountNumberValidated(field, rules, i, options)
                         {
@@ -989,6 +997,7 @@ class RightForms {
                     </select>
                     <script>
                     CompanyInfo.CI.addAllDepositBooks();
+                    //$("#compInfoDepositBooks").html("");
                     </script>
                 </div>
                 <div>

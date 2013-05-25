@@ -512,8 +512,11 @@ I need to place the following deposit book order:
 						<br/>
 						
 						<p style="text-align:left; font-size:10pt; margin:0px; padding:0px;">
-						Imprint<!--: Please take all required information from the attached PDF.-->
+						Imprint
+                                                <!--: Please take all required information from the attached PDF.-->
 						</p>
+                                                <br/>
+                                                <p><b>DEPOSIT TO THE CREDIT OF</b></p>
 						<br>
 						
 						<p style="font-family:Arial; font-size:10pt; text-align:left; margin:0px; padding:0px;">Company Name: <b>' . $this->chequeData->CINACompanyName() . '<br>' . $this->chequeData->CINACompanySecondName() . '</b></p>

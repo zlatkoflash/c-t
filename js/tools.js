@@ -1444,21 +1444,10 @@ function CompanyInfo()
 	this.depositBooks = [];
 	/*
 	this.depositBooks["Deposit Books"] = {copies:0,quantity:0, free:0, price:0, shipping_variable:"", title:"Deposit Books"};
-	this.depositBooks["2 Copies 100 $30"] = {copies:2,quantity:100, free:0, price:30, shipping_variable:"", title:"2 Copies 100"};
-	this.depositBooks["2 Copies 200 $47"] = {copies:2,quantity:200, free:0, price:47, shipping_variable:"", title:"2 Copies 200"};
-	this.depositBooks["2 Copies 300 $62"] = {copies:2,quantity:300, free:0, price:62, shipping_variable:"", title:"2 Copies 300"};
-	this.depositBooks["2 Copies 500 $88"] = {copies:2,quantity:500, free:0, price:88, shipping_variable:"", title:"2 Copies 500"};
-	this.depositBooks["2 Copies 1000 $143"] = {copies:2,quantity:1000, free:0, price:143, shipping_variable:"", title:"2 Copies 1000"};
-	this.depositBooks["2 Copies 1500 $210"] = {copies:2,quantity:1500, free:0, price:210, shipping_variable:"", title:"2 Copies 1500"};
-	this.depositBooks["3 Copies 100 $34"] = {copies:3,quantity:100, free:0, price:34, shipping_variable:"", title:"3 Copies 100"};
-	this.depositBooks["3 Copies 200 $53"] = {copies:3,quantity:200, free:0, price:53, shipping_variable:"", title:"3 Copies 200"};
-	this.depositBooks["3 Copies 300 $67"] = {copies:3,quantity:300, free:0, price:67, shipping_variable:"", title:"3 Copies 300"};
-	this.depositBooks["3 Copies 500 $95"] = {copies:3,quantity:500, free:0, price:95, shipping_variable:"", title:"3 Copies 500"};
-	this.depositBooks["3 Copies 1000 $149"] = {copies:3,quantity:1000, free:0, price:149, shipping_variable:"", title:"3 Copies 1000"};
-	this.depositBooks["3 Copies 1500 $203"] = {copies:3,quantity:1500, free:0, price:203, shipping_variable:"", title:"3 Copies 1500"};
 	*/
 	this.addAllDepositBooks = function()
 	{
+            $("#compInfoDepositBooks").html("");
 		var counter = 0;
 		for(var i in this.depositBooks)
 		{
@@ -1475,16 +1464,23 @@ function CompanyInfo()
                    	}};
 		return this.depositBooks[this.APDepositBooks().text];
 	}
+        this.addAllDepositBooks__exeptx2Copies = function()
+        {
+            $("#compInfoDepositBooks").html("");
+		var counter = 0;
+		for(var i in this.depositBooks)
+		{
+                    if(counter <1 || counter > 6)
+                    {
+			$("#compInfoDepositBooks").append("<option value='"+counter+"'>"+i+"</option>"); 
+                    }
+			counter++;
+		}
+        }
+        
 	this.DWEList = [];
 	/*
 	this.DWEList["Double Window Envelopes (DWE)"] = {quantity:0, free:0, price:0, shipping_variable:"", title:"Double Window Envelopes (DWE)"};
-	this.DWEList["250 DWE $48.00"] = {quantity:250, free:0, price:48, shipping_variable:"", title:"250 DWE"};
-	this.DWEList["500 DWE $69.00"] = {quantity:500, free:0, price:69, shipping_variable:"", title:"500 DWE"};
-	this.DWEList["1000 DWE $105.00"] = {quantity:1000, free:0, price:105, shipping_variable:"", title:"1000 DWE"};
-	this.DWEList["2000 DWE $165.00"] = {quantity:2000, free:0, price:165, shipping_variable:"", title:"2000 DWE"};
-	this.DWEList["3000 DWE $224.00"] = {quantity:3000, free:0, price:224, shipping_variable:"", title:"2000 DWE"};
-	this.DWEList["4000 DWE $293.00"] = {quantity:4000, free:0, price:293, shipping_variable:"", title:"2000 DWE"};
-	this.DWEList["5000 DWE $364.00"] = {quantity:5000, free:0, price:364, shipping_variable:"", title:"2000 DWE"}; 
 	*/
 
 	this.addDWWEList = function()
