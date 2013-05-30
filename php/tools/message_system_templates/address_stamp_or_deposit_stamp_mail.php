@@ -108,15 +108,10 @@ I need to place the following '.$this->get_label_stamp().' order:
 						<br><br>
 						
                         <p style="text-align:left; font-size:10pt; margin:0px; padding:0px;">Quantity/Style: <b>W8824 '.$style_text.'</b></p>
-						<br/>
-						
 						<p style="text-align:left; font-size:10pt; margin:0px; padding:0px;">
 						Imprint<!--: Please take all required information from the attached PDF.-->
 						</p>
-                                                <br/>
                                                 <p><b>DEPOSIT TO THE CREDIT OF</b></p>
-						<br>
-						
 						'.$this->company_info_address($addresses).'
 						
 						<p style="text-align:left; font-size:10pt; margin:0px; padding:0px;">
