@@ -86,15 +86,15 @@
 			}
 			else if($_POST["admin_action"] == PagesModerator::PAGE_ADMIN)
 			{
-				require_once("templates/admin/admin.php");	
+				//require_once("templates/admin/admin.php");	
 			}
 			else if($_POST["admin_action"] == PagesModerator::PAGE_ADMIN_DIRECTIONS)
 			{
-				require_once("templates/admin/directions.php");	
+				//require_once("templates/admin/directions.php");	
 			}
 			else if($_POST["admin_action"] == PagesModerator::PAGE_ADMIN_ORDER_UPDATE_COMPLETE)
 			{
-				require_once("templates/admin/admin_order_complete.php");	
+				//require_once("templates/admin/admin_order_complete.php");	
 			}
 			else
 			{

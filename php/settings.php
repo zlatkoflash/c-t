@@ -49,7 +49,7 @@
 		//const URL_TO_CHECKOUT_PAGE="http://chequesnow.ca/test/checkout/";
 		//const URL_TO_CHECKOUT_PAGE="http://localhost/muhamed/cheque-wp/?page_id=13";//doma
 		
-		const URL_TO_THANK_U="http://localhost/muhamed/cheque/wp_cheque_appi/?page_id=34";//kaj slavica i jas
+		const URL_TO_THANK_U="http://localhost/muhamed/cheque/wp_cheque_appi/thankyou/";//kaj slavica i jas
 		
 		//const URL_TO_THANK_U="http://174.120.175.22/cheques/thankyou/";
 		//const URL_TO_THANK_U="https://chequesnow.ca/cheques/thankyou/";
@@ -63,6 +63,9 @@
 		
 		//const URL_TO_ADMIN_PAGE="http://localhost/muhamed/cheque-wp/?page_id=88";//doma
 		const URL_TO_ADMIN_PAGE="http://localhost/muhamed/cheque/wp_cheque_appi/?page_id=3";//slavica
+                
+                //This is url that will show the form after submit from admin.
+                const URL_TO_ADMIN_PAGE_AFTER_SUBMIT_ORDER = "http://localhost/muhamed/cheque/wp_cheque_appi/admin-after-submit-order/";
 		
 		//const URL_TO_ADMIN_PAGE="http://174.120.175.22/cheques/admin/";
 		//const URL_TO_ADMIN_PAGE="https://chequesnow.ca/cheques/admin/";

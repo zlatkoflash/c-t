@@ -2,7 +2,7 @@
             	Order <b><?php print OrdersDatabase::GET_ORDER_POWER( $_POST["fso_order_number"] ); ?></b> is updated.
             </div>
             <div class="marginBottom10px">
-            	<form action="<?php print SETTINGS::URL_TO_ADMIN_PAGE; ?>" method="post" enctype="multipart/form-data">
+            	<form action="../admin-order-editor/" method="post" enctype="multipart/form-data">
                 	<input type="submit" value="Edit order <?php print OrdersDatabase::GET_ORDER_POWER( $_POST["fso_order_number"] ); ?> " />
                     <input type="hidden" name="user_is_logged" value="yes" />
                 	<input type="hidden" name="show_editing_form" value="true" />
@@ -11,7 +11,7 @@
                 </form>
             </div>
             <div>
-                <form action="<?php print SETTINGS::URL_TO_ADMIN_PAGE; ?>" method="post" enctype="multipart/form-data">
+                <form action="../admin-orders-navigator/" method="post" enctype="multipart/form-data">
                 	<input type="hidden" name="user_is_logged" value="yes" />
                 	<input type="submit" value="Edit another order" />
                     <input type="hidden" name="admin_action" id="admin_action" value="<?php print PagesModerator::PAGE_ADMIN_DIRECTIONS; ?>" />

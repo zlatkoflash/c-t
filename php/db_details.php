@@ -49,8 +49,15 @@ class DB_DETAILS
 	public static $VARs;
 	public static function PRINT_VARS()
 	{
-		http_build_query( self::$VARs );
+		print http_build_query( self::$VARs );
 	}
+        
+        public static function GET_ITEM_BY_ID($table_name, $id_reference, $id_value)
+        {
+            $row = DB_DETAILS::ADD_ACTION("SELECT * FROM ".$table_name." WHERE ".$id_reference."='".$id_value."' ", DB_DETAILS::$TYPE_SELECT);
+            if(count($row) == 0)return NULL;
+            return $row[0];
+        }
 }
 
 ?>

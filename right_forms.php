@@ -63,7 +63,7 @@ class RightForms {
         <script>
             $(document).ready(function(e)
             {
-                $("#form").validationEngine();
+                //$("#form").validationEngine();
             });
         </script>
         <?php
@@ -210,7 +210,7 @@ class RightForms {
             if (!self::IS_NEW_CREATED_ORDER()) {
                 ?>
 
-                            $("#color_info_for_hologram").html(ChequeColor.CH.pictureColor());
+                            $("#color_info_for_hologram").html(ChequeColor.CC.pictureColor());
                             $("#color_info_for_hologram_cheque_position").html(ChequePosition.CP.positionName());
                 <?php
             }

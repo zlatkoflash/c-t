@@ -41,7 +41,7 @@ function HELPER()
 	this.indexOnENTERFRAME = -1;
 	this.setOnEnterFrameEvent = function()
 	{
-		this.indexOnENTERFRAME = setInterval("objHelper.onEnterFrame()", 100);
+		this.indexOnENTERFRAME = setInterval("HELPER.H.onEnterFrame()", 100);
 	}
 	this.setOnEnterFrameEvent();
 	///////////////////////////////////////////////////////////////////////////////////////////
@@ -168,8 +168,10 @@ function HELPER()
 		}
 	}
 }
-var objHelper = new HELPER();
-HELPER.H = objHelper;
+//var HELPER.H = new HELPER();
+HELPER.H = new HELPER();
+
+
 function StringHelper()
 {
 	this.replaceAllStrings_intoString = function(string, stringForReplacment, newStringIntoREplacment)
@@ -204,7 +206,7 @@ function ContactInfo()
 	this.validate = function()
 	{
 		this.CIQuestionsAndCommentsSet();
-		if(/*this.companyName()=="" || */this.contactName()=="" ||/* this.message()=="" ||*/ this.phone()==""|| objHelper.emailValidarot(this.email())==false/* */)
+		if(/*this.companyName()=="" || */this.contactName()=="" ||/* this.message()=="" ||*/ this.phone()==""|| HELPER.H.emailValidarot(this.email())==false/* */)
 		{
 			//alert("Please complete Contact Info Form");
 			return false;
@@ -214,7 +216,7 @@ function ContactInfo()
 			//alert("Please select Quantity & Prices.");
 			return false;
 		}
-		if(objCheque.type == Cheque.LASER && $("#compInfoSoftware").prop("selectedIndex") == 0)
+		if(Cheque.C.type == Cheque.LASER && $("#compInfoSoftware").prop("selectedIndex") == 0)
 		{
 			//alert("Please select Software.");
 			return false;
@@ -311,8 +313,8 @@ function ChequeColor()
 	this.getChequePozadina = function(){return document.getElementById("pozadinaCheckID");}
 	this.getManualPozadina_1 = function(){return document.getElementById("background");}
 	this.getManualPozadina_2 = function(){return document.getElementById("background_2");}
-	this.bgURL = function(){return objHelper.PATH_TO_THEME+"/images/backgrounds/"+this.index+".jpg";}
-	this.bgURLManual = function(){return objHelper.PATH_TO_THEME+"/images/backgrounds-manual/"+this.index+".jpg";}
+	this.bgURL = function(){return HELPER.H.PATH_TO_THEME+"/images/backgrounds/"+this.index+".jpg";}
+	this.bgURLManual = function(){return HELPER.H.PATH_TO_THEME+"/images/backgrounds-manual/"+this.index+".jpg";}
 	this.picturesColors = ['DARK BLUE','TEAL GREEN','BURGUNOY','BROWN','GREY','SKY BLUE','REFLEX BLUE','GREEN','GOLD BUFF','RED'];
 	this.pictureColor = function(){return this.picturesColors[this.index-1];}
 	this.arrayEventsAfterChanging = [];
@@ -324,12 +326,12 @@ function ChequeColor()
 			return;
 		}
 		this.index = indexColor;
-		if(objCheque.type == Cheque.LASER)
+		if(Cheque.C.type == Cheque.LASER)
 		{
-			objChequePosition.changeImages( this.index );
+			ChequePosition.CP.changeImages( this.index );
 			document.getElementById("chequeColor").value = ""+this.index+";"+this.bgURL()+";"+this.pictureColor();
 		}
-		else if(objCheque.type == Cheque.MANUAL)
+		else if(Cheque.C.type == Cheque.MANUAL)
 		{
 			document.getElementById("chequeColor").value = ""+this.index+";"+this.bgURLManual()+";"+this.pictureColor();
 		}
@@ -339,19 +341,19 @@ function ChequeColor()
 	}
 	this.changeBG = function()
 	{
-		if(objCheque.type == Cheque.LASER)
+		if(Cheque.C.type == Cheque.LASER)
 		{
 			if(Cheque.IS_FOR_ADMIN==false)
 			{
-				this.getChequePozadina().src = objHelper.PATH_TO_THEME+"/images/backgrounds/"+this.index+".jpg";
+				this.getChequePozadina().src = HELPER.H.PATH_TO_THEME+"/images/backgrounds/"+this.index+".jpg";
 			}
 		}
-		else if(objCheque.type == Cheque.MANUAL)
+		else if(Cheque.C.type == Cheque.MANUAL)
 		{
-			$("#background").css("background-image", "url("+objHelper.PATH_TO_THEME+"/images/backgrounds-manual/"+this.index+".jpg)");
+			$("#background").css("background-image", "url("+HELPER.H.PATH_TO_THEME+"/images/backgrounds-manual/"+this.index+".jpg)");
 			if(this.getManualPozadina_2() != null)
 			{
-				$("#background_2").css("background-image", "url("+objHelper.PATH_TO_THEME+"/images/backgrounds-manual/"+this.index+".jpg)");
+				$("#background_2").css("background-image", "url("+HELPER.H.PATH_TO_THEME+"/images/backgrounds-manual/"+this.index+".jpg)");
 			}
 		}
 		document.getElementById("backgroundINdex").value = this.index;
@@ -394,8 +396,8 @@ function ChequeColor()
 		}
 	}
 }
-var objChequeColor = new ChequeColor();
-ChequeColor.CH = objChequeColor;
+//var ChequeColor.CC = new ChequeColor();
+ChequeColor.CC = new ChequeColor();
 function ChequePosition()
 {
 	this.arrEventsAfterChanging = [];
@@ -409,7 +411,7 @@ function ChequePosition()
 	this.imgPoz_id3 = function(){return document.getElementById("imgPoz_id3");}
 	this.positionName = function()
 	{
-		if(objCheque.type == Cheque.LASER)
+		if(Cheque.C.type == Cheque.LASER)
 		{
 			switch(this.positionsIndex)
 			{
@@ -418,7 +420,7 @@ function ChequePosition()
 				case 3:{return "BOTTOM";}break;
 			}
 		}
-		else if(objCheque.type == Cheque.MANUAL)
+		else if(Cheque.C.type == Cheque.MANUAL)
 		{
 			if(this.manualX2Cheques())
 			{
@@ -433,9 +435,9 @@ function ChequePosition()
 		
 	this.changeImages = function(index)
 	{
-	    this.imgPoz_id1().src = objHelper.PATH_TO_THEME+"/images/styles/"+index+"-1.png";
-	    this.imgPoz_id2().src = objHelper.PATH_TO_THEME+"/images/styles/"+index+"-2.png";
-	    this.imgPoz_id3().src = objHelper.PATH_TO_THEME+"/images/styles/"+index+"-3.png";
+	    this.imgPoz_id1().src = HELPER.H.PATH_TO_THEME+"/images/styles/"+index+"-1.png";
+	    this.imgPoz_id2().src = HELPER.H.PATH_TO_THEME+"/images/styles/"+index+"-2.png";
+	    this.imgPoz_id3().src = HELPER.H.PATH_TO_THEME+"/images/styles/"+index+"-3.png";
 	}
 	this.changePosition = function(index)
 	{
@@ -444,22 +446,22 @@ function ChequePosition()
 		this.positionsIndex = index;
 		document.getElementById("chequePosition").value = this.positionsIndex;
 		
-		if(objCheque.type == Cheque.LASER)
+		if(Cheque.C.type == Cheque.LASER)
 		{
 			if(index == 3)
 			{
-				objChequeColor.disable__colors();
-				ChequeColor.CH.setupToDarkBlueIfIsSelectedAnotherThenFour();
+				ChequeColor.CC.disable__colors();
+				ChequeColor.CC.setupToDarkBlueIfIsSelectedAnotherThenFour();
 			}
 			else
 			{
-				objChequeColor.enable__colors();
+				ChequeColor.CC.enable__colors();
 			}
 		}
 		HELPER.H.realiseEvents( this.arrEventsAfterChanging );
 		$("#color_info_for_hologram_cheque_position").html( this.positionName() );
 		if(Cheque.IS_FOR_ADMIN==true){return;}
-		objCheque.render();
+		Cheque.C.render();
 	}
 	this.manualX2ChequesSet = function(meCB)
 	{
@@ -478,7 +480,7 @@ function ChequePosition()
 		$("#color_info_for_hologram_cheque_position").html( this.positionName() );
 		if(Cheque.IS_FOR_ADMIN == false)
 		{
-			objCheque.render();
+			Cheque.C.render();
 		}
 	}
 	this.setupCBs1OR2ChequesPerManual = function(istrue)
@@ -498,8 +500,8 @@ function ChequePosition()
 		}
 	}
 }
-var objChequePosition = new ChequePosition();
-ChequePosition.CP = objChequePosition;
+//var ChequePosition.CP = new ChequePosition();
+ChequePosition.CP = new ChequePosition();
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
@@ -637,7 +639,7 @@ function CompanyInfo()
 		}
 		if( this.thereIsSecondNameAvailable()==true )
 		{
-			if(objCheque.type == Cheque.LASER)
+			if(Cheque.C.type == Cheque.LASER)
 			{
 				document.getElementById("line1_topleftID").style.top = "50px";
 			}
@@ -652,7 +654,7 @@ function CompanyInfo()
 		}
 		else
 		{
-			if(objCheque.type == Cheque.LASER)
+			if(Cheque.C.type == Cheque.LASER)
 			{
 				document.getElementById("line1_topleftID").style.top = "35px";
 			}
@@ -673,7 +675,7 @@ function CompanyInfo()
 		   {
 			   document.getElementById("companyName_topleftID_2").innerHTML = this.name_StringHTML();
 		   }
-		   if(objCheque.type == Cheque.LASER)
+		   if(Cheque.C.type == Cheque.LASER)
 		   {
 			   document.getElementById("desnoImeKompanija1ID").innerHTML = this.name_StringCrticka();
 			   document.getElementById("desnoImeKompanija2ID").innerHTML = this.name_StringCrticka();
@@ -691,7 +693,7 @@ function CompanyInfo()
 		   {
 			   document.getElementById("companyName_topleftID_2").innerHTML = "Your Company Name";
 		   }
-		   if(objCheque.type == Cheque.LASER)
+		   if(Cheque.C.type == Cheque.LASER)
 		   {
 			   document.getElementById("desnoImeKompanija1ID").innerHTML = "Your Company Name";
 			   document.getElementById("desnoImeKompanija2ID").innerHTML = "Your Company Name";
@@ -703,7 +705,7 @@ function CompanyInfo()
 		   }
 		}
 		document.getElementById("line1_topleftID").innerHTML = this.adress_1()+'<br/>'+this.adress_2()+'<br/>'+this.adress_3()+'<br/>'+this.adress_4();
-		if(objCheque.type == Cheque.MANUAL && document.getElementById("line1_topleftID_2"))
+		if(Cheque.C.type == Cheque.MANUAL && document.getElementById("line1_topleftID_2"))
 		{
 			document.getElementById("line1_topleftID_2").innerHTML = this.adress_1()+'<br/>'+this.adress_2()+'<br/>'+this.adress_3()+'<br/>'+this.adress_4();
 		}
@@ -821,7 +823,7 @@ function CompanyInfo()
 		}
 		
 		document.getElementById("bank___x4__lines").innerHTML = this.bankAddress1()+"<br/>"+this.bankAddress2()+"<br/>"+this.bankAddress3()+"<br/>"+this.bankAddress4();
-		if(objCheque.type == Cheque.MANUAL && document.getElementById("bank___x4__lines_2") != null)
+		if(Cheque.C.type == Cheque.MANUAL && document.getElementById("bank___x4__lines_2") != null)
 		{
 			document.getElementById("bank___x4__lines_2").innerHTML = this.bankAddress1()+"<br/>"+this.bankAddress2()+"<br/>"+this.bankAddress3()+"<br/>"+this.bankAddress4();
 		}
@@ -1127,28 +1129,6 @@ function CompanyInfo()
 				}
 			}break;
 		}
-		/*
-		if(this.isSecondSignature() == true)
-		{
-			document.getElementById("PER1_ID").style.visibility = "visible";
-			if(objCheque.type == Cheque.LASER)
-			{
-				document.getElementById("PERImeNaKompanijaID").style.top = "150px";
-			}
-		}
-		else
-		{
-			document.getElementById("PER1_ID").style.visibility = "hidden";
-			if(objCheque.type == Cheque.LASER)
-			{
-				document.getElementById("PERImeNaKompanijaID").style.top = "170px";
-			}
-		}
-		if(document.getElementById("PER1_ID_2") != null)
-		{
-			document.getElementById("PER1_ID_2").style.visibility = document.getElementById("PER1_ID").style.visibility;
-		}
-		*/
 	}
 	this.isStartNumber = function(){return document.getElementById("compInfoShowStartNumber").checked;}
 	this.startAt = function()
@@ -1296,12 +1276,12 @@ function CompanyInfo()
 		var divNumber1 = document.getElementById("brojcheLevoID");
 		var divNumber2 = document.getElementById("brojcheCentarID");
 		var divNumber3 = document.getElementById("brojcheDesnoID");
-		if(objCheque.type == Cheque.LASER)
+		if(Cheque.C.type == Cheque.LASER)
 		{
 			document.getElementById("levoBrojce1ID").innerHTML = this.startAt();
 			document.getElementById("levoBrojce2ID").innerHTML = this.startAt();
 		}
-		else if(objCheque.type == Cheque.MANUAL)
+		else if(Cheque.C.type == Cheque.MANUAL)
 		{
                     /*
                      * brojceGoreDesnoIDnew is number of the left part of manual cheque
@@ -1837,7 +1817,7 @@ function CreatingInvoiceForAdditionalProducts()
 		selectedIndexes =  $("#compInfoQuantity").prop("selectedIndex")+";"
 		selectedIndexes +=  $("#compInfoDepositBooks").prop("selectedIndex")+";"+$("#compInfoDWE").prop("selectedIndex")+
 		";"+$("#compInfoSSDWE").prop("selectedIndex")
-		if(objCheque.type == Cheque.MANUAL)
+		if(Cheque.C.type == Cheque.MANUAL)
 		{
 			IDs += ";"+ CompanyInfo.CI.getAPChequeBinderObject().id;
 			selectedIndexes += ";"+$("#compInfoChequeBinder").prop("selectedIndex");
@@ -1853,30 +1833,7 @@ function CreatingInvoiceForAdditionalProducts()
 		selectedIndexes += ";"+$("#compInfoSelfLinkingStamp").prop("selectedIndex");
 		selectedIndexes += ";-1";
 		selectedIndexes += ";-1";
-		/*
-		document.getElementById("depositBooksINPUT").value = this.APDepositBooks().text;
-		document.getElementById("depositBooksINPUT_VARs").value = this.getDepositDetailized();
-		document.getElementById("DWEINPUT").value = this.getAPDWEDetalized();
-		document.getElementById("SSDWEINPUT").value = this.getAPSSDWEDetalized();
-		*/
 		
-		//"", "", "", "", "", ""
-		/*
-		$("#depositBooksINPUTIndex").val( $("#compInfoDepositBooks").prop("selectedIndex") );
-		$("#DWEINPUTIndex").val( $("#compInfoDWE").prop("selectedIndex") );
-		$("#SSDWEINPUTIndex").val( $("#compInfoSSDWE").prop("selectedIndex") );
-		
-		if(objCheque.type == Cheque.MANUAL)
-		{
-			document.getElementById("chequeBinderINPUT").value = this.APChequeBinderDetailized();
-			$("#chequeBinderINPUTIndex").val( $("#compInfoChequeBinder").prop("selectedIndex") );
-		}
-		else
-		{
-		}
-		document.getElementById("SelfLinkStampINPUT").value = this.APSelfLinkingStampDetalized();
-		$("#SelfLinkStampINPUTIndex").val( $("#compInfoSelfLinkingStamp").prop("selectedIndex") );
-		*/
 		$("#additional_products_IDs").val(IDs);
 		$("#additionalProducts_indexes").val(selectedIndexes);
 		OrderTotalAmount.OTA.calculate();
@@ -2299,7 +2256,8 @@ function SentEmail()
 	this.additionalMessageWhenSubMit = "Submit Order?";
 	this.objAjaxTool = new AjaxTOOL();
 	this.formAction = "/php/tools.php";
-	this.form_action = function(){return objHelper.PATH_TO_THEME+this.formAction;}
+	this.form_action = function(){return HELPER.H.PATH_TO_THEME+this.formAction;}
+        //return HELPER.H.URL+"/actions-processing/";
 	this.validate = function()
 	{
 		if(objContactInfo.validate() == false){return false;}
@@ -2318,18 +2276,18 @@ function SentEmail()
 	}
 	this.sendNormal = function()
 	{
-		document.getElementById("form").action = objHelper.PATH_TO_THEME+this.formAction;
+		document.getElementById("form").action = this.form_action();
 		document.getElementById("form").submit();
 	}
 	this.sentAjax = function()
 	{
 		objPreloader.show();
-		this.objAjaxTool = new AjaxTOOL( objHelper.PATH_TO_THEME+this.formAction, 
+		this.objAjaxTool = new AjaxTOOL( HELPER.H.PATH_TO_THEME+this.formAction, 
 								function(e) 
 								{
 									if(objSentEmail.objAjaxTool.http.readyState == 4 && objSentEmail.objAjaxTool.http.status == 200) 
 									{
-										window.location.href = objHelper.URL+"/thankyou/";
+										window.location.href = HELPER.H.URL+"/thankyou/";
 										//window.location.href = "http://localhost/muhamed/cheque-wp/?page_id=70";
 									}
 									else
@@ -2341,12 +2299,12 @@ function SentEmail()
 	this.createOrder = function()
 	{
 		objPreloader.show();
-		this.objAjaxTool = new AjaxTOOL( objHelper.PATH_TO_THEME+this.formAction, 
+		this.objAjaxTool = new AjaxTOOL( HELPER.H.PATH_TO_THEME+this.formAction, 
 										function(e)
 										{
 											if(objSentEmail.objAjaxTool.http.readyState == 4 && objSentEmail.objAjaxTool.http.status == 200) 
 											{
-												//window.location.href = objHelper.URL+"/after_submit_info/";
+												//window.location.href = HELPER.H.URL+"/after_submit_info/";
 												FGTCOBO.SEND( objSentEmail.objAjaxTool.http.responseText );
 												objPreloader.hide();
 											}
@@ -2414,16 +2372,16 @@ function Cheque()
 			case Cheque.LASER:{this.renderLASER();}break;
 			case Cheque.MANUAL:{this.renderMANUAL();}break;
 		}
-		objChequeColor.changeBG();
+		ChequeColor.CC.changeBG();
 		CompanyInfo.CI.showAllTextsOnCheque();
 	}
 	this.renderLASER = function()
 	{
-		this.template.draw(objChequePosition.positionsIndex, this.cheque_render_holderABSOLUTEForTEMPLATE());
+		this.template.draw(ChequePosition.CP.positionsIndex, this.cheque_render_holderABSOLUTEForTEMPLATE());
 	}
 	this.renderMANUAL = function()
 	{
-		this.template.draw(objChequePosition.manualX2Cheques(), this.cheque_render_holderABSOLUTEForTEMPLATE());
+		this.template.draw(ChequePosition.CP.manualX2Cheques(), this.cheque_render_holderABSOLUTEForTEMPLATE());
 	}
 	this.setSizeChequeHolder = function()
 	{
@@ -2436,8 +2394,8 @@ function Cheque()
 	this.tweenY = null;
 	this.cheque_render_holderABSOLUTE_endY = function()
 	{
-		if(objHelper.scrollingYPoz()<=objHelper.absPositionY(this.cheque_render_holder())){return 0;}
-		var endPozition = objHelper.scrollingYPoz()-objHelper.absPositionY(this.cheque_render_holder());
+		if(HELPER.H.scrollingYPoz()<=HELPER.H.absPositionY(this.cheque_render_holder())){return 0;}
+		var endPozition = HELPER.H.scrollingYPoz()-HELPER.H.absPositionY(this.cheque_render_holder());
 		if(endPozition + this.cheque_render_holderABSOLUTE().offsetHeight > this.cheque_render_holder().offsetHeight)
 		{
 			endPozition = this.cheque_render_holder().offsetHeight-this.cheque_render_holderABSOLUTE().offsetHeight;
@@ -2460,15 +2418,14 @@ function Cheque()
 }
 Cheque.LASER = "laser";
 Cheque.MANUAL = "manual";
-var objCheque = new Cheque();
-Cheque.C = objCheque;
+Cheque.C = new Cheque();
 Cheque.IS_FOR_ADMIN=false;
 
-objHelper.addFunctionOnEnterFrame( objCheque );
+HELPER.H.addFunctionOnEnterFrame( Cheque.C );
 window.onscroll = function()
 {
-	if(objCheque != null)
+	if(Cheque.C != null)
 	{
-		objCheque.posicionSetAnimation();
+		Cheque.C.posicionSetAnimation();
 	}
 }

@@ -1,3 +1,12 @@
+<?php
+/*
+  Template Name: Thank You Page
+
+ */
+?>
+<?php get_header(); ?>
+
+
 <style>
 	.positionFixced100Posto
 	{
@@ -68,3 +77,5 @@
     
     
 </div>
+
+<?php get_footer(); ?>

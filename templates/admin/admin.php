@@ -33,8 +33,8 @@ class AdminEditorAdditional {
             $("#adminSimpleUpdateForm").removeClass("width500PX");
             $("#adminSimpleUpdateForm").addClass("width600PX");
 
-            objHelper.URL = "<?php print HELPWordpress::url(); ?>";
-            objCheque.setType("<?php print $cheque->type; ?>");
+            HELPER.H.URL = "<?php print HELPWordpress::url(); ?>";
+            Cheque.C.setType("<?php print $cheque->type; ?>");
             Cheque.IS_FOR_ADMIN = true;
         </script>
 
@@ -565,20 +565,20 @@ class AdminEditorAdditional {
         ?>       
         <script>
             document.getElementById("sendPDFandEmail").value = "FOR_ADMIN";
-            ChequeColor.CH.arrayEventsAfterChanging.push(function()
+            ChequeColor.CC.arrayEventsAfterChanging.push(function()
             {
                 /*
                  document.getElementById("chequeColorsAdditionalInfo").innerHTML = 
-                 "Selected Color <b>"+ChequeColor.CH.pictureColor()+"</b>";*/
+                 "Selected Color <b>"+ChequeColor.CC.pictureColor()+"</b>";*/
             });
         <?php
         //Client told me each time opened in editor background index selected to 0
         //$_POST["backgroundINdex"] = 1;
         ?>
         <?php if (!RightForms::IS_NEW_CREATED_ORDER()) { ?>
-                ChequeColor.CH.change(<?php print $_POST["backgroundINdex"]; ?>);
+                ChequeColor.CC.change(<?php print $_POST["backgroundINdex"]; ?>);
         <?php } else { ?>
-                //ChequeColor.CH.change( 1 );
+                //ChequeColor.CC.change( 1 );
                 //when admin colour must be not selected
                 /**/
                 $("#color_info_for_hologram").html("");
@@ -654,7 +654,7 @@ class AdminEditorAdditional {
         <?php
         if (!RightForms::IS_NEW_CREATED_ORDER()) {
             ?>
-                ChequeColor.CH.change(<?php print $_POST["backgroundINdex"] ?>);
+                ChequeColor.CC.change(<?php print $_POST["backgroundINdex"] ?>);
             <?php
         }
         ?>

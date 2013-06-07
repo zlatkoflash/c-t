@@ -6,7 +6,7 @@
 		Logged User: <a href="#"><b><?php print User::$LOGGED_USER->display_name; ?></b></a>
 	</div>
 	<div class="floatRight">
-		<a href="<?php print SETTINGS::URL_TO_ADMIN_PAGE; ?>">Back To Menu</a>
+		<a href="../admin/">Back To Menu</a>
 	</div>
 	<div class="clearBoth"></div>
 	<hr />
@@ -19,7 +19,7 @@
 				DO_LOGOUT:"Yes i will do it now"
 			}, function(data)
 			{
-				window.location.href = "<?php print SETTINGS::URL_TO_ADMIN_PAGE; ?>";
+				window.location.href = "../admin/";
 			});
 		return false;
 	});

@@ -104,7 +104,7 @@ class SendEMail {
             <!--
             [<?php print OrderNumber::$CURR_ORDER->orderLabel; ?>]
             -->
-            <form id="form_after_updating_order" action="<?php print SETTINGS::URL_TO_ADMIN_PAGE; ?>" method="post" enctype="multipart/form-data">
+            <form id="form_after_updating_order" action="<?php print SETTINGS::URL_TO_ADMIN_PAGE_AFTER_SUBMIT_ORDER; ?>" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="user_is_logged" value="yes" />
                 <input type="hidden" name="after_update_order_please" value="yes" />
                 <input type="hidden" name="fso_order_number" value="<?php print OrderNumber::$CURR_ORDER->orderLabel; ?>" />

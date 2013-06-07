@@ -10,24 +10,22 @@
  */
 ?>
 <?php
-session_start();
+//session_start();
 ?>
-<?php require_once("php/tools.php"); ?>
-<?php require_once("php/products_moderator.php"); ?>
-<?php require_once("right_forms.php"); ?>
+<?php //require_once("php/tools.php"); ?>
+<?php //require_once("php/products_moderator.php"); ?>
+<?php //require_once("right_forms.php"); ?>
 
 <?php
 /* For online */
 $cheque = NULL;
-if ($post->post_title == Cheque::TYPE_LASER) {
+if ($post->post_title == Cheque::TYPE_LASER) 
+{
     $cheque = new Cheque(Cheque::TYPE_LASER);
-} else if ($post->post_title == Cheque::TYPE_MANUAL) {
+} else if ($post->post_title == Cheque::TYPE_MANUAL) 
+{
     $cheque = new Cheque(Cheque::TYPE_MANUAL);
 }
-//$cheque = new Cheque( Cheque::TYPE_LASER );
-//$cheque = new Cheque( Cheque::TYPE_MANUAL );
-//print "[+++".$post->post_title."]";
-//$post->post_title = "checkout";
 ?>
 
 <?php get_header(); ?>
@@ -58,7 +56,7 @@ require_once("preloader.php");
 ?>
 
 <script>
-    objHelper.PATH_TO_THEME = "<?php print HELPWordpress::template_url(); ?>";
+    //objHelper.PATH_TO_THEME = "<?php print HELPWordpress::template_url(); ?>";
 </script>
 
 <?php if ($post->post_title == Cheque::TYPE_MANUAL || $post->post_title == Cheque::TYPE_LASER) { ?>
@@ -72,12 +70,14 @@ require_once("preloader.php");
     ?>
     <?php $RightFObject = new RightForms($cheque); ?>
 
+    <!--
     <div id="headerTopSmall">
 
     </div>
     <div id="headerTopBig">
         <img src="<?php print HELPWordpress::template_url(); ?>/images/order-header.png" />
     </div>
+    -->
     <div id="cheque_holder" class="<?php print $cheque->cssMainWidth; ?>"><!-- Main cheque holder start -->
         <div id="cheque_render_holder" class="floatLEft colorChequeSlidingHelp <?php print $cheque->cheque_render_holder_width; ?>">
             <div id="cheque_render_holderABSOLUTE">
