@@ -2,17 +2,22 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/directions.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/php/tools.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/admin_user_status.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin_login_page.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/php/tools/user.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/php/settings.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/php/settings_test_online/settings.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/js/settings.js</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin_page.php</file>
-        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/manual_page.php</file>
         <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/header.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/directions.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/php/tools/user.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/thankyou_page_template.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/manual_page.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin_page_after_submit_the_order.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin_page.php</file>
         <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin_orders_navigator.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin_order_editor.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin_login_page.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/actionprocess.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/admin_user_status.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/admin_see_if_there_is_logged_user.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/admin_right_editor.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/admin_order_complete.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/admin_menu.php</file>
+        <file>file:/C:/wamp_2013/www/muhamed/cheque/wp_cheque_appi/wp-content/themes/c-t/templates/admin/admin.php</file>
     </open-files>
 </project-private>

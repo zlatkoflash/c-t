@@ -5,7 +5,7 @@
 	<div class="floatRight marginLeft30px">
 		Logged User: <a href="#"><b><?php print User::$LOGGED_USER->display_name; ?></b></a>
 	</div>
-        <?php if(User::$LOGGED_USER->user_nicename == User::TYPE_ADMINISTRATOR) { ?>
+        <?php if(User::$LOGGED_USER->get_wp_user_role() == User::TYPE_ADMINISTRATOR) { ?>
 	<div class="floatRight">
 		<a href="../admin/">Back To Menu</a>
 	</div>

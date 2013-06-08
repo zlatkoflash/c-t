@@ -1,3 +1,5 @@
+<?php if(!isset($_SESSION))session_start();?>
+
 <?php
 	require_once("php/tools.php");
 ?>

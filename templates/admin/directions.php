@@ -25,7 +25,7 @@ if (isset($_POST["order_not_exists"])) {
                     $("#fso_order_number").val($("#fso_order_number").val().toUpperCase());
                     $("#form_submit_order").submit();
                 });
-                <?php if (User::$LOGGED_USER->user_nicename == User::TYPE_CONTRIBUTOR){ ?>
+                <?php if (User::$LOGGED_USER->get_wp_user_role() == User::TYPE_CONTRIBUTOR){ ?>
                     $("#btn_open_order_by_name").val("Resubmit the csv.csv");
                     $("#btn_open_order_by_name").addClass("floatLEft");
                     $("#btn_open_order_by_name").removeClass("floatRight");
@@ -71,7 +71,7 @@ if (isset($_POST["order_not_exists"])) {
                     });
                 }
             </script>
-            <?php if(User::$LOGGED_USER->user_nicename == User::TYPE_ADMINISTRATOR) { ?>
+            <?php if(User::$LOGGED_USER->get_wp_user_role() == User::TYPE_ADMINISTRATOR) { ?>
             <input class="buttonOpenBlackOrder" type="button" value="New Manual Order" onclick="new_manual();" />
             <input class="buttonOpenBlackOrder" type="button" value="New Laser Order" onclick="new_laser();" />
             <?php } ?>
@@ -82,9 +82,9 @@ if (isset($_POST["order_not_exists"])) {
 
 
 <?php
-if (User::$LOGGED_USER->user_nicename == User::TYPE_ADMINISTRATOR) {
+if (User::$LOGGED_USER->get_wp_user_role() == User::TYPE_ADMINISTRATOR) {
     SearchOrders::showSearchForm();
 }
 
-print ">>>>>>>>>>>>>>>>>>>>>".User::$LOGGED_USER->user_nicename;
+//print ">>>>>>>>>>>>>>>>>>>>>".User::$LOGGED_USER->user_nicename;
 ?>
