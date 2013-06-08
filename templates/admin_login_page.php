@@ -39,7 +39,7 @@
                 if (String(data + "").indexOf("login_all_right") != -1)
                 {
                     //MenuAdmin.MA.submit_menu("<?php print PagesModerator::PAGE_ADMIN_DIRECTIONS; ?>");
-                    window.location.href = "./admin-search-orders/";
+                    window.location.href = "../admin-orders-navigator/";
                 }
                 else
                 {

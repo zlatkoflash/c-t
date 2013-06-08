@@ -142,6 +142,24 @@
 		$_POST["after_updating_order"] = "true";
 		$objSendEMail = new SendEMail( $objCheque, true );
 	}
+        
+        /*
+         * This is comming from direction admin when use is contributor.
+         * Actualy is resaving the csv files.Nothing special
+         */
+        if(isset($_POST["admin_action"]) && $_POST["admin_action"]=="UPDATE_CSVCSV_INTO__csv_files__FOLDER")
+        {
+            XMLParser::ADD_ORDER_XML_TO_POST( Settings::ORDERS_FOLDER."xml/".$_POST["fso_order_number"].".xml" );
+            $objCheque = new Cheque( $_POST["chequeType"] );
+            $objChequeData = new ChequeData( $objCheque );
+            OrderNumber::$CURR_ORDER = new OrderNumber($objCheque, false, $_POST["fso_order_number"]);
+            CSVCreator::INIT_AND_SAVE_CSV( );
+            ?>
+            <script>
+                window.location.href = "<?php print SETTINGS::URL_TO_REDIRECTION_FOR_CONTRIBUTERS; ?>";
+            </script>
+            <?php
+        }
 
 	/*
 	if(isset($_GET["order_number_backup"]))

@@ -12,7 +12,8 @@
 		}
 		
 		const VARIABLE_SESSION_USER = "user";
-		
+                const TYPE_ADMINISTRATOR = "admin";
+                const TYPE_CONTRIBUTOR = "contributor";
 		
 		public $ID,
 			   $user_login,
@@ -45,6 +46,7 @@
 				$this->ID = $_SESSION[self::VARIABLE_SESSION_USER]["ID"];
 				$this->user_login = $_SESSION[self::VARIABLE_SESSION_USER]["user_login"];
 				$this->user_pass = $_SESSION[self::VARIABLE_SESSION_USER]["user_pass"];
+                                $this->user_nicename = $_SESSION[self::VARIABLE_SESSION_USER]["user_nicename"];
 				$this->display_name = $_SESSION[self::VARIABLE_SESSION_USER]["display_name"];
 			}
 		}
@@ -78,6 +80,7 @@
 					"ID"=>$user_row["ID"],
 					"user_login"=>$user_row["user_login"],
 					"user_pass"=>$user_row["user_pass"],
+					"user_nicename"=>$user_row["user_nicename"],
 					"display_name"=>$user_row["display_name"]
 				);
 				print "login_all_right";

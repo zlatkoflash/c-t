@@ -5,9 +5,11 @@
 	<div class="floatRight marginLeft30px">
 		Logged User: <a href="#"><b><?php print User::$LOGGED_USER->display_name; ?></b></a>
 	</div>
+        <?php if(User::$LOGGED_USER->user_nicename == User::TYPE_ADMINISTRATOR) { ?>
 	<div class="floatRight">
 		<a href="../admin/">Back To Menu</a>
 	</div>
+        <?php } ?>
 	<div class="clearBoth"></div>
 	<hr />
 </div>
