@@ -60,6 +60,7 @@ class PagesModerator {
             settings.ADMIN_PATH = "<?php print SETTINGS::URL_TO_ADMIN_PAGE; ?>";
         </script>
         <script language="javascript" src="<?php bloginfo("template_url"); ?>/js/tools.js" type="text/javascript"></script>
+        <script language="javascript" src="<?php bloginfo("template_url"); ?>/js/products_moderator.js" type="text/javascript"></script>
         <script>
             HELPER.H.PATH_TO_THEME = "<?php bloginfo("template_url"); ?>";
         </script>
