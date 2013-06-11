@@ -174,7 +174,7 @@ class RightForms {
             ?>
                     <img class="margin5px cursorPointer colour_rect_click" 
                          src="<?php print HELPWordpress::template_url(); ?>/images/colours/<?php print $i; ?>.gif" 
-                         onClick="objChequeColor.change(<?php print $i; ?>);" id="chequeColor__<?php print $i; ?>" />
+                         onClick="ChequeColor.CC.change(<?php print $i; ?>);" id="chequeColor__<?php print $i; ?>" />
             <?php if ($i == 5 && $this->cheque->type == Cheque::TYPE_LASER) { ?> <br/> <?php
             } else if ($i == 5 && $this->cheque->type == Cheque::TYPE_MANUAL) {
                 break;
@@ -288,7 +288,7 @@ class RightForms {
                         ?>
                         <img class="margin2px cursorPointer image_position_laser" id="imgPoz_id<?php print $i; ?>" 
                              src="<?php print HELPWordpress::template_url(); ?>/images/styles/1-<?php print $i; ?>.png" 
-                             onClick="objChequePosition.changePosition(<?php print $i; ?>);" />
+                             onClick="ChequePosition.CP.changePosition(<?php print $i; ?>);" />
                 <?php
             }
             RightForms::CREATE_INPUTS_INVISIBLE(array("chequePosition"), array("1"));
@@ -305,10 +305,10 @@ class RightForms {
                     <div class="floatLEft">
                         <div class="lineTextHeight22 marginBottom2px height22PX">
                             <input type="checkbox" id="manualPosX1cheque" name="manualPosX1cheque_option" value="-1" 
-                                   onClick="objChequePosition.manualX2ChequesSet(this);" checked="checked" /></div>
+                                   onClick="ChequePosition.CP.manualX2ChequesSet(this);" checked="checked" /></div>
                         <div class="lineTextHeight22 marginBottom2px height22PX">
                             <input type="checkbox" id="manualPosX2cheque" name="manualPosX1cheque_option" value="-2"  
-                                   onClick="objChequePosition.manualX2ChequesSet(this);" /></div>
+                                   onClick="ChequePosition.CP.manualX2ChequesSet(this);" /></div>
                     </div>
                     <div class="floatLEft marginLeftRightForms">
                         <div class="lineTextHeight22 marginBottom2px">One Per Page Manual Cheque</div>
