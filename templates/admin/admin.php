@@ -92,6 +92,13 @@ class AdminEditorAdditional {
                                 CreatingInvoiceForAdditionalProducts.CIFAP.reset_approval_drop_box_empthy();
                                 RightAdminForms.RAF.put_inputs_empthy();
                                 $("input[name=cheque_logo_proof_required]").prop("checked", false);
+                                $("#file_approval_drop_down").prop("selectedIndex", 0);
+                                $("#authorization_number").val("");
+                                $("#batch_number").val("");
+                                $('input[name=invoice_paid_or_outstanding]').attr('checked', false);
+                                $("#order_updated_date_invoice").val("");
+                                $("#invoice_approval_drop_down").prop("selectedIndex", 0);
+                                $("#receipt_date").val("");
                             });
                         </script>
                     </div>

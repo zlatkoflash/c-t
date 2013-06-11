@@ -524,7 +524,7 @@ class RightForms {
                     
                     <div id="bank_info_number_validation_form" class="">
                         <div class="marginTop20px marginBottom2px">
-                            <b class="colorRED">Please verify bank details by re-entering below</b> 
+                            <b class="colorRED" style="font-weight: 600;">Please verify bank details by re-entering below</b> 
                         </div>
                         <div class="lineTextHeight22 marginBottom2px">
                             <div class="floatLEft width110px">Branch # (5 digits):</div>
@@ -768,7 +768,7 @@ class RightForms {
                 </div>
                 <div class="clearBoth"></div>
                 <div class="padding10px">
-                    <b class="colorRED">Please Double Check<br/>Bank Address & Postal Code</b>
+                    <b class="colorRED" style="font-weight: 600;">Please Double Check<br/>Bank Address & Postal Code</b>
                 </div>
             </div>
         </div>
@@ -2292,31 +2292,6 @@ class RightForms {
                     </div>
                     <div class="clearBoth"></div>
                 </div>
-                <!--
-                    <div class="marginTop20px">
-                        <div class="floatLEft width100px alignLeft lineTextHeight22 paddingLeft10px">FILE APPROVAL</div>
-                            <div class="floatLEft">
-                                    <select id="file_approval_drop_down" name="file_approval_drop_down">
-                                        <option value=""></option>
-
-                                        <option value="ONLINE-JG">ONLINE-JG</option>
-                                        <option value="ONLINE-EG">ONLINE-EG</option>
-                                        <option value="ONLINE-RB">ONLINE-RB</option>
-                                        <option value="ONLINE-HJ">ONLINE-HJ</option>
-                                        <option value="ONLINE-RG">ONLINE-RG</option>
-                                        <option value="ONLINE-TG">ONLINE-TG</option>
-
-                                        <option value="LOCAL-JG">LOCAL-JG</option>
-                                        <option value="LOCAL-EG">LOCAL-EG</option>
-                                        <option value="LOCAL-RB">LOCAL-RB</option>
-                                        <option value="LOCAL-HJ">LOCAL-HJ</option>
-                                        <option value="LOCAL-RG">LOCAL-RG</option>
-                                        <option value="LOCAL-TG">LOCAL-TG</option>
-                                    </select>
-                                </div>
-                        <div class="clearBoth"></div>
-                    </div>
-                -->
                 <div>
                     <div class="floatLEft width100px alignLeft lineTextHeight22 paddingLeft10px fontSize10px">
                         INVOICE APPROVAL
