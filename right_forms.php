@@ -524,7 +524,7 @@ class RightForms {
                     
                     <div id="bank_info_number_validation_form" class="">
                         <div class="marginTop20px marginBottom2px">
-                            <b class="colorRED" style="font-weight: 600;">Please verify bank details by re-entering below</b> 
+                            <b class="" style="">Please verify bank details by re-entering below</b> 
                         </div>
                         <div class="lineTextHeight22 marginBottom2px">
                             <div class="floatLEft width110px">Branch # (5 digits):</div>
@@ -768,7 +768,7 @@ class RightForms {
                 </div>
                 <div class="clearBoth"></div>
                 <div class="padding10px">
-                    <b class="colorRED" style="font-weight: 600;">Please Double Check<br/>Bank Address & Postal Code</b>
+                    <b class="" style="">Please look over the Bank Address<br/>for any errors, and make any changes.</b>
                 </div>
             </div>
         </div>
