@@ -100,6 +100,7 @@ class AdminEditorAdditional {
                                 $("#invoice_approval_drop_down").prop("selectedIndex", 0);
                                 $("#receipt_date").val("");
                                 $("#receipt_number").val("");
+                                $("#invoice_additiona_customer_code").val("");
                             });
                         </script>
                     </div>
