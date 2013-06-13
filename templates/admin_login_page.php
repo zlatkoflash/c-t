@@ -37,7 +37,7 @@
                         user_pass: $("#fsl_password").val()
                     }, function(data)
             {
-                alert(data);
+                console.log(data);
                 if (String(data + "").indexOf("login_all_right") != -1)
                 {
                     //MenuAdmin.MA.submit_menu("<?php print PagesModerator::PAGE_ADMIN_DIRECTIONS; ?>");

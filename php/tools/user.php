@@ -60,22 +60,26 @@ class User {
      * */
 
     public static function TRY_TO_LOGIN() {
+            session_start();
         $wp_hasher = new PasswordHash(8, TRUE);
         //print $wp_hasher->HashPassword($_POST["user_pass"]);
         $SQLActionSelectUser = "
 				SELECT * FROM wp_users
 				WHERE user_login='" . $_POST["user_login"] . "'
 			";
+        /*$SQLActionSelectUser = "
+				SELECT * FROM wp_users
+			";*/
         //print_r( $_POST );
         $user_row = DB_DETAILS::ADD_ACTION($SQLActionSelectUser, DB_DETAILS::$TYPE_SELECT);
+        //print_r($user_row);
 
-        if (count($user_row) == 1) {
+        if (count($user_row) > 0) {
             $user_row = $user_row[0];
             if (!$wp_hasher->CheckPassword($_POST["user_pass"], $user_row["user_pass"])) {
                 print "error_login password do not match";
                 return;
             }
-            session_start();
             $_SESSION[self::VARIABLE_SESSION_USER] =
                     array
                         (

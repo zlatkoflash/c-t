@@ -3,7 +3,7 @@
 	class SETTINGS
 	{
 		const db_server="localhost";
-		const db_name=  "chequesn_fewp";
+		const db_name=  "chequesn_chqswp";
 		const db_user="chequesn_mnusrac";
 		const db_pass="?1k+IX8HVHL1";
 		
