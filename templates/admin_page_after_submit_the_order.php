@@ -7,6 +7,7 @@
  */
 ?>
 
+<?php //print_r($_POST); ?>
 
 <?php get_header(); ?>
 

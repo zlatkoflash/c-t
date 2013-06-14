@@ -17,9 +17,9 @@
 		
 		const URL_TO_ADMIN_PAGE="https://chequesnow.ca/cheques/admin/";
                 
-                const URL_TO_ADMIN_PAGE_AFTER_SUBMIT_ORDER = "http://chequesnow.ca/cheques/admin-after-submit-order/";
+                const URL_TO_ADMIN_PAGE_AFTER_SUBMIT_ORDER = "https://chequesnow.ca/cheques/admin-after-submit-order/";
                 
-                const URL_TO_REDIRECTION_FOR_CONTRIBUTERS = "http://chequesnow.ca/cheques/admin-orders-navigator/";
+                const URL_TO_REDIRECTION_FOR_CONTRIBUTERS = "https://chequesnow.ca/cheques/admin-orders-navigator/";
                         
 		/*
 			Set of pages after doing the transaction with BeanStream.

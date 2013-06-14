@@ -1,4 +1,7 @@
-			<div class="marginBottom10px">           
+            <?php
+            //print_r($_POST);
+            ?>
+            <div class="marginBottom10px">           
             	Order <b><?php print OrdersDatabase::GET_ORDER_POWER( $_POST["fso_order_number"] ); ?></b> is updated.
             </div>
             <div class="marginBottom10px">

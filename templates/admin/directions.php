@@ -86,5 +86,5 @@ if (User::$LOGGED_USER->get_wp_user_role() == User::TYPE_ADMINISTRATOR) {
     SearchOrders::showSearchForm();
 }
 
-print ">>>>>>>>>>>>>>>>>>>>>".User::$LOGGED_USER->get_wp_user_role();
+//print ">>>>>>>>>>>>>>>>>>>>>".User::$LOGGED_USER->get_wp_user_role();
 ?>
