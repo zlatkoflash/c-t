@@ -15,7 +15,7 @@
         	<!--Left div-->
         	<div class="floatLEft">    	
             	<div class="positionRelative" style=" width:260px; border-right-style:dotted; border-width:1px;">
-                	<div id="" class="brojceGoreDesnoIDnew" style="position:absolute; top:3px; right:5px;font-family:Arial; font-size:12pt; text-align:right; width:100px; ">
+                    <div id="" class="brojceGoreDesnoIDnew" style="position:absolute; top:3px; right:5px;font-family:Arial; font-size:12pt; text-align:right; width:100px; ">
                     	000000
                     </div>
                     <div id="" class="dateLeftTabelaID" style=" font-family:Arial, Helvetica, sans-serif; font-size:7pt; text-align:left; position:absolute; left:40px; top:3px; border-bottom:solid; border-width:1px; width:155px; height:13px;">

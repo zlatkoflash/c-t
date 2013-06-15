@@ -153,6 +153,7 @@ class RightForms {
         /*
           RightForms::CREATE_INPUTS_INVISIBLE(array( "quantityINPUT", "quantityINPUTIndex", "quantityTitle"), array("", "0", ""));
          */
+        RightForms::CREATE_INPUTS_INVISIBLE(array("quantity_product_id"), array(""));
     }
 
     function draw_ChequeColors() {
@@ -1848,13 +1849,6 @@ class RightForms {
                     total += CompanyInfo.CI.getSSDWEObject().price_abs();
                     total += CompanyInfo.CI.getAPChequeBinderObject().price_abs();
                     total += CompanyInfo.CI.getAPSelfLinkingShtamp().price_abs();
-                    /*
-                     if(document.getElementById("rush_25charge_1to5_business_days").checked == true)
-                     {
-                     total += Delivery.D.getShippingRushChargeObject().price-Delivery.D.getShippingRushChargeObject().discount;
-                     }
-                     total += Delivery.D.price;
-                     */
                     total += Delivery.D.getShipingObject().price_abs();
                     if (isNaN(total))
                     {
@@ -1869,79 +1863,6 @@ class RightForms {
                 this.sub_total_taxes = function()
                 {
                     var percent = TaxesModerator.TM.tax_shipping()/100;
-                    //alert(TaxesModerator.TM.tax_shipping());
-                    /*
-                    var selectedProvinceOrStateOnShiping = document.getElementById("CBProvince_TYPE_SHIPING").selectedIndex;
-                    selectedProvinceOrStateOnShiping =
-                            document.getElementById("CBProvince_TYPE_SHIPING").options[selectedProvinceOrStateOnShiping].text
-                    switch (selectedProvinceOrStateOnShiping)
-                    {
-                        case "AB":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "BC":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "MB":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "NB":
-                            {
-                                percent = 13 / 100;
-                            }
-                            break;
-                        case "NL":
-                            {
-                                percent = 13 / 100;
-                            }
-                            break;
-                        case "NS":
-                            {
-                                percent = 15 / 100;
-                            }
-                            break;
-                        case "NT":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "NU":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "ON":
-                            {
-                                percent = 13 / 100;
-                            }
-                            break;
-                        case "PE":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "QC":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "SK":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                        case "YT":
-                            {
-                                percent = 5 / 100;
-                            }
-                            break;
-                    }*/
                     this.percentTaxes = Math.round(percent * 10000);
                     this.percentTaxes /= 100;
                     $("#percentTaxesInput").val(this.percentTaxes);

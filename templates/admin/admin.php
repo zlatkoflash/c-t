@@ -623,7 +623,8 @@ class AdminEditorAdditional {
              */
             ProductEditor.IS_FOR = ProductEditor.IS_FOR_DISCAUNT;
         <?php
-        foreach ($_POST as $variable => $value) {
+        foreach ($_POST as $variable => $value) 
+        {
             if (
                     $variable != "email_discount_code" &&
                     $variable != "order_submited_date_order_updated_date"
@@ -635,6 +636,13 @@ class AdminEditorAdditional {
                 ?>
                 <?php
             }
+        }
+        if(isset($_POST["quantity_product_id"]))
+        {
+        ?>
+            $('#compInfoQuantity option[quantity_product_id="<?php print $_POST["quantity_product_id"]; ?>"]').
+                    attr("selected", "selected");
+        <?php
         }
         /*
          * if shipping_to_bo_box is checked is parsing value to post
@@ -659,7 +667,6 @@ class AdminEditorAdditional {
          */
         ?>
         <script>
-            //HELPER.H.setupComboBoxByIndex("compInfoQuantity", "<?php print $_POST["quantityINPUTIndex"] ?>");
         <?php
         if (!RightForms::IS_NEW_CREATED_ORDER()) {
             ?>

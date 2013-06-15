@@ -150,7 +150,15 @@ class ProductsModerator {
             $product = new Product($allQuantityObjects[$i]);
             if ($product->price > 0) {
                 ?>
-                Quantity_and_Prices.QP.quantity_variables["<?php print $product->title; ?> $<?php print $product->price_formated(); ?>"] = <?php $product->js_object('Quantity_and_Prices.QP.quantity_variables'); ?>;
+                Quantity_and_Prices.QP.quantity_variables_by_id["__<?php print $product->id; ?>__"] =
+                Quantity_and_Prices.QP.quantity_variables["<?php print $product->title; ?> $<?php print $product->price_formated(); ?>"] = 
+                    <?php $product->js_object('Quantity_and_Prices.QP.quantity_variables'); ?>;
+                Quantity_and_Prices.QP.quantity_variables_by_id["__<?php print $product->id; ?>__"].title_full
+                ="<?php print $product->title; ?> $<?php print $product->price_formated(); ?>";
+                Quantity_and_Prices.QP.quantity_variables.push
+                ( 
+                Quantity_and_Prices.QP.quantity_variables_by_id["__<?php print $product->id; ?>__"] 
+                );
                 <?php
             } else if ($product->price == 0) {
                 $product->title = "Quantities and Prices";
@@ -165,7 +173,15 @@ class ProductsModerator {
                   }
                  * */
                 ?>
-                Quantity_and_Prices.QP.quantity_variables["<?php print $product->title; ?>"] = <?php $product->js_object('Quantity_and_Prices.QP.quantity_variables'); ?>;
+                Quantity_and_Prices.QP.quantity_variables_by_id["__<?php print $product->id; ?>__"] =
+                Quantity_and_Prices.QP.quantity_variables["<?php print $product->title; ?>"] = 
+                    <?php $product->js_object('Quantity_and_Prices.QP.quantity_variables'); ?>;
+                Quantity_and_Prices.QP.quantity_variables_by_id["__<?php print $product->id; ?>__"].title_full
+                ="<?php print $product->title; ?>";
+                Quantity_and_Prices.QP.quantity_variables.push
+                ( 
+                Quantity_and_Prices.QP.quantity_variables_by_id["__<?php print $product->id; ?>__"] 
+                );
                 <?php
             }
         }

@@ -254,7 +254,18 @@ function Quantity_and_Prices()
 				 money:this.quantityMONEY(),
 				 quantityCountFree:this.quantityCountFree()};
 	}
+        /*
+         * 
+         * @type Array
+         * It hold all objects with push, it reference to all objects by title.
+         */
 	this.quantity_variables = [];
+        /*
+         * 
+         * @type Array
+         * __id__
+         */
+        this.quantity_variables_by_id = [];
 	
 	this.quantityObject = function()
 	{
@@ -279,24 +290,26 @@ function Quantity_and_Prices()
 	this.addQuantintyOptions = function(  )
 	{
 		var counter = 0;
-		for(var i in this.quantity_variables)
+		for(var i=0;i<this.quantity_variables.length;i++)
 		{
 			var value="";
 			if(counter > 0)
 			{
 				value = i;
 			}
-			if(i=="Manual Cheques" && settings.IS_SEARCH_FORM==true)
+			if(this.quantity_variables[i].title_full=="Manual Cheques" && settings.IS_SEARCH_FORM==true)
 			{
-				$("#compInfoQuantity").append("<option>-</option>");
+				$("#compInfoQuantity").append('<option value="-1">-</option>');
 			}
 			//alert(value);
-			$("#compInfoQuantity").append("<option>"+i+"</option>");
+			$("#compInfoQuantity").append('<option quantity_product_id="'+this.quantity_variables[i].id
+                                +'" value="'+this.quantity_variables[i].title_full+'">'+this.quantity_variables[i].title_full+'</option>');
 			counter++;
 		}
 		$("#compInfoQuantity").change(function(e)
 		{
-			//alert($(this).val());
+                    $("#quantity_product_id").val( $("#compInfoQuantity").find(":selected").attr("quantity_product_id") );
+                    //console.log($("#quantity_product_id").val());
 		});
 	}
 }
@@ -1268,9 +1281,8 @@ function CompanyInfo()
 		$("#brojceGoreDesnoID .compInfoStartAt").html(this.startAt());
                 if(document.getElementById("brojceGoreDesnoID_2") != null)
 		{
-			//document.getElementById("brojceGoreDesnoID_2").innerHTML = "AAAA  "+this.startAt_plus_1();
                         $("#brojceGoreDesnoID_2 .special_designation").html($("#special_designation").val().toLocaleUpperCase());
-                        $("#brojceGoreDesnoID_2 .compInfoStartAt").html(this.startAt());
+                        $("#brojceGoreDesnoID_2 .compInfoStartAt").html(this.startAt_plus_1());
 		}
                 
 		var divNumber1 = document.getElementById("brojcheLevoID");
@@ -1286,11 +1298,8 @@ function CompanyInfo()
                     /*
                      * brojceGoreDesnoIDnew is number of the left part of manual cheque
                      */
-			document.getElementById("brojceGoreDesnoIDnew").innerHTML = this.startAt();
-			if(document.getElementById("brojceGoreDesnoIDnew_2") != null)
-			{
-				document.getElementById("brojceGoreDesnoIDnew_2").innerHTML = this.startAt_plus_1();
-			}
+                        $("#brojceGoreDesnoIDnew").html( this.startAt() );
+                        $("#brojceGoreDesnoIDnew_2").html( this.startAt_plus_1() );
 		}
 	
 		var num1 = this.startAt();if(isNaN(num1))num1 = "000000";

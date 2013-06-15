@@ -1,13 +1,13 @@
 <source>
 			<fso_admin_submit_additions><![CDATA[1,0,0]]></fso_admin_submit_additions>
-							   <order_action_type><![CDATA[update]]></order_action_type>
 							   <sendToPrintNowEmail><![CDATA[orders@printnow.ca]]></sendToPrintNowEmail>
 							   <admin_second_email_for_customer><![CDATA[2d email for customer]]></admin_second_email_for_customer>
 							   <sales_person_code_show_cb><![CDATA[A]]></sales_person_code_show_cb>
 							   <order_entered_by_show_cb><![CDATA[A]]></order_entered_by_show_cb>
 							   <sales_person_code_order_entered_by><![CDATA[1;IN11R;2;HJ]]></sales_person_code_order_entered_by>
 							   <order_submited_date_order_updated_date><![CDATA[10000000;]]></order_submited_date_order_updated_date>
-							   <compInfoQuantity><![CDATA[250 + 75 FREE $149.00]]></compInfoQuantity>
+							   <compInfoQuantity><![CDATA[3000 + 750 FREE $536.00]]></compInfoQuantity>
+							   <quantity_product_id><![CDATA[8]]></quantity_product_id>
 							   <CICompanyName><![CDATA[asdasd]]></CICompanyName>
 							   <CIContactName><![CDATA[asdfsdf]]></CIContactName>
 							   <CIPhone><![CDATA[asdasd]]></CIPhone>
@@ -58,8 +58,8 @@
 							   <compInfoDWE><![CDATA[0]]></compInfoDWE>
 							   <compInfoSSDWE><![CDATA[0]]></compInfoSSDWE>
 							   <compInfoSelfLinkingStamp><![CDATA[0]]></compInfoSelfLinkingStamp>
-							   <additional_products_IDs><![CDATA[4;37;49;57;-1;68;-1;74]]></additional_products_IDs>
-							   <additionalProducts_indexes><![CDATA[3;1;0;0;-1;0;-1;-1]]></additionalProducts_indexes>
+							   <additional_products_IDs><![CDATA[8;37;49;57;-1;68;-1;74]]></additional_products_IDs>
+							   <additionalProducts_indexes><![CDATA[7;1;0;0;-1;0;-1;-1]]></additionalProducts_indexes>
 							   <BSCombo_TYPE_BILLING><![CDATA[yes_they_are_selected]]></BSCombo_TYPE_BILLING>
 							   <companyName_TYPE_BILLING><![CDATA[asdasd]]></companyName_TYPE_BILLING>
 							   <contactName_TYPE_BILLING><![CDATA[asdfsdf]]></contactName_TYPE_BILLING>
@@ -101,10 +101,10 @@
 							   <shipping_charge_select_company><![CDATA[CANADAPOST]]></shipping_charge_select_company>
 							   <shipping_price_INPUT_company><![CDATA[CANADAPOST]]></shipping_price_INPUT_company>
 							   <deliveryINPUT><![CDATA[Standard 8-10 Business Days]]></deliveryINPUT>
-							   <sub_total_products_INPUT><![CDATA[194]]></sub_total_products_INPUT>
-							   <shipping_price_INPUT><![CDATA[15]]></shipping_price_INPUT>
-							   <sub_total_taxes_INPUT><![CDATA[7.76]]></sub_total_taxes_INPUT>
-							   <grand_total_INPUT><![CDATA[201.76]]></grand_total_INPUT>
+							   <sub_total_products_INPUT><![CDATA[566]]></sub_total_products_INPUT>
+							   <shipping_price_INPUT><![CDATA[0]]></shipping_price_INPUT>
+							   <sub_total_taxes_INPUT><![CDATA[22.64]]></sub_total_taxes_INPUT>
+							   <grand_total_INPUT><![CDATA[588.64]]></grand_total_INPUT>
 							   <percentTaxesInput><![CDATA[4]]></percentTaxesInput>
 							   <authorization_number><![CDATA[]]></authorization_number>
 							   <batch_number><![CDATA[]]></batch_number>
@@ -112,7 +112,7 @@
 							   <invoice_additiona_customer_code><![CDATA[]]></invoice_additiona_customer_code>
 							   <enter_email_address_for_invoice><![CDATA[enter email address]]></enter_email_address_for_invoice>
 							   <invoice_approval_drop_down><![CDATA[EG]]></invoice_approval_drop_down>
-							   <next_start_number_input><![CDATA[00000325]]></next_start_number_input>
+							   <next_start_number_input><![CDATA[000003750]]></next_start_number_input>
 							   <receipt_date><![CDATA[]]></receipt_date>
 							   <email_discount_code><![CDATA[GG028]]></email_discount_code>
 							   <order_updated_date_invoice_value><![CDATA[0]]></order_updated_date_invoice_value>
