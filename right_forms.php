@@ -63,7 +63,7 @@ class RightForms {
         <script>
             $(document).ready(function(e)
             {
-                //$("#form").validationEngine();
+                $("#form").validationEngine();
             });
         </script>
         <?php
