@@ -24,6 +24,19 @@ function Eventor()
     }
 }
 
+function Stage()
+{
+    this.enter_frame = function()
+    {
+        this.dispatch_event(Stage.ON_ENTER_FRAME, {});
+    }
+    setInterval("Stage.S.enter_frame();", 1000/24);
+}
+Stage.ON_ENTER_FRAME = "ON_ENTER_FRAME";
+Stage.prototype = new Eventor();
+Stage.S = new Stage();
+
+
 function HELPER()
 {
 	this.arrayFUNCTIONs = [];

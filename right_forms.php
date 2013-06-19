@@ -63,7 +63,7 @@ class RightForms {
         <script>
             $(document).ready(function(e)
             {
-                $("#form").validationEngine();
+                //$("#form").validationEngine();
             });
         </script>
         <?php
@@ -662,6 +662,17 @@ class RightForms {
                                 {
                                     show_labels_for_account_numbers();
                                 });
+                                
+                    Stage.S.add_event(Stage.ON_ENTER_FRAME, function(data)
+                    {
+                        if($("#cb_ovverride_default_bank_layout").prop("checked"))
+                        {
+                            if($("#compInfoAccountNumber").val().substring(0,1) != " ")
+                            $("#compInfoAccountNumber").val(" "+$("#compInfoAccountNumber").val());
+                            if($("#compInfoAccountNumber_verify").val().substring(0,1) != " ")
+                            $("#compInfoAccountNumber_verify").val(" "+$("#compInfoAccountNumber_verify").val());
+                        }
+                    });
                                 function checkAccountNumberFormat(field, rules, i, options)
                                 {
                                     if (!CompanyInfo.CI.check_account_number_if_is_good())
@@ -920,6 +931,46 @@ class RightForms {
                     </div>
                     -->
                 </div>
+                <?php if(self::$IS_FOR_SHOWING_ORDER_FOR_ADMIN){ ?>
+                <div class="floatLEft  alignLeft">
+                    <div class="lineTextHeight22 marginBottom2px">STD</div>
+                    <div class="lineTextHeight22 marginBottom2px">SPECIAL</div>
+                    <div class="lineTextHeight22 marginBottom2px">T</div>
+                    <div class="lineTextHeight22 marginBottom2px">M</div>
+                    <div class="lineTextHeight22 marginBottom2px">B</div>
+                    <div class="lineTextHeight22 marginBottom2px">Optional text:</div>
+                </div>
+                <div class="floatLEft marginLeftRightForms alignLeft">
+                    <div class="lineTextHeight22 height22PX marginBottom2px">
+                        <input type="checkbox" value="STD" name="std_checkeckbox" id="std_checkeckbox" />
+                    </div>
+                    <div class="lineTextHeight22 height22PX marginBottom2px">
+                        <input type="checkbox" value="SPECIAL" name="special_checkeckbox" id="special_checkeckbox" />
+                    </div>
+                    <div class="lineTextHeight22 height22PX marginBottom2px">
+                        <input type="checkbox" value="T" name="t_checkeckbox" id="t_checkeckbox" />
+                    </div>
+                    <div class="lineTextHeight22 height22PX marginBottom2px">
+                        <input type="checkbox" value="M" name="m_checkeckbox" id="m_checkeckbox" />
+                    </div>
+                    <div class="lineTextHeight22 height22PX marginBottom2px">
+                        <input type="checkbox" value="B" name="b_checkeckbox" id="b_checkeckbox" />
+                    </div>
+                    <div class="lineTextHeight22 height22PX marginBottom2px">
+                        <input type="text" value="" name="optional_text" id="optional_text" />
+                    </div>
+                </div>
+                <script>
+                <?php 
+                if(isset($_POST["std_checkeckbox"])){ ?> $("#std_checkeckbox").prop("checked", true); <?php }
+                if(isset($_POST["special_checkeckbox"])){ ?> $("#special_checkeckbox").prop("checked", true); <?php }
+                if(isset($_POST["t_checkeckbox"])){ ?> $("#t_checkeckbox").prop("checked", true); <?php }
+                if(isset($_POST["m_checkeckbox"])){ ?> $("#m_checkeckbox").prop("checked", true); <?php }
+                if(isset($_POST["b_checkeckbox"])){ ?> $("#b_checkeckbox").prop("checked", true); <?php }
+                ?>
+                </script>
+                <?php
+                } ?>
                 <script>
                       $(".onfocus_select").click(function(e)
                       {
@@ -1478,7 +1529,7 @@ class RightForms {
                         <input type="text" id="companyName_<?php print $type; ?>" name="companyName_<?php print $type; ?>" value=""
                                onkeyup="TekstHelperBSM.TH.removeComma(this);
                                 BillingShipingModerator.BSM.ON_CHANGE('<?php print $type; ?>');" 
-                               class="validate[required] <?php print $additional_classes_for_shipping; ?> " />
+                               class="validate[required] <?php print $additional_classes_for_shipping; ?>" />
                     </div>
                     <div class="lineTextHeight22 marginBottom2px">
                         <input type="text" id="contactName_<?php print $type; ?>" name="contactName_<?php print $type; ?>" value=""

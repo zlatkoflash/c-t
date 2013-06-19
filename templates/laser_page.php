@@ -18,7 +18,7 @@
 <?php RightForms::$RF = new RightForms($cheque); ?>
 
 
-<div id="cheque_holder" class="<?php print $cheque->cssMainWidth; ?>"><!-- Main cheque holder start -->
+<div id="cheque_holder" class="<?php print $cheque->cssMainWidth; ?>"  spellcheck="true"><!-- Main cheque holder start -->
     <div id="cheque_render_holder" class="floatLEft colorChequeSlidingHelp <?php print $cheque->cheque_render_holder_width; ?>">
         <div id="cheque_render_holderABSOLUTE">
             <div></div>	

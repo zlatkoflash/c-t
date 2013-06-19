@@ -81,6 +81,7 @@
 			}
 			
 			$email_discount_code = "54";
+                        $deposit_to_the_credit_of_label = "";
 			if($_POST["email_discount_code"] != "")
 			{
 				$email_discount_code = $_POST["email_discount_code"];
@@ -88,6 +89,7 @@
 			if(Product::$SELF_INKING_STAMP->additional_type == "address_and_deposit")
 			{
 				$style_text = " 1 Address Stamp ";
+                                $deposit_to_the_credit_of_label = '<p><b>DEPOSIT TO THE CREDIT OF</b></p>';
 			}
 			else
 			{
@@ -111,7 +113,7 @@ I need to place the following '.$this->get_label_stamp().' order:
 						<p style="text-align:left; font-size:10pt; margin:0px; padding:0px;">
 						Imprint<!--: Please take all required information from the attached PDF.-->
 						</p>
-                                                <p><b>DEPOSIT TO THE CREDIT OF</b></p>
+                                                '.$deposit_to_the_credit_of_label.'
 						'.$this->company_info_address($addresses).'
 						
 						<p style="text-align:left; font-size:10pt; margin:0px; padding:0px;">

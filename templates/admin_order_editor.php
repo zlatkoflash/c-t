@@ -24,7 +24,7 @@
 	SettingsModerator::init();
 ?>
 
-<div id="adminSimpleUpdateForm" class="margin__0___AUTO width500PX borderGrayDotted colorBGWhite padding30px">
+<div id="adminSimpleUpdateForm" class="margin__0___AUTO width500PX borderGrayDotted colorBGWhite padding30px" spellcheck="true">
 
 <?php require_once(get_template_directory()."/templates/admin/admin_user_status.php"); ?>
     

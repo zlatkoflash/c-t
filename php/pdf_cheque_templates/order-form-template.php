@@ -409,17 +409,40 @@ class OrderFormTemplate
 		$this->pdf->SetXY(20, PDFHelper::pixels_to_MM(275));
 		$this->pdf->MultiCell(20,PDFHelper::points_to_MM(12),$this->chequeData->startAtNumber(),$this->showBorder,"C");
 		$this->pdf->SetFont("helvetica", "", $this->fontSize);
-		/*
+		
 		//STD checkbox field
+                if(isset($_POST["std_checkeckbox"])){
 		$this->pdf->SetXY(PDFHelper::pixels_to_MM(191), PDFHelper::pixels_to_MM(269));
 		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(14),PDFHelper::points_to_MM(7),"X",$this->showBorder,"C");
+                }
 		//Special checkbox field
+                if(isset($_POST["special_checkeckbox"])){
 		$this->pdf->SetXY(PDFHelper::pixels_to_MM(191), PDFHelper::pixels_to_MM(284));
 		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(14),PDFHelper::points_to_MM(7),"X",$this->showBorder,"C");
+                }
 		//TMB field
+		$this->pdf->SetFont("helvetica_bold", "", 7);
+                if(isset($_POST["t_checkeckbox"])){
+		$this->pdf->SetXY(57.5, 70);
+		$this->pdf->MultiCell(3,3,"T",
+                        $this->showBorder,"C");
+                }
+                if(isset($_POST["m_checkeckbox"])){
+		$this->pdf->SetXY(61, 70);
+		$this->pdf->MultiCell(3,3,"M",
+                        $this->showBorder,"C");
+                }
+                if(isset($_POST["b_checkeckbox"])){
+		$this->pdf->SetXY(65.5, 70);
+		$this->pdf->MultiCell(3,3,"B",
+                        $this->showBorder,"C");
+                }
+                
+		$this->pdf->SetFont("helvetica", "", 7);
 		$this->pdf->SetXY(PDFHelper::pixels_to_MM(215), PDFHelper::pixels_to_MM(280));
-		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(50),PDFHelper::points_to_MM(12),"TMB text",$this->showBorder,"L");
-		*/
+		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(50),PDFHelper::points_to_MM(12),$_POST["optional_text"],
+                        $this->showBorder,"L");
+		/**/
 		//Sequence field
 		$this->pdf->SetFont("helvetica", "", 7);
 		$this->pdf->SetXY(70, PDFHelper::pixels_to_MM(275));

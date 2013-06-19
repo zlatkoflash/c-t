@@ -47,7 +47,8 @@
 							   <compInfoShowStartNumber><![CDATA[on]]></compInfoShowStartNumber>
 							   <compInfoStartAt><![CDATA[000000]]></compInfoStartAt>
 							   <special_designation><![CDATA[XXXX]]></special_designation>
-							   <t_checkeckbox><![CDATA[T]]></t_checkeckbox>
+							   <std_checkeckbox><![CDATA[STD]]></std_checkeckbox>
+							   <special_checkeckbox><![CDATA[SPECIAL]]></special_checkeckbox>
 							   <compInfoStartAtTrueOrFalse><![CDATA[true]]></compInfoStartAtTrueOrFalse>
 							   <isThereSecondSignature><![CDATA[SIGNATURE_x1]]></isThereSecondSignature>
 							   <softwareINPUT><![CDATA[Buisiness Visions;2]]></softwareINPUT>
@@ -134,7 +135,9 @@
 							   <change_repeat_cheques_see_atchd><![CDATA[See Atchd]]></change_repeat_cheques_see_atchd>
 							   <job_name_text><![CDATA[asdasdsdf sdfsdf sdfsdafasdfasdfasdfasdfasdfasdfasdfasdfasdf sdfsdfsdfsdfsd
 sdfsdfasdfsdfsdf]]></job_name_text>
-							   <order_number_reference><![CDATA[T_L5840]]></order_number_reference>
-							   <orderNumber><![CDATA[T_L5840]]></orderNumber>
+							   <order_number_reference><![CDATA[T_L6226]]></order_number_reference>
+							   <date_for_new_submited_order><![CDATA[1371593250]]></date_for_new_submited_order>
+							   <IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER><![CDATA[true]]></IS_NEW_CREATED_ORDER_FROM_EXISTING_ORDER>
+							   <orderNumber><![CDATA[T_L6226]]></orderNumber>
 							   
 			</source>
