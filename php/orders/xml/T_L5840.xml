@@ -1,12 +1,14 @@
 <source>
 			<fso_admin_submit_additions><![CDATA[1,0,0]]></fso_admin_submit_additions>
+							   <order_action_type><![CDATA[update]]></order_action_type>
 							   <sendToPrintNowEmail><![CDATA[orders@printnow.ca]]></sendToPrintNowEmail>
 							   <admin_second_email_for_customer><![CDATA[2d email for customer]]></admin_second_email_for_customer>
+							   <cb__sendCustomer_Email><![CDATA[do_not_send_customer_email]]></cb__sendCustomer_Email>
 							   <sales_person_code_show_cb><![CDATA[A]]></sales_person_code_show_cb>
 							   <order_entered_by_show_cb><![CDATA[A]]></order_entered_by_show_cb>
 							   <sales_person_code_order_entered_by><![CDATA[1;IN11R;2;HJ]]></sales_person_code_order_entered_by>
 							   <order_submited_date_order_updated_date><![CDATA[10000000;]]></order_submited_date_order_updated_date>
-							   <compInfoQuantity><![CDATA[3000 + 750 FREE $536.00]]></compInfoQuantity>
+							   <compInfoQuantity><![CDATA[3000 + 750 FREE $540.00]]></compInfoQuantity>
 							   <quantity_product_id><![CDATA[8]]></quantity_product_id>
 							   <CICompanyName><![CDATA[asdasd]]></CICompanyName>
 							   <CIContactName><![CDATA[asdfsdf]]></CIContactName>
@@ -48,7 +50,7 @@
 							   <compInfoStartAt><![CDATA[000000]]></compInfoStartAt>
 							   <special_designation><![CDATA[XXXX]]></special_designation>
 							   <std_or_special_checkeckbox><![CDATA[SPECIAL]]></std_or_special_checkeckbox>
-							   <tmb_checkeckbox><![CDATA[Array]]></tmb_checkeckbox>
+							   <none_checkeckbox><![CDATA[NONE]]></none_checkeckbox>
 							   <optional_text><![CDATA[]]></optional_text>
 							   <compInfoStartAtTrueOrFalse><![CDATA[true]]></compInfoStartAtTrueOrFalse>
 							   <isThereSecondSignature><![CDATA[SIGNATURE_x1]]></isThereSecondSignature>
@@ -104,10 +106,10 @@
 							   <shipping_charge_select_company><![CDATA[CANADAPOST]]></shipping_charge_select_company>
 							   <shipping_price_INPUT_company><![CDATA[CANADAPOST]]></shipping_price_INPUT_company>
 							   <deliveryINPUT><![CDATA[Standard 8-10 Business Days]]></deliveryINPUT>
-							   <sub_total_products_INPUT><![CDATA[566]]></sub_total_products_INPUT>
+							   <sub_total_products_INPUT><![CDATA[570]]></sub_total_products_INPUT>
 							   <shipping_price_INPUT><![CDATA[0]]></shipping_price_INPUT>
-							   <sub_total_taxes_INPUT><![CDATA[22.64]]></sub_total_taxes_INPUT>
-							   <grand_total_INPUT><![CDATA[588.64]]></grand_total_INPUT>
+							   <sub_total_taxes_INPUT><![CDATA[22.8]]></sub_total_taxes_INPUT>
+							   <grand_total_INPUT><![CDATA[592.8]]></grand_total_INPUT>
 							   <percentTaxesInput><![CDATA[4]]></percentTaxesInput>
 							   <authorization_number><![CDATA[]]></authorization_number>
 							   <batch_number><![CDATA[]]></batch_number>

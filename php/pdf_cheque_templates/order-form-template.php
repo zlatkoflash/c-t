@@ -423,6 +423,13 @@ class OrderFormTemplate
                 }
                 
 		//TMB field
+                //$_POST["none_checkeckbox"] = "AAAA";
+		$this->pdf->SetFont("helvetica_bold", "", 10);
+                if(isset($_POST["none_checkeckbox"])){
+		$this->pdf->SetXY(56, 70);
+		$this->pdf->MultiCell(20,3,"NONE",
+                        $this->showBorder,"L");
+                }
 		$this->pdf->SetFont("helvetica_bold", "", 7);
                 if(isset($_POST["t_checkeckbox"])){
 		$this->pdf->SetXY(57.5, 70);

@@ -932,7 +932,7 @@ class RightForms {
                         B<input type="checkbox" value="B" name="b_checkeckbox" id="b_checkeckbox" class="tmb_checkboxes validate[funcCall[check_if_special_option_is_selected]]" />
                     </div>
                     <div class="floatLEft marginLeft5px">
-                        None<input type="checkbox" value="B" name="none_checkeckbox" id="none_checkeckbox" class="tmb_checkboxes validate[funcCall[check_if_special_option_is_selected]]" />
+                        None<input type="checkbox" value="NONE" name="none_checkeckbox" id="none_checkeckbox" class="tmb_checkboxes validate[funcCall[check_if_special_option_is_selected]]" />
                     </div>
                     <div class="clearBoth"></div>
                 </div>
@@ -944,17 +944,35 @@ class RightForms {
                     <div class="clearBoth"></div>
                 </div>
                 <script>
+                <?php
+                if(isset($_POST["std_or_special_checkeckbox"]) && $_POST["std_or_special_checkeckbox"] == "STD")
+                {
+                    ?>$("#std_checkeckbox").prop("checked", true);<?php
+                }
+                else if(isset($_POST["std_or_special_checkeckbox"]) && 
+                        $_POST["std_or_special_checkeckbox"] == "SPECIAL")
+                {
+                    ?>$("#special_checkeckbox").prop("checked", true);<?php 
+                }
+                ?>
                 <?php 
                 if(isset($_POST["std_checkeckbox"])){ ?> $("#std_checkeckbox").prop("checked", true); <?php }
                 if(isset($_POST["special_checkeckbox"])){ ?> $("#special_checkeckbox").prop("checked", true); <?php }
                 if(isset($_POST["t_checkeckbox"])){ ?> $("#t_checkeckbox").prop("checked", true); <?php }
                 if(isset($_POST["m_checkeckbox"])){ ?> $("#m_checkeckbox").prop("checked", true); <?php }
                 if(isset($_POST["b_checkeckbox"])){ ?> $("#b_checkeckbox").prop("checked", true); <?php }
+                if(isset($_POST["none_checkeckbox"])){ ?> $("#none_checkeckbox").prop("checked", true); <?php }
                 ?>
                 </script>
                 <?php
                 } ?>
                 <script>
+                    $("#none_checkeckbox").click(function(e)
+                    {
+                        $("#t_checkeckbox").prop("checked", false);
+                        $("#m_checkeckbox").prop("checked", false);
+                        $("#b_checkeckbox").prop("checked", false);
+                    });
                       $(".onfocus_select").click(function(e)
                       {
                           $(this).select();
