@@ -410,16 +410,18 @@ class OrderFormTemplate
 		$this->pdf->MultiCell(20,PDFHelper::points_to_MM(12),$this->chequeData->startAtNumber(),$this->showBorder,"C");
 		$this->pdf->SetFont("helvetica", "", $this->fontSize);
 		
+                
 		//STD checkbox field
-                if(isset($_POST["std_checkeckbox"])){
+                if(isset($_POST["std_or_special_checkeckbox"]) && $_POST["std_or_special_checkeckbox"] == "STD"){
 		$this->pdf->SetXY(PDFHelper::pixels_to_MM(191), PDFHelper::pixels_to_MM(269));
 		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(14),PDFHelper::points_to_MM(7),"X",$this->showBorder,"C");
                 }
 		//Special checkbox field
-                if(isset($_POST["special_checkeckbox"])){
+                if(isset($_POST["std_or_special_checkeckbox"]) && $_POST["std_or_special_checkeckbox"] == "SPECIAL"){
 		$this->pdf->SetXY(PDFHelper::pixels_to_MM(191), PDFHelper::pixels_to_MM(284));
 		$this->pdf->MultiCell(PDFHelper::pixels_to_MM(14),PDFHelper::points_to_MM(7),"X",$this->showBorder,"C");
                 }
+                
 		//TMB field
 		$this->pdf->SetFont("helvetica_bold", "", 7);
                 if(isset($_POST["t_checkeckbox"])){

@@ -912,53 +912,36 @@ class RightForms {
                                value="" maxlength=4
                                placeholder="Add designation in front of cheque #" />
                     </div>
-                    <!--
-                    <div class="lineTextHeight22 marginBottom2px">
-                        <input class="width150px onfocus_select cheque_numbers_key_up onkeyupload_bank_details" 
-                               type="text" id="compInfoBrunchNumber" name="compInfoBrunchNumber" 
-                                                                onchange="" value="00000" maxlength=5 />
-                    </div>
-                    <div class="lineTextHeight22 marginBottom2px">
-                        <input class="width150px onfocus_select cheque_numbers_key_up onkeyupload_bank_details" 
-                               type="text" id="compInfoTransitNumber" name="compInfoTransitNumber" 
-                                            onchange="" value="000" maxlength=3 />
-                                            
-                    </div>
-                    <div class="lineTextHeight22 marginBottom2px">
-                        <input class="width150px onfocus_select cheque_numbers_key_up" 
-                               type="text" id="compInfoAccountNumber" name="compInfoAccountNumber" 
-                         value="000000000000000" maxlength=15 />
-                    </div>
-                    -->
                 </div>
+                <div class="clearBoth"></div>
                 <?php if(self::$IS_FOR_SHOWING_ORDER_FOR_ADMIN){ ?>
-                <div class="floatLEft  alignLeft">
-                    <div class="lineTextHeight22 marginBottom2px">STD</div>
-                    <div class="lineTextHeight22 marginBottom2px">SPECIAL</div>
-                    <div class="lineTextHeight22 marginBottom2px">T</div>
-                    <div class="lineTextHeight22 marginBottom2px">M</div>
-                    <div class="lineTextHeight22 marginBottom2px">B</div>
-                    <div class="lineTextHeight22 marginBottom2px">Optional text:</div>
+                <div class="marginTop20px">
+                    <div class="floatLEft">
+                        STD<input type="radio" value="STD" name="std_or_special_checkeckbox" id="std_checkeckbox" class="validate[required] std_or_special_checkeckbox" />
+                    </div>
+                    <div class="floatLEft marginLeft5px">
+                        SPECIAL<input type="radio" value="SPECIAL" name="std_or_special_checkeckbox" id="special_checkeckbox" class="validate[required] std_or_special_checkeckbox" />
+                    </div>
+                    <div class="floatLEft marginLeft5px">
+                        T<input type="checkbox" value="T" name="t_checkeckbox" id="t_checkeckbox" class="tmb_checkboxes validate[funcCall[check_if_special_option_is_selected]]" />
+                    </div>
+                    <div class="floatLEft marginLeft5px">
+                        M<input type="checkbox" value="M" name="m_checkeckbox" id="m_checkeckbox" class="tmb_checkboxes validate[funcCall[check_if_special_option_is_selected]]" />
+                    </div>
+                    <div class="floatLEft marginLeft5px">
+                        B<input type="checkbox" value="B" name="b_checkeckbox" id="b_checkeckbox" class="tmb_checkboxes validate[funcCall[check_if_special_option_is_selected]]" />
+                    </div>
+                    <div class="floatLEft marginLeft5px">
+                        None<input type="checkbox" value="B" name="none_checkeckbox" id="none_checkeckbox" class="tmb_checkboxes validate[funcCall[check_if_special_option_is_selected]]" />
+                    </div>
+                    <div class="clearBoth"></div>
                 </div>
-                <div class="floatLEft marginLeftRightForms alignLeft">
-                    <div class="lineTextHeight22 height22PX marginBottom2px">
-                        <input type="checkbox" value="STD" name="std_checkeckbox" id="std_checkeckbox" />
-                    </div>
-                    <div class="lineTextHeight22 height22PX marginBottom2px">
-                        <input type="checkbox" value="SPECIAL" name="special_checkeckbox" id="special_checkeckbox" />
-                    </div>
-                    <div class="lineTextHeight22 height22PX marginBottom2px">
-                        <input type="checkbox" value="T" name="t_checkeckbox" id="t_checkeckbox" />
-                    </div>
-                    <div class="lineTextHeight22 height22PX marginBottom2px">
-                        <input type="checkbox" value="M" name="m_checkeckbox" id="m_checkeckbox" />
-                    </div>
-                    <div class="lineTextHeight22 height22PX marginBottom2px">
-                        <input type="checkbox" value="B" name="b_checkeckbox" id="b_checkeckbox" />
-                    </div>
-                    <div class="lineTextHeight22 height22PX marginBottom2px">
+                <div class="marginTop5px">
+                    <div class="lineTextHeight22 floatLEft">Optional text:</div>
+                    <div class="lineTextHeight22 height22PX floatLEft">
                         <input type="text" value="" name="optional_text" id="optional_text" />
                     </div>
+                    <div class="clearBoth"></div>
                 </div>
                 <script>
                 <?php 
@@ -991,6 +974,15 @@ class RightForms {
                       {
                           CompanyInfo.CI.load_bank_details();
                       });
+                      function check_if_special_option_is_selected(field, rules, i, options)
+                      {
+                            if (!$("#t_checkeckbox").prop("checked") && !$("#m_checkeckbox").prop("checked") && !$("#b_checkeckbox").prop("checked")
+                            && !$("#none_checkeckbox").prop("checked")
+                    && $("#special_checkeckbox").prop("checked"))
+                            {
+                                return "Please check special options.";
+                            }
+                      }
                 </script>
                 <div class="clearBoth"></div>
             </div>
@@ -1139,26 +1131,6 @@ class RightForms {
     ////////////////////////////////////////////////////////////////////////
     function draw_delivery() {
         ?>
-        <!--
-            <div class="holderRightParceForm">
-                    <div class="titleRightForm">Delivery</div>
-                <div class="holderRightParceForm___intoForm">
-                    <div>
-                            <input type=radio id="delivery_5_7_days" onclick="deliveriOBJ.RBDeliveryOnClick(this);" checked="checked" /> Standard 5-7 bus days Production Time
-                    </div>
-                    <div>
-                            <input type=radio id="delivery_24_48_days" onclick="deliveriOBJ.RBDeliveryOnClick(this);" /> 
-                        Rush 24-48 hours Production Time<span style="font-size:15px; font-weight:bold; color:#900;">($25 Charge)</span>
-                    </div>
-                    <div>
-                            <br><span style="font-size:10px; font-weight:bold; color:black;">Please Note, Rush Charge of $25 is an extra charge in addition 
-                        to the standard shipping charges.
-                        <br>Overnight shipping is also available please call us for details.</span>
-                    </div>
-                </div>
-                <div class="clearBoth"></div>
-            </div>
-        -->
         <div class="holderRightParceForm">
             <div class="titleRightForm">Delivery</div>
             <div class="holderRightParceForm___intoForm positionRelative deliveryFormInto">

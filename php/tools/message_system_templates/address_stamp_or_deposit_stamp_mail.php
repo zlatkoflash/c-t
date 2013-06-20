@@ -95,6 +95,10 @@
 			{
 				$style_text = Product::$SELF_INKING_STAMP->title;
 			}
+                        if(Product::$SELF_INKING_STAMP->additional_type == "deposit")
+                        {
+                                $deposit_to_the_credit_of_label = '<p><b>DEPOSIT TO THE CREDIT OF</b></p>';
+                        }
 			return '
 					<html>
 					<head>

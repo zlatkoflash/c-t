@@ -6,7 +6,7 @@
 							   <order_entered_by_show_cb><![CDATA[A]]></order_entered_by_show_cb>
 							   <sales_person_code_order_entered_by><![CDATA[1;IN11R;2;HJ]]></sales_person_code_order_entered_by>
 							   <order_submited_date_order_updated_date><![CDATA[10000000;]]></order_submited_date_order_updated_date>
-							   <compInfoQuantity><![CDATA[3000 + 750 FREE $540.00]]></compInfoQuantity>
+							   <compInfoQuantity><![CDATA[3000 + 750 FREE $536.00]]></compInfoQuantity>
 							   <quantity_product_id><![CDATA[8]]></quantity_product_id>
 							   <CICompanyName><![CDATA[asdasd]]></CICompanyName>
 							   <CIContactName><![CDATA[asdfsdf]]></CIContactName>
@@ -29,10 +29,10 @@
 							   <CILogoType><![CDATA[-1]]></CILogoType>
 							   <compInfoBrunchNumber><![CDATA[]]></compInfoBrunchNumber>
 							   <compInfoTransitNumber><![CDATA[]]></compInfoTransitNumber>
-							   <compInfoAccountNumber><![CDATA[]]></compInfoAccountNumber>
+							   <compInfoAccountNumber><![CDATA[ ]]></compInfoAccountNumber>
 							   <compInfoBrunchNumber_verify><![CDATA[]]></compInfoBrunchNumber_verify>
 							   <compInfoTransitNumber_verify><![CDATA[]]></compInfoTransitNumber_verify>
-							   <compInfoAccountNumber_verify><![CDATA[]]></compInfoAccountNumber_verify>
+							   <compInfoAccountNumber_verify><![CDATA[ ]]></compInfoAccountNumber_verify>
 							   <cb_ovverride_default_bank_layout><![CDATA[true]]></cb_ovverride_default_bank_layout>
 							   <compInfoBankName><![CDATA[]]></compInfoBankName>
 							   <compInfoBankAddress1><![CDATA[]]></compInfoBankAddress1>
@@ -47,7 +47,9 @@
 							   <compInfoShowStartNumber><![CDATA[on]]></compInfoShowStartNumber>
 							   <compInfoStartAt><![CDATA[000000]]></compInfoStartAt>
 							   <special_designation><![CDATA[XXXX]]></special_designation>
-							   <t_checkeckbox><![CDATA[T]]></t_checkeckbox>
+							   <std_or_special_checkeckbox><![CDATA[SPECIAL]]></std_or_special_checkeckbox>
+							   <tmb_checkeckbox><![CDATA[Array]]></tmb_checkeckbox>
+							   <optional_text><![CDATA[]]></optional_text>
 							   <compInfoStartAtTrueOrFalse><![CDATA[true]]></compInfoStartAtTrueOrFalse>
 							   <isThereSecondSignature><![CDATA[SIGNATURE_x1]]></isThereSecondSignature>
 							   <softwareINPUT><![CDATA[Buisiness Visions;2]]></softwareINPUT>
@@ -102,10 +104,10 @@
 							   <shipping_charge_select_company><![CDATA[CANADAPOST]]></shipping_charge_select_company>
 							   <shipping_price_INPUT_company><![CDATA[CANADAPOST]]></shipping_price_INPUT_company>
 							   <deliveryINPUT><![CDATA[Standard 8-10 Business Days]]></deliveryINPUT>
-							   <sub_total_products_INPUT><![CDATA[570]]></sub_total_products_INPUT>
+							   <sub_total_products_INPUT><![CDATA[566]]></sub_total_products_INPUT>
 							   <shipping_price_INPUT><![CDATA[0]]></shipping_price_INPUT>
-							   <sub_total_taxes_INPUT><![CDATA[22.8]]></sub_total_taxes_INPUT>
-							   <grand_total_INPUT><![CDATA[592.8]]></grand_total_INPUT>
+							   <sub_total_taxes_INPUT><![CDATA[22.64]]></sub_total_taxes_INPUT>
+							   <grand_total_INPUT><![CDATA[588.64]]></grand_total_INPUT>
 							   <percentTaxesInput><![CDATA[4]]></percentTaxesInput>
 							   <authorization_number><![CDATA[]]></authorization_number>
 							   <batch_number><![CDATA[]]></batch_number>
